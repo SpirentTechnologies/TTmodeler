@@ -1,0 +1,17 @@
+TTworkbench / TTmodeler Installation Guide for RSA 7.5.x
+--------------------------------------------------------
+
+
+Precondition: Make sure that you checked 'Reporting' for installation with RSA, since the incorporated BIRT features are needed by TTworkbench. 
+
+1) unzip this archive into the following folder:
+  a) Linux:   /opt/IBM/SDP/dropins
+  b) Windows: C:\Program Files\IBM\SDP\dropins (create if non-existent)
+
+2) copy your TTworkbench license file into the following folder:
+  a) Linux:   /opt/IBM/SDP/
+  b) Windows: C:\Program Files\IBM\SDP
+
+3) start RSA
+
+
