@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<diagrams:Diagrams xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.topcased.org/DI/1.0" xmlns:diagrams="http://www.topcased.org/Diagrams/1.0" xmi:id="_R9jlMGE1EdyDiJI7g-NtVQ" activeDiagram="_IS2XIWBIEdydLMC0IfSMUQ">
+  <model href="ATMTestMdl.uml#_qb8akM37EdqwVrslYOdUDA"/>
+  <subdiagrams xmi:id="_IS2XIGBIEdydLMC0IfSMUQ" activeDiagram="_zSkW0GDtEdyDiJI7g-NtVQ">
+    <model href="ATMTestMdl.uml#_w8IxIM37EdqwVrslYOdUDA"/>
+    <diagrams xmi:id="_IS2XIWBIEdydLMC0IfSMUQ" position="0,0" size="100,100" name="ATMTest" viewport="0,0">
+      <property xmi:id="_ITnMIGBIEdydLMC0IfSMUQ" key="pageFormatName" value="A4"/>
+      <property xmi:id="_ITnMIWBIEdydLMC0IfSMUQ" key="diagramWidth" value="840"/>
+      <property xmi:id="_ITnMImBIEdydLMC0IfSMUQ" key="diagramHeight" value="1188"/>
+      <property xmi:id="_ITnMI2BIEdydLMC0IfSMUQ" key="pageMarginName" value="Small Margin"/>
+      <property xmi:id="_ITnMJGBIEdydLMC0IfSMUQ" key="diagramTopMargin" value="20"/>
+      <property xmi:id="_ITnMJWBIEdydLMC0IfSMUQ" key="diagramBottomMargin" value="20"/>
+      <property xmi:id="_ITnMJmBIEdydLMC0IfSMUQ" key="diagramLeftMargin" value="20"/>
+      <property xmi:id="_ITnMJ2BIEdydLMC0IfSMUQ" key="diagramRightMargin" value="20"/>
+      <property xmi:id="_ITnMKGBIEdydLMC0IfSMUQ" key="orientation" value="portrait"/>
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IS2XImBIEdydLMC0IfSMUQ" presentation="org.topcased.modeler.uml.classdiagram">
+        <element href="ATMTestMdl.uml#_w8IxIM37EdqwVrslYOdUDA"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_jeFZYGBIEdydLMC0IfSMUQ" position="232,22" size="149,-1">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_jeFZYWBIEdydLMC0IfSMUQ" presentation="default">
+          <element href="ATMTestMdl.uml#_jeFZaGBIEdydLMC0IfSMUQ"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_jeFZYmBIEdydLMC0IfSMUQ">
+          <property xmi:id="_jeFZY2BIEdydLMC0IfSMUQ" key="eStructuralFeatureID" value="37"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_jeFZZGBIEdydLMC0IfSMUQ" presentation="default">
+            <element href="ATMTestMdl.uml#_jeFZaGBIEdydLMC0IfSMUQ"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_jeFZZWBIEdydLMC0IfSMUQ">
+          <property xmi:id="_jeFZZmBIEdydLMC0IfSMUQ" key="eStructuralFeatureID" value="47"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_jeFZZ2BIEdydLMC0IfSMUQ" presentation="default">
+            <element href="ATMTestMdl.uml#_jeFZaGBIEdydLMC0IfSMUQ"/>
+          </semanticModel>
+        </contained>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_MXrpEGBJEdydLMC0IfSMUQ" position="7,4" size="196,-1">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_MXrpEWBJEdydLMC0IfSMUQ" presentation="default">
+          <element href="ATMTestMdl.uml#_MXrpGGBJEdydLMC0IfSMUQ"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_MXrpEmBJEdydLMC0IfSMUQ">
+          <property xmi:id="_MXrpE2BJEdydLMC0IfSMUQ" key="eStructuralFeatureID" value="37"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_MXrpFGBJEdydLMC0IfSMUQ" presentation="default">
+            <element href="ATMTestMdl.uml#_MXrpGGBJEdydLMC0IfSMUQ"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_QMpvgGBJEdydLMC0IfSMUQ" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_QMpvgWBJEdydLMC0IfSMUQ" presentation="default">
+              <element href="ATMTestMdl.uml#_QMv2IGBJEdydLMC0IfSMUQ"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_PiEE8GBKEdydLMC0IfSMUQ" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_PiEE8WBKEdydLMC0IfSMUQ" presentation="default">
+              <element href="ATMTestMdl.uml#_PiEE8mBKEdydLMC0IfSMUQ"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_cw_kYGBKEdydLMC0IfSMUQ" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_cw_kYWBKEdydLMC0IfSMUQ" presentation="default">
+              <element href="ATMTestMdl.uml#_cw_kYmBKEdydLMC0IfSMUQ"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_EEBe4GBLEdydLMC0IfSMUQ" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_EEBe4WBLEdydLMC0IfSMUQ" presentation="default">
+              <element href="ATMTestMdl.uml#_EEBe4mBLEdydLMC0IfSMUQ"/>
+            </semanticModel>
+          </contained>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_MXrpFWBJEdydLMC0IfSMUQ">
+          <property xmi:id="_MXrpFmBJEdydLMC0IfSMUQ" key="eStructuralFeatureID" value="47"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_MXrpF2BJEdydLMC0IfSMUQ" presentation="default">
+            <element href="ATMTestMdl.uml#_MXrpGGBJEdydLMC0IfSMUQ"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_OKYVwGBJEdydLMC0IfSMUQ" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_OKYVwWBJEdydLMC0IfSMUQ" presentation="default">
+              <element href="ATMTestMdl.uml#_OKYVwmBJEdydLMC0IfSMUQ"/>
+            </semanticModel>
+          </contained>
+        </contained>
+      </contained>
+    </diagrams>
+    <subdiagrams xmi:id="_gwLLMGBUEdydLMC0IfSMUQ">
+      <model href="ATMTestMdl.uml#_MXrpGGBJEdydLMC0IfSMUQ"/>
+      <diagrams xmi:id="_zSkW0GDtEdyDiJI7g-NtVQ" position="0,0" size="100,100" name="ATMSuite" viewport="0,0">
+        <property xmi:id="_zUS1IGDtEdyDiJI7g-NtVQ" key="pageFormatName" value="A4"/>
+        <property xmi:id="_zUS1IWDtEdyDiJI7g-NtVQ" key="diagramWidth" value="840"/>
+        <property xmi:id="_zUS1ImDtEdyDiJI7g-NtVQ" key="diagramHeight" value="1188"/>
+        <property xmi:id="_zUS1I2DtEdyDiJI7g-NtVQ" key="pageMarginName" value="Small Margin"/>
+        <property xmi:id="_zUS1JGDtEdyDiJI7g-NtVQ" key="diagramTopMargin" value="20"/>
+        <property xmi:id="_zUS1JWDtEdyDiJI7g-NtVQ" key="diagramBottomMargin" value="20"/>
+        <property xmi:id="_zUS1JmDtEdyDiJI7g-NtVQ" key="diagramLeftMargin" value="20"/>
+        <property xmi:id="_zUS1J2DtEdyDiJI7g-NtVQ" key="diagramRightMargin" value="20"/>
+        <property xmi:id="_zUS1KGDtEdyDiJI7g-NtVQ" key="orientation" value="landscape"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_zSkW0WDtEdyDiJI7g-NtVQ" presentation="org.topcased.modeler.uml.compositestructuresdiagram.internal">
+          <element href="ATMTestMdl.uml#_MXrpGGBJEdydLMC0IfSMUQ"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_zUlJAGDtEdyDiJI7g-NtVQ" position="16,22" size="162,60">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_zUlJAWDtEdyDiJI7g-NtVQ" presentation="default">
+            <element href="ATMTestMdl.uml#_QMv2IGBJEdydLMC0IfSMUQ"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_zUxWQGDtEdyDiJI7g-NtVQ" position="64,41" size="-1,-1">
+            <property xmi:id="_zUxWQWDtEdyDiJI7g-NtVQ" key="portPosition" value="32"/>
+            <anchorage xmi:id="_3evmEGEeEdyDiJI7g-NtVQ"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_zUxWQmDtEdyDiJI7g-NtVQ" presentation="default">
+              <element href="BankATM.uml#__OlQYGA-EdydLMC0IfSMUQ"/>
+            </semanticModel>
+          </contained>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_zUlJAmDtEdyDiJI7g-NtVQ" position="14,139" size="149,60">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_zUlJA2DtEdyDiJI7g-NtVQ" presentation="default">
+            <element href="ATMTestMdl.uml#_PiEE8mBKEdydLMC0IfSMUQ"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_zUxWQ2DtEdyDiJI7g-NtVQ" position="66,-2" size="-1,-1">
+            <property xmi:id="_zUxWRGDtEdyDiJI7g-NtVQ" key="portPosition" value="8"/>
+            <anchorage xmi:id="_3evmEWEeEdyDiJI7g-NtVQ"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_zUxWRWDtEdyDiJI7g-NtVQ" presentation="default">
+              <element href="ATMTestMdl.uml#_u_ws0GBIEdydLMC0IfSMUQ"/>
+            </semanticModel>
+          </contained>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_zUrPoGDtEdyDiJI7g-NtVQ" position="235,26" size="125,60">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_zUrPoWDtEdyDiJI7g-NtVQ" presentation="default">
+            <element href="ATMTestMdl.uml#_cw_kYmBKEdydLMC0IfSMUQ"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_zUrPomDtEdyDiJI7g-NtVQ" position="209,135" size="177,60">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_zUrPo2DtEdyDiJI7g-NtVQ" presentation="default">
+            <element href="ATMTestMdl.uml#_EEBe4mBLEdydLMC0IfSMUQ"/>
+          </semanticModel>
+        </contained>
+      </diagrams>
+    </subdiagrams>
+    <subdiagrams xmi:id="_OBH4kGD4EdyDiJI7g-NtVQ"/>
+    <subdiagrams xmi:id="_e0VDUGE1EdyDiJI7g-NtVQ">
+      <model href="ATMTestMdl.uml#_e0O8sWE1EdyDiJI7g-NtVQ"/>
+      <diagrams xmi:id="_e0nXMGE1EdyDiJI7g-NtVQ" position="0,0" size="100,100" name="userLogin" viewport="0,132">
+        <property xmi:id="_e1lAgGE1EdyDiJI7g-NtVQ" key="pageFormatName" value="A4"/>
+        <property xmi:id="_e1lAgWE1EdyDiJI7g-NtVQ" key="diagramWidth" value="840"/>
+        <property xmi:id="_e1lAgmE1EdyDiJI7g-NtVQ" key="diagramHeight" value="1188"/>
+        <property xmi:id="_e1lAg2E1EdyDiJI7g-NtVQ" key="pageMarginName" value="Small Margin"/>
+        <property xmi:id="_e1lAhGE1EdyDiJI7g-NtVQ" key="diagramTopMargin" value="20"/>
+        <property xmi:id="_e1lAhWE1EdyDiJI7g-NtVQ" key="diagramBottomMargin" value="20"/>
+        <property xmi:id="_e1lAhmE1EdyDiJI7g-NtVQ" key="diagramLeftMargin" value="20"/>
+        <property xmi:id="_e1lAh2E1EdyDiJI7g-NtVQ" key="diagramRightMargin" value="20"/>
+        <property xmi:id="_e1lAiGE1EdyDiJI7g-NtVQ" key="orientation" value="portrait"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_e0nXMWE1EdyDiJI7g-NtVQ" presentation="org.topcased.modeler.uml.sequencediagram">
+          <element href="ATMTestMdl.uml#_e0O8sWE1EdyDiJI7g-NtVQ"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_nrzToGUBEdyW-NKB4s2d6g" position="5,238" size="587,127">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_nrzToWUBEdyW-NKB4s2d6g" presentation="default">
+            <element href="ATMTestMdl.uml#_nvI7gGUBEdyW-NKB4s2d6g"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_gGkHQGE1EdyDiJI7g-NtVQ" position="220,40" size="156,427">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_gGkHQWE1EdyDiJI7g-NtVQ" presentation="default">
+            <element href="ATMTestMdl.uml#_gGkHQmE1EdyDiJI7g-NtVQ"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_eK5dwGKTEdyFCuvHLLRvjA" position="95,16" size="20,50">
+            <anchorage xmi:id="_j8KwoWLGEdyBx5u4lyH2LA" position="13,7" graphEdge="_j8KwomLGEdyBx5u4lyH2LA"/>
+            <anchorage xmi:id="_F2Uh8GLHEdyBx5u4lyH2LA" position="4,42" graphEdge="_F2Uh8mLHEdyBx5u4lyH2LA"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_eK5dwWKTEdyFCuvHLLRvjA" presentation="default">
+              <element href="ATMTestMdl.uml#_eMIz4GKTEdyFCuvHLLRvjA"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_8SBGgGT9EdyW-NKB4s2d6g" position="95,84" size="20,77">
+            <anchorage xmi:id="_DfyUwGT-EdyW-NKB4s2d6g" position="0,5" graphEdge="_DfyUwWT-EdyW-NKB4s2d6g"/>
+            <anchorage xmi:id="_g9EAMGUAEdyW-NKB4s2d6g" position="16,5" graphEdge="_g9EAMmUAEdyW-NKB4s2d6g"/>
+            <anchorage xmi:id="_-p_jIGUAEdyW-NKB4s2d6g" position="9,67" graphEdge="_-p_jImUAEdyW-NKB4s2d6g"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_8SBGgWT9EdyW-NKB4s2d6g" presentation="default">
+              <element href="ATMTestMdl.uml#_8SBGgmT9EdyW-NKB4s2d6g"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_g895kGUAEdyW-NKB4s2d6g" position="81,113" size="20,20">
+            <anchorage xmi:id="_g9EAMWUAEdyW-NKB4s2d6g" position="-1,5" graphEdge="_g9EAMmUAEdyW-NKB4s2d6g"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_g895kWUAEdyW-NKB4s2d6g" presentation="default">
+              <element href="ATMTestMdl.uml#_g895kmUAEdyW-NKB4s2d6g"/>
+            </semanticModel>
+            <contained xsi:type="di:GraphEdge" xmi:id="_g9EAMmUAEdyW-NKB4s2d6g" anchor="_g9EAMGUAEdyW-NKB4s2d6g _g9EAMWUAEdyW-NKB4s2d6g">
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_g9EAM2UAEdyW-NKB4s2d6g" presentation="default">
+                <element href="ATMTestMdl.uml#_g9EAOGUAEdyW-NKB4s2d6g"/>
+              </semanticModel>
+              <contained xsi:type="di:EdgeObjectOffset" xmi:id="_g9EANGUAEdyW-NKB4s2d6g" id="nameEdgeObject" offset="-7,-1"/>
+              <waypoints>[43, 0, 30, -31]</waypoints>
+              <waypoints>[43, 31, 30, 0]</waypoints>
+            </contained>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_E440sGUJEdyW-NKB4s2d6g" position="68,176" size="20,50">
+            <anchorage xmi:id="_Kf_AEGUJEdyW-NKB4s2d6g" position="5,23" graphEdge="_Kf_AEmUJEdyW-NKB4s2d6g"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_E440sWUJEdyW-NKB4s2d6g" presentation="default">
+              <element href="ATMTestMdl.uml#_E4-7UGUJEdyW-NKB4s2d6g"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_FkVlcGUJEdyW-NKB4s2d6g" position="68,241" size="20,50">
+            <anchorage xmi:id="_MKeL8GUJEdyW-NKB4s2d6g" position="5,8" graphEdge="_MKeL8mUJEdyW-NKB4s2d6g"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_FkVlcWUJEdyW-NKB4s2d6g" presentation="default">
+              <element href="ATMTestMdl.uml#_FkVlcmUJEdyW-NKB4s2d6g"/>
+            </semanticModel>
+          </contained>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_n1wnkGE1EdyDiJI7g-NtVQ" position="19,40" size="126,425">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_n1wnkWE1EdyDiJI7g-NtVQ" presentation="default">
+            <element href="ATMTestMdl.uml#_n1wnkmE1EdyDiJI7g-NtVQ"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_fSbtkGKTEdyFCuvHLLRvjA" position="106,15" size="20,50">
+            <anchorage xmi:id="_j8KwoGLGEdyBx5u4lyH2LA" position="9,8" graphEdge="_j8KwomLGEdyBx5u4lyH2LA"/>
+            <anchorage xmi:id="_F2Uh8WLHEdyBx5u4lyH2LA" position="3,43" graphEdge="_F2Uh8mLHEdyBx5u4lyH2LA"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_fSbtkWKTEdyFCuvHLLRvjA" presentation="default">
+              <element href="ATMTestMdl.uml#_fSbtkmKTEdyFCuvHLLRvjA"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_4oUb8GT9EdyW-NKB4s2d6g" position="106,84" size="20,78">
+            <anchorage xmi:id="_DfsOIGT-EdyW-NKB4s2d6g" position="9,5" graphEdge="_DfyUwWT-EdyW-NKB4s2d6g"/>
+            <anchorage xmi:id="_-p_jIWUAEdyW-NKB4s2d6g" position="15,67" graphEdge="_-p_jImUAEdyW-NKB4s2d6g"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_4oUb8WT9EdyW-NKB4s2d6g" presentation="default">
+              <element href="ATMTestMdl.uml#_4omv0GT9EdyW-NKB4s2d6g"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_0F4xkGUIEdyW-NKB4s2d6g" position="53,178" size="20,50">
+            <anchorage xmi:id="_Kf_AEWUJEdyW-NKB4s2d6g" position="9,21" graphEdge="_Kf_AEmUJEdyW-NKB4s2d6g"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_0F4xkWUIEdyW-NKB4s2d6g" presentation="default">
+              <element href="ATMTestMdl.uml#_0F4xkmUIEdyW-NKB4s2d6g"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_02-QQGUIEdyW-NKB4s2d6g" position="53,241" size="20,50">
+            <anchorage xmi:id="_MKeL8WUJEdyW-NKB4s2d6g" position="6,8" graphEdge="_MKeL8mUJEdyW-NKB4s2d6g"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_02-QQWUIEdyW-NKB4s2d6g" presentation="default">
+              <element href="ATMTestMdl.uml#_02-QQmUIEdyW-NKB4s2d6g"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_Ufoa4GUbEdyW-NKB4s2d6g" position="53,313" size="20,50">
+            <anchorage xmi:id="_Z0Y5EGUbEdyW-NKB4s2d6g" position="11,25" graphEdge="_Z0Y5EmUbEdyW-NKB4s2d6g"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_Ufoa4WUbEdyW-NKB4s2d6g" presentation="default">
+              <element href="ATMTestMdl.uml#_Ufoa4mUbEdyW-NKB4s2d6g"/>
+            </semanticModel>
+          </contained>
+        </contained>
+        <contained xsi:type="di:GraphEdge" xmi:id="_j8KwomLGEdyBx5u4lyH2LA" anchor="_j8KwoGLGEdyBx5u4lyH2LA _j8KwoWLGEdyBx5u4lyH2LA">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_j8Kwo2LGEdyBx5u4lyH2LA" presentation="default">
+            <element href="ATMTestMdl.uml#_j8Q3Q2LGEdyBx5u4lyH2LA"/>
+          </semanticModel>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_j8KwpGLGEdyBx5u4lyH2LA" id="nameEdgeObject" offset="0,-10"/>
+        </contained>
+        <contained xsi:type="di:GraphEdge" xmi:id="_F2Uh8mLHEdyBx5u4lyH2LA" anchor="_F2Uh8GLHEdyBx5u4lyH2LA _F2Uh8WLHEdyBx5u4lyH2LA">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_F2Uh82LHEdyBx5u4lyH2LA" presentation="default">
+            <element href="ATMTestMdl.uml#_F2Uh-GLHEdyBx5u4lyH2LA"/>
+          </semanticModel>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_F2Uh9GLHEdyBx5u4lyH2LA" id="nameEdgeObject" offset="0,-10"/>
+        </contained>
+        <contained xsi:type="di:GraphEdge" xmi:id="_DfyUwWT-EdyW-NKB4s2d6g" anchor="_DfsOIGT-EdyW-NKB4s2d6g _DfyUwGT-EdyW-NKB4s2d6g">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_DfyUwmT-EdyW-NKB4s2d6g" presentation="default">
+            <element href="ATMTestMdl.uml#_Df4bYGT-EdyW-NKB4s2d6g"/>
+          </semanticModel>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_DfyUw2T-EdyW-NKB4s2d6g" id="nameEdgeObject" offset="0,-10"/>
+        </contained>
+        <contained xsi:type="di:GraphEdge" xmi:id="_-p_jImUAEdyW-NKB4s2d6g" anchor="_-p_jIGUAEdyW-NKB4s2d6g _-p_jIWUAEdyW-NKB4s2d6g">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_-p_jI2UAEdyW-NKB4s2d6g" presentation="default">
+            <element href="ATMTestMdl.uml#_-qFpwGUAEdyW-NKB4s2d6g"/>
+          </semanticModel>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_-p_jJGUAEdyW-NKB4s2d6g" id="nameEdgeObject" offset="0,-10"/>
+        </contained>
+        <contained xsi:type="di:GraphEdge" xmi:id="_Kf_AEmUJEdyW-NKB4s2d6g" anchor="_Kf_AEGUJEdyW-NKB4s2d6g _Kf_AEWUJEdyW-NKB4s2d6g">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_Kf_AE2UJEdyW-NKB4s2d6g" presentation="default">
+            <element href="ATMTestMdl.uml#_KgFGsGUJEdyW-NKB4s2d6g"/>
+          </semanticModel>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_Kf_AFGUJEdyW-NKB4s2d6g" id="nameEdgeObject" offset="0,-10"/>
+        </contained>
+        <contained xsi:type="di:GraphEdge" xmi:id="_MKeL8mUJEdyW-NKB4s2d6g" anchor="_MKeL8GUJEdyW-NKB4s2d6g _MKeL8WUJEdyW-NKB4s2d6g">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_MKeL82UJEdyW-NKB4s2d6g" presentation="default">
+            <element href="ATMTestMdl.uml#_MKkSkmUJEdyW-NKB4s2d6g"/>
+          </semanticModel>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_MKeL9GUJEdyW-NKB4s2d6g" id="nameEdgeObject" offset="0,-10"/>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="__h-AEGUYEdyW-NKB4s2d6g" position="404,40" size="174,426">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="__h-AEWUYEdyW-NKB4s2d6g" presentation="default">
+            <element href="ATMTestMdl.uml#__h-AEmUYEdyW-NKB4s2d6g"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_VkM2QGUbEdyW-NKB4s2d6g" position="70,314" size="20,50">
+            <anchorage xmi:id="_Z0Y5EWUbEdyW-NKB4s2d6g" position="13,24" graphEdge="_Z0Y5EmUbEdyW-NKB4s2d6g"/>
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_VkM2QWUbEdyW-NKB4s2d6g" presentation="default">
+              <element href="ATMTestMdl.uml#_VkM2QmUbEdyW-NKB4s2d6g"/>
+            </semanticModel>
+          </contained>
+        </contained>
+        <contained xsi:type="di:GraphEdge" xmi:id="_Z0Y5EmUbEdyW-NKB4s2d6g" anchor="_Z0Y5EGUbEdyW-NKB4s2d6g _Z0Y5EWUbEdyW-NKB4s2d6g">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_Z0Y5E2UbEdyW-NKB4s2d6g" presentation="default">
+            <element href="ATMTestMdl.uml#_Z0e_sGUbEdyW-NKB4s2d6g"/>
+          </semanticModel>
+          <contained xsi:type="di:EdgeObjectOffset" xmi:id="_Z0Y5FGUbEdyW-NKB4s2d6g" id="nameEdgeObject" offset="0,-10"/>
+        </contained>
+      </diagrams>
+    </subdiagrams>
+  </subdiagrams>
+</diagrams:Diagrams>

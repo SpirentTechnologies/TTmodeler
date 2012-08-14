@@ -1,0 +1,3 @@
+module ISUTRequired {
+	signature intOp(in integer callValue) return integer;
+}

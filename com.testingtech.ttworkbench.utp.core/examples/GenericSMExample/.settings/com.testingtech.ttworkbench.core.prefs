@@ -1,0 +1,16 @@
+#Thu Oct 09 13:35:57 CEST 2008
+eclipse.preferences.version=1
+tt3-plugins-path=tt3-plugins-path
+ttcn3.continue_on_fail=false
+ttcn3.gen_debug_code_record_init=false
+ttcn3.generate_mlf=true
+ttcn3.main_module=
+ttcn3.mlf_class=
+ttcn3.mlf_jar=
+ttcn3.output_folder=//PROJECT_NAME//ttcn3build
+ttcn3.output_same_as_src=true
+ttcn3.save_log_automatically=false
+ttcn3.source_folders=//PROJECT_NAME//ttcn3
+ttcn3.tlz.output_folder=
+ttcn3.use_bigint=false
+ttcn3.use_destination_path_for_ttcn3view=false

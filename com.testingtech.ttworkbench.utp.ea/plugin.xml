@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.importWizards">
+      <category
+            id="com.testingtech.ttworkbench.utp.ea.importWizard.sampleCategory"
+            name="UTP"/>
+      <wizard
+            category="com.testingtech.ttworkbench.utp.ea.importWizard.sampleCategory"
+            class="com.testingtech.ttworkbench.utp.ea.importer.EAImportWizard"
+            icon="icons/sample.gif"
+            id="com.testingtech.ttworkbench.utp.ea.importWizard.EAImportWizard"
+            name="Enterprise Architect Model">
+         <description>
+            Transform a Enterprise Architect Model from the local file system to a UML2 Model into the workspace.
+         </description>
+      </wizard>
+   </extension>
+   <extension
+         point="com.testingtech.ttworkbench.metamodel.core.foreignModelImporter">
+      <descriptor
+            class="com.testingtech.ttworkbench.utp.ea.importer.EAImporterDescription"
+            description="%Importer.description"
+            extensions="eap"
+            id="%Importer.id"
+            name="%Importer.name"
+            wizard="com.testingtech.ttworkbench.utp.ea.importer.EAImporterWizard"/>
+   </extension>
+</plugin>

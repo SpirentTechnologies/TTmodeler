@@ -1,0 +1,7 @@
+module UTPAUX {
+	type charstring address;
+
+
+	type component MTC__DEFAULT {
+	}
+}

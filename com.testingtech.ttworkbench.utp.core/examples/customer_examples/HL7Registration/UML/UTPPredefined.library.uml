@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Standard="http://www.eclipse.org/uml2/schemas/Standard/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xsi:schemaLocation="http://www.eclipse.org/uml2/schemas/Standard/1 pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w">
+  <uml:Model xmi:id="_3tOv6QyjEd6Nic0EjEjOQA" name="UTPPredefined" viewpoint="">
+    <packagedElement xmi:type="uml:Class" xmi:id="_3tOv6gyjEd6Nic0EjEjOQA" name="Duration"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_3tOv6wyjEd6Nic0EjEjOQA" name="Timezone"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_3tOv7AyjEd6Nic0EjEjOQA" name="Time"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_3tOv7QyjEd6Nic0EjEjOQA" name="Scheduler">
+      <ownedOperation xmi:id="_3tOv7gyjEd6Nic0EjEjOQA" name="Scheduler"/>
+      <ownedOperation xmi:id="_3tOv7wyjEd6Nic0EjEjOQA" name="startTestCase">
+        <ownedParameter xmi:id="_3tOv8AyjEd6Nic0EjEjOQA" name="t">
+          <type xmi:type="uml:Stereotype" href="utp.profile.uml#_3tOyEAyjEd6Nic0EjEjOQA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_3tOv8QyjEd6Nic0EjEjOQA" name="finishTestCase">
+        <ownedParameter xmi:id="_3tOv8gyjEd6Nic0EjEjOQA" name="t">
+          <type xmi:type="uml:Stereotype" href="utp.profile.uml#_3tOyEAyjEd6Nic0EjEjOQA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_3tOv8wyjEd6Nic0EjEjOQA" name="createTestComponent">
+        <ownedParameter xmi:id="_3tOv9AyjEd6Nic0EjEjOQA" name="t">
+          <type xmi:type="uml:Stereotype" href="utp.profile.uml#_3tOyEAyjEd6Nic0EjEjOQA"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_3tOv9QyjEd6Nic0EjEjOQA" name="Arbiter" clientDependency="_3tOwBgyjEd6Nic0EjEjOQA">
+      <ownedOperation xmi:id="_3tOv9gyjEd6Nic0EjEjOQA" name="getVerdict">
+        <ownedParameter xmi:id="_3tOv9wyjEd6Nic0EjEjOQA" name="returnValue" type="_3tOv-gyjEd6Nic0EjEjOQA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_3tOv-AyjEd6Nic0EjEjOQA" name="setVerdict">
+        <ownedParameter xmi:id="_3tOv-QyjEd6Nic0EjEjOQA" name="v" type="_3tOv-gyjEd6Nic0EjEjOQA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_3tOv-gyjEd6Nic0EjEjOQA" name="Verdict">
+      <ownedLiteral xmi:id="_3tOv-wyjEd6Nic0EjEjOQA" name="pass"/>
+      <ownedLiteral xmi:id="_3tOv_AyjEd6Nic0EjEjOQA" name="fail"/>
+      <ownedLiteral xmi:id="_3tOv_QyjEd6Nic0EjEjOQA" name="inconc"/>
+      <ownedLiteral xmi:id="_3tOv_gyjEd6Nic0EjEjOQA" name="error"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_3tOv_wyjEd6Nic0EjEjOQA" name="Timer">
+      <ownedAttribute xmi:id="_3tOwAAyjEd6Nic0EjEjOQA" name="isRunning">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_3tOwAQyjEd6Nic0EjEjOQA" name="start">
+        <ownedParameter xmi:id="_3tOwAgyjEd6Nic0EjEjOQA" name="expires" type="_3tOv7AyjEd6Nic0EjEjOQA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_3tOwAwyjEd6Nic0EjEjOQA" name="stop"/>
+      <ownedOperation xmi:id="_3tOwBAyjEd6Nic0EjEjOQA" name="read">
+        <ownedParameter xmi:id="_3tOwBQyjEd6Nic0EjEjOQA" name="returnValue" type="_3tOv7AyjEd6Nic0EjEjOQA" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Realization" xmi:id="_3tOwBgyjEd6Nic0EjEjOQA" supplier="_3tOv9QyjEd6Nic0EjEjOQA" client="_3tOv9QyjEd6Nic0EjEjOQA"/>
+    <profileApplication xmi:id="_3tOwBwyjEd6Nic0EjEjOQA">
+      <eAnnotations xmi:id="_3tOwCAyjEd6Nic0EjEjOQA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:id="_3tOwCQyjEd6Nic0EjEjOQA">
+      <eAnnotations xmi:id="_3tOwCgyjEd6Nic0EjEjOQA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="Default.profile.uml#_3tX2UgyjEd6Nic0EjEjOQA"/>
+      </eAnnotations>
+      <appliedProfile href="Default.profile.uml#_3tX2UAyjEd6Nic0EjEjOQA"/>
+    </profileApplication>
+    <profileApplication xmi:id="_3tOwCwyjEd6Nic0EjEjOQA">
+      <eAnnotations xmi:id="_3tOwDAyjEd6Nic0EjEjOQA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="Deployment.profile.uml#_3tOsfAyjEd6Nic0EjEjOQA"/>
+      </eAnnotations>
+      <appliedProfile href="Deployment.profile.uml#_3tOsegyjEd6Nic0EjEjOQA"/>
+    </profileApplication>
+  </uml:Model>
+  <Standard:ModelLibrary xmi:id="_3tOwDQyjEd6Nic0EjEjOQA" base_Package="_3tOv6QyjEd6Nic0EjEjOQA"/>
+</xmi:XMI>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.testingtech.ttworkbench.utp.core/generated"
+    modelPluginID="com.testingtech.ttworkbench.utp.core" modelName="UTP" importerID="org.eclipse.uml2.uml.ecore.importer"
+    usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore platform:/plugin/org.eclipse.uml2.uml/model/UML.genmodel#//uml">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
+    <details key="DUPLICATE_FEATURES" value="DISCARD"/>
+    <details key="DUPLICATE_FEATURE_INHERITANCE" value="DISCARD"/>
+    <details key="REDEFINING_PROPERTIES" value="REPORT"/>
+    <details key="DUPLICATE_OPERATIONS" value="DISCARD"/>
+    <details key="DERIVED_FEATURES" value="PROCESS"/>
+    <details key="SUBSETTING_PROPERTIES" value="REPORT"/>
+    <details key="ECORE_TAGGED_VALUES" value="PROCESS"/>
+    <details key="REDEFINING_OPERATIONS" value="REPORT"/>
+    <details key="ANNOTATION_DETAILS" value="PROCESS"/>
+    <details key="SUPER_CLASS_ORDER" value="PROCESS"/>
+    <details key="UNION_PROPERTIES" value="REPORT"/>
+    <details key="DUPLICATE_OPERATION_INHERITANCE" value="DISCARD"/>
+  </genAnnotations>
+  <foreignModel>utp.profile.uml</foreignModel>
+  <genPackages prefix="UTP" disposableProviderFactory="true" ecorePackage="utp.ecore#/">
+    <genEnums ecoreEnum="utp.ecore#//InteractionOperator">
+      <genEnumLiterals ecoreEnumLiteral="utp.ecore#//InteractionOperator/seq"/>
+      <genEnumLiterals ecoreEnumLiteral="utp.ecore#//InteractionOperator/alt"/>
+      <genEnumLiterals ecoreEnumLiteral="utp.ecore#//InteractionOperator/opt"/>
+      <genEnumLiterals ecoreEnumLiteral="utp.ecore#//InteractionOperator/break"/>
+      <genEnumLiterals ecoreEnumLiteral="utp.ecore#//InteractionOperator/par"/>
+      <genEnumLiterals ecoreEnumLiteral="utp.ecore#//InteractionOperator/strict"/>
+      <genEnumLiterals ecoreEnumLiteral="utp.ecore#//InteractionOperator/loop"/>
+      <genEnumLiterals ecoreEnumLiteral="utp.ecore#//InteractionOperator/region"/>
+      <genEnumLiterals ecoreEnumLiteral="utp.ecore#//InteractionOperator/neg"/>
+      <genEnumLiterals ecoreEnumLiteral="utp.ecore#//InteractionOperator/assert"/>
+      <genEnumLiterals ecoreEnumLiteral="utp.ecore#//InteractionOperator/ignore"/>
+      <genEnumLiterals ecoreEnumLiteral="utp.ecore#//InteractionOperator/consider"/>
+      <genEnumLiterals ecoreEnumLiteral="utp.ecore#//InteractionOperator/determAlt"/>
+    </genEnums>
+    <genClasses ecoreClass="utp.ecore#//TestContext">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//TestContext/arbiter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//TestContext/base_StructuredClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//TestContext/scheduler"/>
+    </genClasses>
+    <genClasses ecoreClass="utp.ecore#//TestComponent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//TestComponent/zone"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//TestComponent/base_StructuredClassifier"/>
+    </genClasses>
+    <genClasses ecoreClass="utp.ecore#//SUT">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//SUT/base_Property"/>
+    </genClasses>
+    <genClasses ecoreClass="utp.ecore#//Default">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//Default/base_Behavior"/>
+    </genClasses>
+    <genClasses ecoreClass="utp.ecore#//DefaultApplication">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//DefaultApplication/base_Dependency"/>
+    </genClasses>
+    <genClasses ecoreClass="utp.ecore#//FinishAction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//FinishAction/base_Action"/>
+    </genClasses>
+    <genClasses ecoreClass="utp.ecore#//LogAction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//LogAction/base_SendObjectAction"/>
+    </genClasses>
+    <genClasses ecoreClass="utp.ecore#//TestCase">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//TestCase/base_Operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//TestCase/base_Behavior"/>
+    </genClasses>
+    <genClasses ecoreClass="utp.ecore#//TestObjective">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//TestObjective/base_Dependency"/>
+    </genClasses>
+    <genClasses ecoreClass="utp.ecore#//ValidationAction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//ValidationAction/base_CallOperationAction"/>
+    </genClasses>
+    <genClasses ecoreClass="utp.ecore#//TestLog">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//TestLog/base_Behavior"/>
+    </genClasses>
+    <genClasses ecoreClass="utp.ecore#//TestLogApplication">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//TestLogApplication/base_Dependency"/>
+    </genClasses>
+    <genClasses ecoreClass="utp.ecore#//CodingRule">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//CodingRule/base_Property"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//CodingRule/base_ValueSpecification"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//CodingRule/base_Namespace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute utp.ecore#//CodingRule/coding"/>
+    </genClasses>
+    <genClasses ecoreClass="utp.ecore#//DataPool">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//DataPool/base_Property"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//DataPool/base_Classifier"/>
+    </genClasses>
+    <genClasses ecoreClass="utp.ecore#//DataPartition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//DataPartition/base_Classifier"/>
+    </genClasses>
+    <genClasses ecoreClass="utp.ecore#//DataSelector">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//DataSelector/base_Operation"/>
+    </genClasses>
+    <genClasses ecoreClass="utp.ecore#//LiteralAny">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//LiteralAny/base_LiteralSpecification"/>
+    </genClasses>
+    <genClasses ecoreClass="utp.ecore#//LiteralAnyOrNull">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//LiteralAnyOrNull/base_LiteralSpecification"/>
+    </genClasses>
+    <genClasses ecoreClass="utp.ecore#//TimeOut">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//TimeOut/base_Trigger"/>
+    </genClasses>
+    <genClasses ecoreClass="utp.ecore#//TimeOutMessage">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//TimeOutMessage/base_Message"/>
+    </genClasses>
+    <genClasses ecoreClass="utp.ecore#//TimeOutAction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//TimeOutAction/base_AcceptEventAction"/>
+    </genClasses>
+    <genClasses ecoreClass="utp.ecore#//StartTimerAction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//StartTimerAction/base_CallOperationAction"/>
+    </genClasses>
+    <genClasses ecoreClass="utp.ecore#//StopTimerAction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//StopTimerAction/base_CallOperationAction"/>
+    </genClasses>
+    <genClasses ecoreClass="utp.ecore#//ReadTimerAction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//ReadTimerAction/base_CallOperationAction"/>
+    </genClasses>
+    <genClasses ecoreClass="utp.ecore#//TimerRunningAction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//TimerRunningAction/base_ReadStructuralFeatureAction"/>
+    </genClasses>
+    <genClasses ecoreClass="utp.ecore#//GetTimezoneAction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//GetTimezoneAction/base_ReadStructuralFeatureAction"/>
+    </genClasses>
+    <genClasses ecoreClass="utp.ecore#//SetTimezoneAction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference utp.ecore#//SetTimezoneAction/base_WriteStructuralFeatureAction"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="UTPPredefined" disposableProviderFactory="true" ecorePackage="UTPPredefined.ecore#/">
+    <genEnums ecoreEnum="UTPPredefined.ecore#//Verdict"/>
+    <genClasses ecoreClass="UTPPredefined.ecore#//Duration"/>
+    <genClasses ecoreClass="UTPPredefined.ecore#//Timezone"/>
+    <genClasses ecoreClass="UTPPredefined.ecore#//Time"/>
+    <genClasses image="false" ecoreClass="UTPPredefined.ecore#//Scheduler">
+      <genOperations ecoreOperation="UTPPredefined.ecore#//Scheduler/Scheduler"/>
+      <genOperations ecoreOperation="UTPPredefined.ecore#//Scheduler/startTestCase">
+        <genParameters ecoreParameter="UTPPredefined.ecore#//Scheduler/startTestCase/t"/>
+      </genOperations>
+      <genOperations ecoreOperation="UTPPredefined.ecore#//Scheduler/finishTestCase">
+        <genParameters ecoreParameter="UTPPredefined.ecore#//Scheduler/finishTestCase/t"/>
+      </genOperations>
+      <genOperations ecoreOperation="UTPPredefined.ecore#//Scheduler/createTestComponent">
+        <genParameters ecoreParameter="UTPPredefined.ecore#//Scheduler/createTestComponent/t"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="UTPPredefined.ecore#//Timer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UTPPredefined.ecore#//Timer/isRunning"/>
+      <genOperations ecoreOperation="UTPPredefined.ecore#//Timer/start">
+        <genParameters ecoreParameter="UTPPredefined.ecore#//Timer/start/expires"/>
+      </genOperations>
+      <genOperations ecoreOperation="UTPPredefined.ecore#//Timer/stop"/>
+      <genOperations ecoreOperation="UTPPredefined.ecore#//Timer/read"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="UTPPredefined.ecore#//Arbiter">
+      <genOperations ecoreOperation="UTPPredefined.ecore#//Arbiter/getVerdict"/>
+      <genOperations ecoreOperation="UTPPredefined.ecore#//Arbiter/setVerdict">
+        <genParameters ecoreParameter="UTPPredefined.ecore#//Arbiter/setVerdict/v"/>
+      </genOperations>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

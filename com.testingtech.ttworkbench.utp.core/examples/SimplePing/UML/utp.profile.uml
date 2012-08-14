@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_3kosZBZYEd-DIOK_NLelwQ" name="utp" metaclassReference="_3kotCRZYEd-DIOK_NLelwQ _3kotChZYEd-DIOK_NLelwQ _3kotCxZYEd-DIOK_NLelwQ _3kotDBZYEd-DIOK_NLelwQ _3kotDRZYEd-DIOK_NLelwQ _3kotDhZYEd-DIOK_NLelwQ _3kotDxZYEd-DIOK_NLelwQ _3kotEBZYEd-DIOK_NLelwQ _3kotERZYEd-DIOK_NLelwQ _3kotEhZYEd-DIOK_NLelwQ _3kotExZYEd-DIOK_NLelwQ _3kotFBZYEd-DIOK_NLelwQ _3kotFxZYEd-DIOK_NLelwQ _3kotGBZYEd-DIOK_NLelwQ _3kotGRZYEd-DIOK_NLelwQ _3kotGhZYEd-DIOK_NLelwQ _3kotGxZYEd-DIOK_NLelwQ">
+  <eAnnotations xmi:id="_3kosZRZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_3kosZhZYEd-DIOK_NLelwQ" name="utp" nsURI="http:///schemas/utp/_jfnNQP1JEdutkb3Be6e_HQ/0" nsPrefix="utp">
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3kosZxZYEd-DIOK_NLelwQ" name="TestContext">
+        <eAnnotations xmi:id="_3kosaBZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3kotHBZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kosaRZYEd-DIOK_NLelwQ" name="arbiter" ordered="false" lowerBound="1" eType="_3kosbxZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kosaxZYEd-DIOK_NLelwQ" name="base_StructuredClassifier" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//StructuredClassifier"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kosbRZYEd-DIOK_NLelwQ" name="scheduler" ordered="false" lowerBound="1" eType="_3koseBZYEd-DIOK_NLelwQ"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3kosbxZYEd-DIOK_NLelwQ" name="UTPPredefined_Arbiter" abstract="true" interface="true">
+        <eAnnotations xmi:id="_3koscBZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="uml:Interface" href="UTPPredefined.library.uml#_3kyfLxZYEd-DIOK_NLelwQ"/>
+        </eAnnotations>
+        <eOperations xmi:id="_3koscRZYEd-DIOK_NLelwQ" name="getVerdict" ordered="false" lowerBound="1" eType="_3kosdhZYEd-DIOK_NLelwQ"/>
+        <eOperations xmi:id="_3koscxZYEd-DIOK_NLelwQ" name="setVerdict" ordered="false" lowerBound="1">
+          <eParameters xmi:id="_3kosdBZYEd-DIOK_NLelwQ" name="v" ordered="false" lowerBound="1" eType="_3kosdhZYEd-DIOK_NLelwQ"/>
+        </eOperations>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EEnum" xmi:id="_3kosdhZYEd-DIOK_NLelwQ" name="UTPPredefined_Verdict">
+        <eAnnotations xmi:id="_3kosdxZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="uml:Enumeration" href="UTPPredefined.library.uml#_3kyfNBZYEd-DIOK_NLelwQ"/>
+        </eAnnotations>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3koseBZYEd-DIOK_NLelwQ" name="UTPPredefined_Scheduler" abstract="true" interface="true">
+        <eAnnotations xmi:id="_3koseRZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="uml:Interface" href="UTPPredefined.library.uml#_3kyfJxZYEd-DIOK_NLelwQ"/>
+        </eAnnotations>
+        <eOperations xmi:id="_3kosehZYEd-DIOK_NLelwQ" name="Scheduler" ordered="false" lowerBound="1"/>
+        <eOperations xmi:id="_3kosexZYEd-DIOK_NLelwQ" name="startTestCase" ordered="false" lowerBound="1">
+          <eParameters xmi:id="_3kosfBZYEd-DIOK_NLelwQ" name="t" ordered="false" lowerBound="1" eType="_3koshBZYEd-DIOK_NLelwQ"/>
+        </eOperations>
+        <eOperations xmi:id="_3kosfhZYEd-DIOK_NLelwQ" name="finishTestCase" ordered="false" lowerBound="1">
+          <eParameters xmi:id="_3kosfxZYEd-DIOK_NLelwQ" name="t" ordered="false" lowerBound="1" eType="_3koshBZYEd-DIOK_NLelwQ"/>
+        </eOperations>
+        <eOperations xmi:id="_3kosgRZYEd-DIOK_NLelwQ" name="createTestComponent" ordered="false" lowerBound="1">
+          <eParameters xmi:id="_3kosghZYEd-DIOK_NLelwQ" name="t" ordered="false" lowerBound="1" eType="_3koshBZYEd-DIOK_NLelwQ"/>
+        </eOperations>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3koshBZYEd-DIOK_NLelwQ" name="TestComponent">
+        <eAnnotations xmi:id="_3koshRZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3kotIhZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3koshhZYEd-DIOK_NLelwQ" name="zone" ordered="false" eType="_3kosihZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kosiBZYEd-DIOK_NLelwQ" name="base_StructuredClassifier" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//StructuredClassifier"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3kosihZYEd-DIOK_NLelwQ" name="UTPPredefined_Timezone">
+        <eAnnotations xmi:id="_3kosixZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="uml:Class" href="UTPPredefined.library.uml#_3kyfJRZYEd-DIOK_NLelwQ"/>
+        </eAnnotations>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3kosjBZYEd-DIOK_NLelwQ" name="SUT">
+        <eAnnotations xmi:id="_3kosjRZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3kotKRZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kosjhZYEd-DIOK_NLelwQ" name="base_Property" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//Property"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3koskBZYEd-DIOK_NLelwQ" name="Default">
+        <eAnnotations xmi:id="_3koskRZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3kotLRZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3koskhZYEd-DIOK_NLelwQ" name="base_Behavior" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//Behavior"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3koslBZYEd-DIOK_NLelwQ" name="DefaultApplication">
+        <eAnnotations xmi:id="_3koslRZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3kotMRZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3koslhZYEd-DIOK_NLelwQ" name="base_Dependency" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//Dependency"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EEnum" xmi:id="_3kosmBZYEd-DIOK_NLelwQ" name="InteractionOperator">
+        <eAnnotations xmi:id="_3kosmRZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3kotNRZYEd-DIOK_NLelwQ"/>
+        <eLiterals xmi:id="_3kosmhZYEd-DIOK_NLelwQ" name="seq"/>
+        <eLiterals xmi:id="_3kosmxZYEd-DIOK_NLelwQ" name="alt" value="1"/>
+        <eLiterals xmi:id="_3kosnBZYEd-DIOK_NLelwQ" name="opt" value="2"/>
+        <eLiterals xmi:id="_3kosnRZYEd-DIOK_NLelwQ" name="break" value="3"/>
+        <eLiterals xmi:id="_3kosnhZYEd-DIOK_NLelwQ" name="par" value="4"/>
+        <eLiterals xmi:id="_3kosnxZYEd-DIOK_NLelwQ" name="strict" value="5"/>
+        <eLiterals xmi:id="_3kosoBZYEd-DIOK_NLelwQ" name="loop" value="6"/>
+        <eLiterals xmi:id="_3kosoRZYEd-DIOK_NLelwQ" name="region" value="7"/>
+        <eLiterals xmi:id="_3kosohZYEd-DIOK_NLelwQ" name="neg" value="8"/>
+        <eLiterals xmi:id="_3kosoxZYEd-DIOK_NLelwQ" name="assert" value="9"/>
+        <eLiterals xmi:id="_3kospBZYEd-DIOK_NLelwQ" name="ignore" value="10"/>
+        <eLiterals xmi:id="_3kospRZYEd-DIOK_NLelwQ" name="consider" value="11"/>
+        <eLiterals xmi:id="_3kosphZYEd-DIOK_NLelwQ" name="determAlt" value="12"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3kospxZYEd-DIOK_NLelwQ" name="FinishAction">
+        <eAnnotations xmi:id="_3kosqBZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3kotQxZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kosqRZYEd-DIOK_NLelwQ" name="base_Action" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//Action"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3kosqxZYEd-DIOK_NLelwQ" name="LogAction">
+        <eAnnotations xmi:id="_3kosrBZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3kotRxZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kosrRZYEd-DIOK_NLelwQ" name="base_SendObjectAction" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//SendObjectAction"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3kosrxZYEd-DIOK_NLelwQ" name="TestCase">
+        <eAnnotations xmi:id="_3kossBZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3kotSxZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kossRZYEd-DIOK_NLelwQ" name="base_Operation" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//Operation"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kossxZYEd-DIOK_NLelwQ" name="base_Behavior" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//Behavior"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3kostRZYEd-DIOK_NLelwQ" name="TestObjective">
+        <eAnnotations xmi:id="_3kosthZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3kotUhZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kostxZYEd-DIOK_NLelwQ" name="base_Dependency" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//Dependency"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3kosuRZYEd-DIOK_NLelwQ" name="ValidationAction">
+        <eAnnotations xmi:id="_3kosuhZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3kotVhZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kosuxZYEd-DIOK_NLelwQ" name="base_CallOperationAction" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//CallOperationAction"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3kosvRZYEd-DIOK_NLelwQ" name="TestLog">
+        <eAnnotations xmi:id="_3kosvhZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3kotWhZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kosvxZYEd-DIOK_NLelwQ" name="base_Behavior" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//Behavior"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3koswRZYEd-DIOK_NLelwQ" name="TestLogApplication">
+        <eAnnotations xmi:id="_3koswhZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3kotXhZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3koswxZYEd-DIOK_NLelwQ" name="base_Dependency" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//Dependency"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3kosxRZYEd-DIOK_NLelwQ" name="CodingRule">
+        <eAnnotations xmi:id="_3kosxhZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3kotYhZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kosxxZYEd-DIOK_NLelwQ" name="base_Property" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//Property"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kosyRZYEd-DIOK_NLelwQ" name="base_ValueSpecification" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//ValueSpecification"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kosyxZYEd-DIOK_NLelwQ" name="base_Namespace" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//Namespace"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_3koszRZYEd-DIOK_NLelwQ" name="coding" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3koszxZYEd-DIOK_NLelwQ" name="DataPool">
+        <eAnnotations xmi:id="_3kos0BZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3kotbRZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kos0RZYEd-DIOK_NLelwQ" name="base_Property" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//Property"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kos0xZYEd-DIOK_NLelwQ" name="base_Classifier" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//Classifier"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3kos1RZYEd-DIOK_NLelwQ" name="DataPartition">
+        <eAnnotations xmi:id="_3kos1hZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3kotdBZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kos1xZYEd-DIOK_NLelwQ" name="base_Classifier" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//Classifier"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3kos2RZYEd-DIOK_NLelwQ" name="DataSelector">
+        <eAnnotations xmi:id="_3kos2hZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3koteBZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kos2xZYEd-DIOK_NLelwQ" name="base_Operation" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//Operation"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3kos3RZYEd-DIOK_NLelwQ" name="LiteralAny">
+        <eAnnotations xmi:id="_3kos3hZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3kotfBZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kos3xZYEd-DIOK_NLelwQ" name="base_LiteralSpecification" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//LiteralSpecification"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3kos4RZYEd-DIOK_NLelwQ" name="LiteralAnyOrNull">
+        <eAnnotations xmi:id="_3kos4hZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3kotgBZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kos4xZYEd-DIOK_NLelwQ" name="base_LiteralSpecification" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//LiteralSpecification"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3kos5RZYEd-DIOK_NLelwQ" name="TimeOut">
+        <eAnnotations xmi:id="_3kos5hZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3kothBZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kos5xZYEd-DIOK_NLelwQ" name="base_Trigger" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//Trigger"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3kos6RZYEd-DIOK_NLelwQ" name="TimeOutMessage">
+        <eAnnotations xmi:id="_3kos6hZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3kotiBZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kos6xZYEd-DIOK_NLelwQ" name="base_Message" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//Message"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3kos7RZYEd-DIOK_NLelwQ" name="TimeOutAction">
+        <eAnnotations xmi:id="_3kos7hZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3kotjBZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kos7xZYEd-DIOK_NLelwQ" name="base_AcceptEventAction" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//AcceptEventAction"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3kos8RZYEd-DIOK_NLelwQ" name="StartTimerAction">
+        <eAnnotations xmi:id="_3kos8hZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3kotkBZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kos8xZYEd-DIOK_NLelwQ" name="base_CallOperationAction" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//CallOperationAction"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3kos9RZYEd-DIOK_NLelwQ" name="StopTimerAction">
+        <eAnnotations xmi:id="_3kos9hZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3kotlBZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kos9xZYEd-DIOK_NLelwQ" name="base_CallOperationAction" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//CallOperationAction"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3kos-RZYEd-DIOK_NLelwQ" name="ReadTimerAction">
+        <eAnnotations xmi:id="_3kos-hZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3kotmBZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kos-xZYEd-DIOK_NLelwQ" name="base_CallOperationAction" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//CallOperationAction"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3kos_RZYEd-DIOK_NLelwQ" name="TimerRunningAction">
+        <eAnnotations xmi:id="_3kos_hZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3kotnBZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kos_xZYEd-DIOK_NLelwQ" name="base_ReadStructuralFeatureAction" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//ReadStructuralFeatureAction"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3kotARZYEd-DIOK_NLelwQ" name="GetTimezoneAction">
+        <eAnnotations xmi:id="_3kotAhZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3kotoBZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kotAxZYEd-DIOK_NLelwQ" name="base_ReadStructuralFeatureAction" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//ReadStructuralFeatureAction"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_3kotBRZYEd-DIOK_NLelwQ" name="SetTimezoneAction">
+        <eAnnotations xmi:id="_3kotBhZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3kotpBZYEd-DIOK_NLelwQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_3kotBxZYEd-DIOK_NLelwQ" name="base_WriteStructuralFeatureAction" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//WriteStructuralFeatureAction"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+  </eAnnotations>
+  <elementImport xmi:id="_3kotCRZYEd-DIOK_NLelwQ">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#StructuredClassifier"/>
+  </elementImport>
+  <elementImport xmi:id="_3kotChZYEd-DIOK_NLelwQ">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
+  </elementImport>
+  <elementImport xmi:id="_3kotCxZYEd-DIOK_NLelwQ">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Behavior"/>
+  </elementImport>
+  <elementImport xmi:id="_3kotDBZYEd-DIOK_NLelwQ">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Dependency"/>
+  </elementImport>
+  <elementImport xmi:id="_3kotDRZYEd-DIOK_NLelwQ">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Action"/>
+  </elementImport>
+  <elementImport xmi:id="_3kotDhZYEd-DIOK_NLelwQ">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#SendObjectAction"/>
+  </elementImport>
+  <elementImport xmi:id="_3kotDxZYEd-DIOK_NLelwQ">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Operation"/>
+  </elementImport>
+  <elementImport xmi:id="_3kotEBZYEd-DIOK_NLelwQ">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#CallOperationAction"/>
+  </elementImport>
+  <elementImport xmi:id="_3kotERZYEd-DIOK_NLelwQ">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ValueSpecification"/>
+  </elementImport>
+  <elementImport xmi:id="_3kotEhZYEd-DIOK_NLelwQ">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Namespace"/>
+  </elementImport>
+  <elementImport xmi:id="_3kotExZYEd-DIOK_NLelwQ">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#LiteralSpecification"/>
+  </elementImport>
+  <elementImport xmi:id="_3kotFBZYEd-DIOK_NLelwQ">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Classifier"/>
+  </elementImport>
+  <elementImport xmi:id="_3kotFRZYEd-DIOK_NLelwQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_3kotFhZYEd-DIOK_NLelwQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_3kotFxZYEd-DIOK_NLelwQ">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Trigger"/>
+  </elementImport>
+  <elementImport xmi:id="_3kotGBZYEd-DIOK_NLelwQ">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Message"/>
+  </elementImport>
+  <elementImport xmi:id="_3kotGRZYEd-DIOK_NLelwQ">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#AcceptEventAction"/>
+  </elementImport>
+  <elementImport xmi:id="_3kotGhZYEd-DIOK_NLelwQ">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ReadStructuralFeatureAction"/>
+  </elementImport>
+  <elementImport xmi:id="_3kotGxZYEd-DIOK_NLelwQ">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#WriteStructuralFeatureAction"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3kotHBZYEd-DIOK_NLelwQ" name="TestContext">
+    <ownedAttribute xmi:id="_3kotHRZYEd-DIOK_NLelwQ" name="arbiter">
+      <type xmi:type="uml:Interface" href="UTPPredefined.library.uml#_3kyfLxZYEd-DIOK_NLelwQ"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_3kotHhZYEd-DIOK_NLelwQ" name="base_StructuredClassifier" association="_3kotIBZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#StructuredClassifier"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_3kotHxZYEd-DIOK_NLelwQ" name="scheduler">
+      <type xmi:type="uml:Interface" href="UTPPredefined.library.uml#_3kyfJxZYEd-DIOK_NLelwQ"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotIBZYEd-DIOK_NLelwQ" name="StructuredClassifier_TestContext" memberEnd="_3kotIRZYEd-DIOK_NLelwQ _3kotHhZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotIRZYEd-DIOK_NLelwQ" name="extension_TestContext" type="_3kotHBZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotIBZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3kotIhZYEd-DIOK_NLelwQ" name="TestComponent">
+    <ownedAttribute xmi:id="_3kotIxZYEd-DIOK_NLelwQ" name="zone">
+      <type xmi:type="uml:Class" href="UTPPredefined.library.uml#_3kyfJRZYEd-DIOK_NLelwQ"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3kotJBZYEd-DIOK_NLelwQ"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_3kotJRZYEd-DIOK_NLelwQ" value=""/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_3kotJhZYEd-DIOK_NLelwQ" name="base_StructuredClassifier" association="_3kotJxZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#StructuredClassifier"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotJxZYEd-DIOK_NLelwQ" name="StructuredClassifier_TestComponent" memberEnd="_3kotKBZYEd-DIOK_NLelwQ _3kotJhZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotKBZYEd-DIOK_NLelwQ" name="extension_TestComponent" type="_3kotIhZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotJxZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3kotKRZYEd-DIOK_NLelwQ" name="SUT">
+    <ownedAttribute xmi:id="_3kotKhZYEd-DIOK_NLelwQ" name="base_Property" association="_3kotKxZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotKxZYEd-DIOK_NLelwQ" name="Property_SUT" memberEnd="_3kotLBZYEd-DIOK_NLelwQ _3kotKhZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotLBZYEd-DIOK_NLelwQ" name="extension_SUT" type="_3kotKRZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotKxZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3kotLRZYEd-DIOK_NLelwQ" name="Default">
+    <ownedAttribute xmi:id="_3kotLhZYEd-DIOK_NLelwQ" name="base_Behavior" association="_3kotLxZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Behavior"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotLxZYEd-DIOK_NLelwQ" name="Behavior_Default" memberEnd="_3kotMBZYEd-DIOK_NLelwQ _3kotLhZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotMBZYEd-DIOK_NLelwQ" name="extension_Default" type="_3kotLRZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotLxZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3kotMRZYEd-DIOK_NLelwQ" name="DefaultApplication">
+    <ownedAttribute xmi:id="_3kotMhZYEd-DIOK_NLelwQ" name="base_Dependency" association="_3kotMxZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Dependency"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotMxZYEd-DIOK_NLelwQ" name="Dependency_DefaultApplication" memberEnd="_3kotNBZYEd-DIOK_NLelwQ _3kotMhZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotNBZYEd-DIOK_NLelwQ" name="extension_DefaultApplication" type="_3kotMRZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotMxZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Enumeration" xmi:id="_3kotNRZYEd-DIOK_NLelwQ" name="InteractionOperator">
+    <ownedLiteral xmi:id="_3kotNhZYEd-DIOK_NLelwQ" name="seq"/>
+    <ownedLiteral xmi:id="_3kotNxZYEd-DIOK_NLelwQ" name="alt"/>
+    <ownedLiteral xmi:id="_3kotOBZYEd-DIOK_NLelwQ" name="opt"/>
+    <ownedLiteral xmi:id="_3kotORZYEd-DIOK_NLelwQ" name="break"/>
+    <ownedLiteral xmi:id="_3kotOhZYEd-DIOK_NLelwQ" name="par"/>
+    <ownedLiteral xmi:id="_3kotOxZYEd-DIOK_NLelwQ" name="strict"/>
+    <ownedLiteral xmi:id="_3kotPBZYEd-DIOK_NLelwQ" name="loop"/>
+    <ownedLiteral xmi:id="_3kotPRZYEd-DIOK_NLelwQ" name="region"/>
+    <ownedLiteral xmi:id="_3kotPhZYEd-DIOK_NLelwQ" name="neg"/>
+    <ownedLiteral xmi:id="_3kotPxZYEd-DIOK_NLelwQ" name="assert"/>
+    <ownedLiteral xmi:id="_3kotQBZYEd-DIOK_NLelwQ" name="ignore"/>
+    <ownedLiteral xmi:id="_3kotQRZYEd-DIOK_NLelwQ" name="consider"/>
+    <ownedLiteral xmi:id="_3kotQhZYEd-DIOK_NLelwQ" name="determAlt"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3kotQxZYEd-DIOK_NLelwQ" name="FinishAction">
+    <ownedAttribute xmi:id="_3kotRBZYEd-DIOK_NLelwQ" name="base_Action" association="_3kotRRZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Action"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotRRZYEd-DIOK_NLelwQ" name="Action_FinishAction" memberEnd="_3kotRhZYEd-DIOK_NLelwQ _3kotRBZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotRhZYEd-DIOK_NLelwQ" name="extension_FinishAction" type="_3kotQxZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotRRZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3kotRxZYEd-DIOK_NLelwQ" name="LogAction">
+    <ownedAttribute xmi:id="_3kotSBZYEd-DIOK_NLelwQ" name="base_SendObjectAction" association="_3kotSRZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#SendObjectAction"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotSRZYEd-DIOK_NLelwQ" name="SendObjectAction_LogAction" memberEnd="_3kotShZYEd-DIOK_NLelwQ _3kotSBZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotShZYEd-DIOK_NLelwQ" name="extension_LogAction" type="_3kotRxZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotSRZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3kotSxZYEd-DIOK_NLelwQ" name="TestCase">
+    <ownedAttribute xmi:id="_3kotTBZYEd-DIOK_NLelwQ" name="base_Operation" association="_3kotThZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Operation"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_3kotTRZYEd-DIOK_NLelwQ" name="base_Behavior" association="_3kotUBZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Behavior"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotThZYEd-DIOK_NLelwQ" name="Operation_TestCase" memberEnd="_3kotTxZYEd-DIOK_NLelwQ _3kotTBZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotTxZYEd-DIOK_NLelwQ" name="extension_TestCase" type="_3kotSxZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotThZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotUBZYEd-DIOK_NLelwQ" name="Behavior_TestCase" memberEnd="_3kotURZYEd-DIOK_NLelwQ _3kotTRZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotURZYEd-DIOK_NLelwQ" name="extension_TestCase" type="_3kotSxZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotUBZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3kotUhZYEd-DIOK_NLelwQ" name="TestObjective">
+    <ownedAttribute xmi:id="_3kotUxZYEd-DIOK_NLelwQ" name="base_Dependency" association="_3kotVBZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Dependency"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotVBZYEd-DIOK_NLelwQ" name="Dependency_TestObjective" memberEnd="_3kotVRZYEd-DIOK_NLelwQ _3kotUxZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotVRZYEd-DIOK_NLelwQ" name="extension_TestObjective" type="_3kotUhZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotVBZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3kotVhZYEd-DIOK_NLelwQ" name="ValidationAction">
+    <ownedAttribute xmi:id="_3kotVxZYEd-DIOK_NLelwQ" name="base_CallOperationAction" association="_3kotWBZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#CallOperationAction"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotWBZYEd-DIOK_NLelwQ" name="CallOperationAction_ValidationAction" memberEnd="_3kotWRZYEd-DIOK_NLelwQ _3kotVxZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotWRZYEd-DIOK_NLelwQ" name="extension_ValidationAction" type="_3kotVhZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotWBZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3kotWhZYEd-DIOK_NLelwQ" name="TestLog">
+    <ownedAttribute xmi:id="_3kotWxZYEd-DIOK_NLelwQ" name="base_Behavior" association="_3kotXBZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Behavior"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotXBZYEd-DIOK_NLelwQ" name="Behavior_TestLog" memberEnd="_3kotXRZYEd-DIOK_NLelwQ _3kotWxZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotXRZYEd-DIOK_NLelwQ" name="extension_TestLog" type="_3kotWhZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotXBZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3kotXhZYEd-DIOK_NLelwQ" name="TestLogApplication">
+    <ownedAttribute xmi:id="_3kotXxZYEd-DIOK_NLelwQ" name="base_Dependency" association="_3kotYBZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Dependency"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotYBZYEd-DIOK_NLelwQ" name="Dependency_TestLogApplication" memberEnd="_3kotYRZYEd-DIOK_NLelwQ _3kotXxZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotYRZYEd-DIOK_NLelwQ" name="extension_TestLogApplication" type="_3kotXhZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotYBZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3kotYhZYEd-DIOK_NLelwQ" name="CodingRule">
+    <ownedAttribute xmi:id="_3kotYxZYEd-DIOK_NLelwQ" name="base_Property" association="_3kotZxZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_3kotZBZYEd-DIOK_NLelwQ" name="base_ValueSpecification" association="_3kotaRZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ValueSpecification"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_3kotZRZYEd-DIOK_NLelwQ" name="base_Namespace" association="_3kotaxZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Namespace"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_3kotZhZYEd-DIOK_NLelwQ" name="coding">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotZxZYEd-DIOK_NLelwQ" name="Property_CodingRule" memberEnd="_3kotaBZYEd-DIOK_NLelwQ _3kotYxZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotaBZYEd-DIOK_NLelwQ" name="extension_CodingRule" type="_3kotYhZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotZxZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotaRZYEd-DIOK_NLelwQ" name="ValueSpecification_CodingRule" memberEnd="_3kotahZYEd-DIOK_NLelwQ _3kotZBZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotahZYEd-DIOK_NLelwQ" name="extension_CodingRule" type="_3kotYhZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotaRZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotaxZYEd-DIOK_NLelwQ" name="Namespace_CodingRule" memberEnd="_3kotbBZYEd-DIOK_NLelwQ _3kotZRZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotbBZYEd-DIOK_NLelwQ" name="extension_CodingRule" type="_3kotYhZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotaxZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3kotbRZYEd-DIOK_NLelwQ" name="DataPool">
+    <ownedAttribute xmi:id="_3kotbhZYEd-DIOK_NLelwQ" name="base_Property" association="_3kotcBZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_3kotbxZYEd-DIOK_NLelwQ" name="base_Classifier" association="_3kotchZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Classifier"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotcBZYEd-DIOK_NLelwQ" name="Property_DataPool" memberEnd="_3kotcRZYEd-DIOK_NLelwQ _3kotbhZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotcRZYEd-DIOK_NLelwQ" name="extension_DataPool" type="_3kotbRZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotcBZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotchZYEd-DIOK_NLelwQ" name="Classifier_DataPool" memberEnd="_3kotcxZYEd-DIOK_NLelwQ _3kotbxZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotcxZYEd-DIOK_NLelwQ" name="extension_DataPool" type="_3kotbRZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotchZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3kotdBZYEd-DIOK_NLelwQ" name="DataPartition">
+    <ownedAttribute xmi:id="_3kotdRZYEd-DIOK_NLelwQ" name="base_Classifier" association="_3kotdhZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Classifier"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotdhZYEd-DIOK_NLelwQ" name="Classifier_DataPartition" memberEnd="_3kotdxZYEd-DIOK_NLelwQ _3kotdRZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotdxZYEd-DIOK_NLelwQ" name="extension_DataPartition" type="_3kotdBZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotdhZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3koteBZYEd-DIOK_NLelwQ" name="DataSelector">
+    <ownedAttribute xmi:id="_3koteRZYEd-DIOK_NLelwQ" name="base_Operation" association="_3kotehZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Operation"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotehZYEd-DIOK_NLelwQ" name="Operation_DataSelector" memberEnd="_3kotexZYEd-DIOK_NLelwQ _3koteRZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotexZYEd-DIOK_NLelwQ" name="extension_DataSelector" type="_3koteBZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotehZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3kotfBZYEd-DIOK_NLelwQ" name="LiteralAny">
+    <ownedAttribute xmi:id="_3kotfRZYEd-DIOK_NLelwQ" name="base_LiteralSpecification" association="_3kotfhZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#LiteralSpecification"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotfhZYEd-DIOK_NLelwQ" name="LiteralSpecification_LiteralAny" memberEnd="_3kotfxZYEd-DIOK_NLelwQ _3kotfRZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotfxZYEd-DIOK_NLelwQ" name="extension_LiteralAny" type="_3kotfBZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotfhZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3kotgBZYEd-DIOK_NLelwQ" name="LiteralAnyOrNull">
+    <ownedAttribute xmi:id="_3kotgRZYEd-DIOK_NLelwQ" name="base_LiteralSpecification" association="_3kotghZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#LiteralSpecification"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotghZYEd-DIOK_NLelwQ" name="LiteralSpecification_LiteralAnyOrNull" memberEnd="_3kotgxZYEd-DIOK_NLelwQ _3kotgRZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotgxZYEd-DIOK_NLelwQ" name="extension_LiteralAnyOrNull" type="_3kotgBZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotghZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3kothBZYEd-DIOK_NLelwQ" name="TimeOut">
+    <ownedAttribute xmi:id="_3kothRZYEd-DIOK_NLelwQ" name="base_Trigger" association="_3kothhZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Trigger"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kothhZYEd-DIOK_NLelwQ" name="Trigger_TimeOut" memberEnd="_3kothxZYEd-DIOK_NLelwQ _3kothRZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kothxZYEd-DIOK_NLelwQ" name="extension_TimeOut" type="_3kothBZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kothhZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3kotiBZYEd-DIOK_NLelwQ" name="TimeOutMessage">
+    <ownedAttribute xmi:id="_3kotiRZYEd-DIOK_NLelwQ" name="base_Message" association="_3kotihZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Message"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotihZYEd-DIOK_NLelwQ" name="Message_TimeOutMessage" memberEnd="_3kotixZYEd-DIOK_NLelwQ _3kotiRZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotixZYEd-DIOK_NLelwQ" name="extension_TimeOutMessage" type="_3kotiBZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotihZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3kotjBZYEd-DIOK_NLelwQ" name="TimeOutAction">
+    <ownedAttribute xmi:id="_3kotjRZYEd-DIOK_NLelwQ" name="base_AcceptEventAction" association="_3kotjhZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#AcceptEventAction"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotjhZYEd-DIOK_NLelwQ" name="AcceptEventAction_TimeOutAction" memberEnd="_3kotjxZYEd-DIOK_NLelwQ _3kotjRZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotjxZYEd-DIOK_NLelwQ" name="extension_TimeOutAction" type="_3kotjBZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotjhZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3kotkBZYEd-DIOK_NLelwQ" name="StartTimerAction">
+    <ownedAttribute xmi:id="_3kotkRZYEd-DIOK_NLelwQ" name="base_CallOperationAction" association="_3kotkhZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#CallOperationAction"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotkhZYEd-DIOK_NLelwQ" name="CallOperationAction_StartTimerAction" memberEnd="_3kotkxZYEd-DIOK_NLelwQ _3kotkRZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotkxZYEd-DIOK_NLelwQ" name="extension_StartTimerAction" type="_3kotkBZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotkhZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3kotlBZYEd-DIOK_NLelwQ" name="StopTimerAction">
+    <ownedAttribute xmi:id="_3kotlRZYEd-DIOK_NLelwQ" name="base_CallOperationAction" association="_3kotlhZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#CallOperationAction"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotlhZYEd-DIOK_NLelwQ" name="CallOperationAction_StopTimerAction" memberEnd="_3kotlxZYEd-DIOK_NLelwQ _3kotlRZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotlxZYEd-DIOK_NLelwQ" name="extension_StopTimerAction" type="_3kotlBZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotlhZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3kotmBZYEd-DIOK_NLelwQ" name="ReadTimerAction">
+    <ownedAttribute xmi:id="_3kotmRZYEd-DIOK_NLelwQ" name="base_CallOperationAction" association="_3kotmhZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#CallOperationAction"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotmhZYEd-DIOK_NLelwQ" name="CallOperationAction_ReadTimerAction" memberEnd="_3kotmxZYEd-DIOK_NLelwQ _3kotmRZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotmxZYEd-DIOK_NLelwQ" name="extension_ReadTimerAction" type="_3kotmBZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotmhZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3kotnBZYEd-DIOK_NLelwQ" name="TimerRunningAction">
+    <ownedAttribute xmi:id="_3kotnRZYEd-DIOK_NLelwQ" name="base_ReadStructuralFeatureAction" association="_3kotnhZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ReadStructuralFeatureAction"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotnhZYEd-DIOK_NLelwQ" name="ReadStructuralFeatureAction_TimerRunningAction" memberEnd="_3kotnxZYEd-DIOK_NLelwQ _3kotnRZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotnxZYEd-DIOK_NLelwQ" name="extension_TimerRunningAction" type="_3kotnBZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotnhZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3kotoBZYEd-DIOK_NLelwQ" name="GetTimezoneAction">
+    <ownedAttribute xmi:id="_3kotoRZYEd-DIOK_NLelwQ" name="base_ReadStructuralFeatureAction" association="_3kotohZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ReadStructuralFeatureAction"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotohZYEd-DIOK_NLelwQ" name="ReadStructuralFeatureAction_GetTimezoneAction" memberEnd="_3kotoxZYEd-DIOK_NLelwQ _3kotoRZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotoxZYEd-DIOK_NLelwQ" name="extension_GetTimezoneAction" type="_3kotoBZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotohZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_3kotpBZYEd-DIOK_NLelwQ" name="SetTimezoneAction">
+    <ownedAttribute xmi:id="_3kotpRZYEd-DIOK_NLelwQ" name="base_WriteStructuralFeatureAction" association="_3kotphZYEd-DIOK_NLelwQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#WriteStructuralFeatureAction"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_3kotphZYEd-DIOK_NLelwQ" name="WriteStructuralFeatureAction_SetTimezoneAction" memberEnd="_3kotpxZYEd-DIOK_NLelwQ _3kotpRZYEd-DIOK_NLelwQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_3kotpxZYEd-DIOK_NLelwQ" name="extension_SetTimezoneAction" type="_3kotpBZYEd-DIOK_NLelwQ" aggregation="composite" association="_3kotphZYEd-DIOK_NLelwQ"/>
+  </packagedElement>
+</uml:Profile>

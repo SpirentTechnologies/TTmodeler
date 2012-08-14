@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmlns:utp="http:///schemas/utp/_jfnNQP1JEdutkb3Be6e_HQ/0" xsi:schemaLocation="http:///schemas/utp/_jfnNQP1JEdutkb3Be6e_HQ/0 utp.profile.uml#_3kosZhZYEd-DIOK_NLelwQ">
+  <uml:Model xmi:id="_3kyevBZYEd-DIOK_NLelwQ" name="SimplePing">
+    <packageImport xmi:id="_3kyevRZYEd-DIOK_NLelwQ">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_3kyevhZYEd-DIOK_NLelwQ" name="root">
+      <packagedElement xmi:type="uml:Interface" xmi:id="_3kyevxZYEd-DIOK_NLelwQ" name="PingInterface">
+        <ownedOperation xmi:id="_3kyewBZYEd-DIOK_NLelwQ" name="ping">
+          <ownedParameter xmi:id="_3kyewRZYEd-DIOK_NLelwQ" name="ttl">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_3kyewhZYEd-DIOK_NLelwQ" name="result" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_3kyewxZYEd-DIOK_NLelwQ" name="EchoServer">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_3kyexBZYEd-DIOK_NLelwQ" name="pingServerPort" type="_3kyexRZYEd-DIOK_NLelwQ"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_3kyexRZYEd-DIOK_NLelwQ" name="PortClassProvided" visibility="private" clientDependency="_3kyexhZYEd-DIOK_NLelwQ">
+          <interfaceRealization xmi:id="_3kyexhZYEd-DIOK_NLelwQ" supplier="_3kyevxZYEd-DIOK_NLelwQ" client="_3kyexRZYEd-DIOK_NLelwQ" contract="_3kyevxZYEd-DIOK_NLelwQ"/>
+        </nestedClassifier>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_3kyexxZYEd-DIOK_NLelwQ" name="EchoClient">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_3kyeyBZYEd-DIOK_NLelwQ" name="pingClientPort" type="_3kyeyRZYEd-DIOK_NLelwQ"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_3kyeyRZYEd-DIOK_NLelwQ" name="PortClassRequired" visibility="private" clientDependency="_3kye4xZYEd-DIOK_NLelwQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_3kyeyhZYEd-DIOK_NLelwQ" name="TestSuite" clientDependency="_3kye7RZYEd-DIOK_NLelwQ _3kye7hZYEd-DIOK_NLelwQ">
+        <ownedAttribute xmi:id="_3kyeyxZYEd-DIOK_NLelwQ" name="echoclient" visibility="private" type="_3kyexxZYEd-DIOK_NLelwQ" aggregation="composite"/>
+        <ownedAttribute xmi:id="_3kyezBZYEd-DIOK_NLelwQ" name="echoserver" visibility="private" type="_3kyewxZYEd-DIOK_NLelwQ" aggregation="composite"/>
+        <ownedConnector xmi:id="_3kyezRZYEd-DIOK_NLelwQ" name="ethernet" kind="assembly">
+          <end xmi:id="_3kyezhZYEd-DIOK_NLelwQ" partWithPort="_3kyezBZYEd-DIOK_NLelwQ" role="_3kyexBZYEd-DIOK_NLelwQ"/>
+          <end xmi:id="_3kyezxZYEd-DIOK_NLelwQ" partWithPort="_3kyeyxZYEd-DIOK_NLelwQ" role="_3kyeyBZYEd-DIOK_NLelwQ"/>
+        </ownedConnector>
+        <ownedBehavior xmi:type="uml:Interaction" xmi:id="_3kye0BZYEd-DIOK_NLelwQ" name="pingTestInteraction" specification="_3kye4hZYEd-DIOK_NLelwQ">
+          <lifeline xmi:id="_3kye0RZYEd-DIOK_NLelwQ" represents="_3kyeyxZYEd-DIOK_NLelwQ" coveredBy="_3kye3BZYEd-DIOK_NLelwQ _3kye0xZYEd-DIOK_NLelwQ _3kye1xZYEd-DIOK_NLelwQ _3kye2BZYEd-DIOK_NLelwQ _3kye2RZYEd-DIOK_NLelwQ _3kye2hZYEd-DIOK_NLelwQ _3kye2xZYEd-DIOK_NLelwQ"/>
+          <lifeline xmi:id="_3kye0hZYEd-DIOK_NLelwQ" represents="_3kyezBZYEd-DIOK_NLelwQ" coveredBy="_3kye3RZYEd-DIOK_NLelwQ _3kye1BZYEd-DIOK_NLelwQ _3kye1RZYEd-DIOK_NLelwQ _3kye1hZYEd-DIOK_NLelwQ"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_3kye0xZYEd-DIOK_NLelwQ" covered="_3kye0RZYEd-DIOK_NLelwQ" event="_3kye5BZYEd-DIOK_NLelwQ" message="_3kye3hZYEd-DIOK_NLelwQ"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_3kye1BZYEd-DIOK_NLelwQ" covered="_3kye0hZYEd-DIOK_NLelwQ" event="_3kye5RZYEd-DIOK_NLelwQ" message="_3kye3hZYEd-DIOK_NLelwQ"/>
+          <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_3kye1RZYEd-DIOK_NLelwQ" covered="_3kye0hZYEd-DIOK_NLelwQ" start="_3kye1BZYEd-DIOK_NLelwQ" finish="_3kye1hZYEd-DIOK_NLelwQ"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_3kye1hZYEd-DIOK_NLelwQ" covered="_3kye0hZYEd-DIOK_NLelwQ" event="_3kye5BZYEd-DIOK_NLelwQ" message="_3kye3xZYEd-DIOK_NLelwQ"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_3kye1xZYEd-DIOK_NLelwQ" covered="_3kye0RZYEd-DIOK_NLelwQ" event="_3kye5RZYEd-DIOK_NLelwQ" message="_3kye3xZYEd-DIOK_NLelwQ"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_3kye2BZYEd-DIOK_NLelwQ" covered="_3kye0RZYEd-DIOK_NLelwQ" event="_3kye6BZYEd-DIOK_NLelwQ" message="_3kye4BZYEd-DIOK_NLelwQ"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_3kye2RZYEd-DIOK_NLelwQ" name="" covered="_3kye0RZYEd-DIOK_NLelwQ" event="_3kye6RZYEd-DIOK_NLelwQ" message="_3kye4BZYEd-DIOK_NLelwQ"/>
+          <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_3kye2hZYEd-DIOK_NLelwQ" covered="_3kye0RZYEd-DIOK_NLelwQ" start="_3kye2RZYEd-DIOK_NLelwQ" finish="_3kye2xZYEd-DIOK_NLelwQ"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_3kye2xZYEd-DIOK_NLelwQ" covered="_3kye0RZYEd-DIOK_NLelwQ" event="_3kye7BZYEd-DIOK_NLelwQ" execution="_3kye2hZYEd-DIOK_NLelwQ"/>
+          <fragment xmi:type="uml:OccurrenceSpecification" xmi:id="_3kye3BZYEd-DIOK_NLelwQ" covered="_3kye0RZYEd-DIOK_NLelwQ" event="_3kye5hZYEd-DIOK_NLelwQ"/>
+          <fragment xmi:type="uml:OccurrenceSpecification" xmi:id="_3kye3RZYEd-DIOK_NLelwQ" covered="_3kye0hZYEd-DIOK_NLelwQ" event="_3kye5xZYEd-DIOK_NLelwQ"/>
+          <message xmi:id="_3kye3hZYEd-DIOK_NLelwQ" name="ping" receiveEvent="_3kye1BZYEd-DIOK_NLelwQ" sendEvent="_3kye0xZYEd-DIOK_NLelwQ" connector="_3kyezRZYEd-DIOK_NLelwQ"/>
+          <message xmi:id="_3kye3xZYEd-DIOK_NLelwQ" name="ping" messageSort="reply" receiveEvent="_3kye1xZYEd-DIOK_NLelwQ" sendEvent="_3kye1hZYEd-DIOK_NLelwQ" connector="_3kyezRZYEd-DIOK_NLelwQ"/>
+          <message xmi:id="_3kye4BZYEd-DIOK_NLelwQ" name="setVerdict" messageSort="asynchCall" receiveEvent="_3kye2RZYEd-DIOK_NLelwQ" sendEvent="_3kye2BZYEd-DIOK_NLelwQ">
+            <argument xmi:type="uml:LiteralString" xmi:id="_3kye4RZYEd-DIOK_NLelwQ" value="pass"/>
+          </message>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_3kye4hZYEd-DIOK_NLelwQ" name="pingTest" method="_3kye0BZYEd-DIOK_NLelwQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_3kye4xZYEd-DIOK_NLelwQ" supplier="_3kyevxZYEd-DIOK_NLelwQ" client="_3kyeyRZYEd-DIOK_NLelwQ"/>
+      <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_3kye5BZYEd-DIOK_NLelwQ" name="SendOperationEvent2" operation="_3kyewBZYEd-DIOK_NLelwQ"/>
+      <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_3kye5RZYEd-DIOK_NLelwQ" name="ReceiveOperationEvent2" operation="_3kyewBZYEd-DIOK_NLelwQ"/>
+      <packagedElement xmi:type="uml:DestructionEvent" xmi:id="_3kye5hZYEd-DIOK_NLelwQ" name="DestructionEvent1"/>
+      <packagedElement xmi:type="uml:DestructionEvent" xmi:id="_3kye5xZYEd-DIOK_NLelwQ" name="DestructionEvent2"/>
+      <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_3kye6BZYEd-DIOK_NLelwQ" name="SendOperationEvent3">
+        <operation href="UTPPredefined.library.uml#_3kyfMhZYEd-DIOK_NLelwQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_3kye6RZYEd-DIOK_NLelwQ" name="ReceiveOperationEvent3">
+        <operation href="UTPPredefined.library.uml#_3kyfMhZYEd-DIOK_NLelwQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_3kye6hZYEd-DIOK_NLelwQ" name=""/>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_3kye6xZYEd-DIOK_NLelwQ" name="ExecutionEvent1"/>
+      <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_3kye7BZYEd-DIOK_NLelwQ" name="ExecutionEvent2"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_3kye7RZYEd-DIOK_NLelwQ" supplier="_3kyewxZYEd-DIOK_NLelwQ" client="_3kyeyhZYEd-DIOK_NLelwQ"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_3kye7hZYEd-DIOK_NLelwQ" supplier="_3kyexxZYEd-DIOK_NLelwQ" client="_3kyeyhZYEd-DIOK_NLelwQ"/>
+    </packagedElement>
+    <profileApplication xmi:id="_3kye7xZYEd-DIOK_NLelwQ">
+      <eAnnotations xmi:id="_3kye8BZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:id="_3kye8RZYEd-DIOK_NLelwQ">
+      <eAnnotations xmi:id="_3kye8hZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="Default.profile.uml#_3kygNxZYEd-DIOK_NLelwQ"/>
+      </eAnnotations>
+      <appliedProfile href="Default.profile.uml#_3kygNRZYEd-DIOK_NLelwQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_3kye8xZYEd-DIOK_NLelwQ">
+      <eAnnotations xmi:id="_3kye9BZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="Deployment.profile.uml#_3kycdRZYEd-DIOK_NLelwQ"/>
+      </eAnnotations>
+      <appliedProfile href="Deployment.profile.uml#_3kyccxZYEd-DIOK_NLelwQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_3kye9RZYEd-DIOK_NLelwQ">
+      <eAnnotations xmi:id="_3kye9hZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="utp.profile.uml#_3kosZhZYEd-DIOK_NLelwQ"/>
+      </eAnnotations>
+      <appliedProfile href="utp.profile.uml#_3kosZBZYEd-DIOK_NLelwQ"/>
+    </profileApplication>
+  </uml:Model>
+  <utp:TestComponent xmi:id="_3kye9xZYEd-DIOK_NLelwQ" base_StructuredClassifier="_3kyexxZYEd-DIOK_NLelwQ"/>
+  <utp:TestContext xmi:id="_3kye-BZYEd-DIOK_NLelwQ" base_StructuredClassifier="_3kyeyhZYEd-DIOK_NLelwQ"/>
+  <utp:SUT xmi:id="_3kye-RZYEd-DIOK_NLelwQ" base_Property="_3kyezBZYEd-DIOK_NLelwQ"/>
+  <utp:TestCase xmi:id="_3kye-hZYEd-DIOK_NLelwQ" base_Operation="_3kye4hZYEd-DIOK_NLelwQ"/>
+</xmi:XMI>

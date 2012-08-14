@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmlns:utp="http:///schemas/utp/_jfnNQP1JEdutkb3Be6e_HQ/0" xsi:schemaLocation="http:///schemas/utp/_jfnNQP1JEdutkb3Be6e_HQ/0 utp.profile.uml#_iJlZiP21Ed2lbZNz8Ihdhg">
+  <uml:Model xmi:id="_iJlXBf21Ed2lbZNz8Ihdhg" name="GenericSMExample">
+    <packageImport xmi:id="_iJlXBv21Ed2lbZNz8Ihdhg">
+      <importedPackage xmi:type="uml:Model" href="UTPPredefined.library.uml#_iJlRZf21Ed2lbZNz8Ihdhg"/>
+    </packageImport>
+    <packageImport xmi:id="_iJlXB_21Ed2lbZNz8Ihdhg">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_iJlXCP21Ed2lbZNz8Ihdhg" name="TestSystemPackage">
+      <packagedElement xmi:type="uml:Class" xmi:id="_iJlXCf21Ed2lbZNz8Ihdhg" name="TestSuite" clientDependency="_iJlX_P21Ed2lbZNz8Ihdhg _iJlYIv21Ed2lbZNz8Ihdhg">
+        <ownedAttribute xmi:id="_iJlXCv21Ed2lbZNz8Ihdhg" name="sut" visibility="public" type="_iJlYJP21Ed2lbZNz8Ihdhg"/>
+        <ownedAttribute xmi:id="_iJlXC_21Ed2lbZNz8Ihdhg" name="testComp" visibility="public" type="_iJlX_f21Ed2lbZNz8Ihdhg"/>
+        <ownedConnector xmi:id="_iJlXDP21Ed2lbZNz8Ihdhg" name="sutPort - testCompPort" kind="assembly">
+          <end xmi:id="_iJlXDf21Ed2lbZNz8Ihdhg" partWithPort="_iJlXC_21Ed2lbZNz8Ihdhg" role="_iJlX_v21Ed2lbZNz8Ihdhg"/>
+          <end xmi:id="_iJlXDv21Ed2lbZNz8Ihdhg" partWithPort="_iJlXCv21Ed2lbZNz8Ihdhg" role="_iJlYJf21Ed2lbZNz8Ihdhg"/>
+        </ownedConnector>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_iJlXD_21Ed2lbZNz8Ihdhg" name="Call_TC_SM" clientDependency="_iJlX-_21Ed2lbZNz8Ihdhg _iJlYAv21Ed2lbZNz8Ihdhg" specification="_iJlX9f21Ed2lbZNz8Ihdhg">
+          <ownedAttribute xmi:id="_iJlXEP21Ed2lbZNz8Ihdhg" name="timer1" visibility="private">
+            <type xmi:type="uml:Interface" href="UTPPredefined.library.uml#_iJlRe_21Ed2lbZNz8Ihdhg"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_iJlXEf21Ed2lbZNz8Ihdhg" value="3">
+              <type xmi:type="uml:Interface" href="UTPPredefined.library.uml#_iJlRe_21Ed2lbZNz8Ihdhg"/>
+            </defaultValue>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_iJlXEv21Ed2lbZNz8Ihdhg" name="testComp" visibility="private" type="_iJlX_f21Ed2lbZNz8Ihdhg">
+            <eAnnotations xmi:id="_iJlXE_21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_iJlXFP21Ed2lbZNz8Ihdhg" key="runsOn"/>
+            </eAnnotations>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_iJlXFf21Ed2lbZNz8Ihdhg" name="extInitInt" visibility="private">
+            <eAnnotations xmi:id="_iJlXFv21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_iJlXF_21Ed2lbZNz8Ihdhg" key="externalInit"/>
+            </eAnnotations>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_iJlXGP21Ed2lbZNz8Ihdhg" name="unInitializedString" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_iJlXGf21Ed2lbZNz8Ihdhg" name="inputNumber" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_iJlXGv21Ed2lbZNz8Ihdhg" value="5">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </defaultValue>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_iJlXG_21Ed2lbZNz8Ihdhg" name="result" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_iJlXHP21Ed2lbZNz8Ihdhg">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            </defaultValue>
+          </ownedAttribute>
+          <nestedClassifier xmi:type="uml:Signal" xmi:id="_iJlXHf21Ed2lbZNz8Ihdhg" name="SUTException">
+            <ownedAttribute xmi:id="_iJlXHv21Ed2lbZNz8Ihdhg" name="type" visibility="private" type="_iJlYLP21Ed2lbZNz8Ihdhg"/>
+          </nestedClassifier>
+          <region xmi:id="_iJlXH_21Ed2lbZNz8Ihdhg" name="Region1" visibility="private">
+            <subvertex xmi:type="uml:State" xmi:id="_iJlXIP21Ed2lbZNz8Ihdhg" name="VERDICT_PASS" visibility="private">
+              <doActivity xmi:type="uml:Activity" xmi:id="_iJlXIf21Ed2lbZNz8Ihdhg" name="setVerdictPass" visibility="private">
+                <node xmi:type="uml:CallOperationAction" xmi:id="_iJlXIv21Ed2lbZNz8Ihdhg" name="">
+                  <argument xmi:id="_iJlXI_21Ed2lbZNz8Ihdhg" name="v" ordering="unordered">
+                    <eAnnotations xmi:id="_iJlXJP21Ed2lbZNz8Ihdhg" source="Parameter">
+                      <references xmi:type="uml:Parameter" href="UTPPredefined.library.uml#_iJlRdf21Ed2lbZNz8Ihdhg"/>
+                    </eAnnotations>
+                    <ownedComment xmi:id="_iJlXJf21Ed2lbZNz8Ihdhg" annotatedElement="_iJlXI_21Ed2lbZNz8Ihdhg">
+                      <eAnnotations xmi:id="_iJlXJv21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                        <details xmi:id="_iJlXJ_21Ed2lbZNz8Ihdhg" key="value"/>
+                      </eAnnotations>
+                      <body>pass&lt;br /></body>
+                    </ownedComment>
+                    <type xmi:type="uml:Enumeration" href="UTPPredefined.library.uml#_iJlRdv21Ed2lbZNz8Ihdhg"/>
+                  </argument>
+                  <operation href="UTPPredefined.library.uml#_iJlRdP21Ed2lbZNz8Ihdhg"/>
+                </node>
+              </doActivity>
+            </subvertex>
+            <subvertex xmi:type="uml:State" xmi:id="_iJlXKP21Ed2lbZNz8Ihdhg" name="VERDICT_FAIL" visibility="private">
+              <doActivity xmi:type="uml:Activity" xmi:id="_iJlXKf21Ed2lbZNz8Ihdhg" name="setVerdictFail" visibility="private">
+                <node xmi:type="uml:CallOperationAction" xmi:id="_iJlXKv21Ed2lbZNz8Ihdhg" name="">
+                  <argument xmi:id="_iJlXK_21Ed2lbZNz8Ihdhg" name="v" ordering="unordered">
+                    <eAnnotations xmi:id="_iJlXLP21Ed2lbZNz8Ihdhg" source="Parameter">
+                      <references xmi:type="uml:Parameter" href="UTPPredefined.library.uml#_iJlRdf21Ed2lbZNz8Ihdhg"/>
+                    </eAnnotations>
+                    <ownedComment xmi:id="_iJlXLf21Ed2lbZNz8Ihdhg" annotatedElement="_iJlXK_21Ed2lbZNz8Ihdhg">
+                      <eAnnotations xmi:id="_iJlXLv21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                        <details xmi:id="_iJlXL_21Ed2lbZNz8Ihdhg" key="value"/>
+                      </eAnnotations>
+                      <body>fail&lt;br /></body>
+                    </ownedComment>
+                    <type xmi:type="uml:Enumeration" href="UTPPredefined.library.uml#_iJlRdv21Ed2lbZNz8Ihdhg"/>
+                  </argument>
+                  <operation href="UTPPredefined.library.uml#_iJlRdP21Ed2lbZNz8Ihdhg"/>
+                </node>
+              </doActivity>
+            </subvertex>
+            <subvertex xmi:type="uml:State" xmi:id="_iJlXMP21Ed2lbZNz8Ihdhg" name="CALL" visibility="private">
+              <doActivity xmi:type="uml:Activity" xmi:id="_iJlXMf21Ed2lbZNz8Ihdhg" name="call_booleanOp" visibility="private">
+                <node xmi:type="uml:CallOperationAction" xmi:id="_iJlXMv21Ed2lbZNz8Ihdhg" name="" onPort="_iJlX_v21Ed2lbZNz8Ihdhg" operation="_iJlYKf21Ed2lbZNz8Ihdhg">
+                  <argument xmi:id="_iJlXM_21Ed2lbZNz8Ihdhg" name="int" ordering="unordered">
+                    <eAnnotations xmi:id="_iJlXNP21Ed2lbZNz8Ihdhg" source="Parameter" references="_iJlYKv21Ed2lbZNz8Ihdhg"/>
+                    <ownedComment xmi:id="_iJlXNf21Ed2lbZNz8Ihdhg">
+                      <eAnnotations xmi:id="_iJlXNv21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                        <details xmi:id="_iJlXN_21Ed2lbZNz8Ihdhg" key="variable"/>
+                      </eAnnotations>
+                      <body>inputNumber</body>
+                    </ownedComment>
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+                    <upperBound xmi:type="uml:LiteralInteger" xmi:id="_iJlXOP21Ed2lbZNz8Ihdhg" value="1"/>
+                    <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iJlXOf21Ed2lbZNz8Ihdhg" value="1"/>
+                    <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iJlXOv21Ed2lbZNz8Ihdhg" value="1"/>
+                  </argument>
+                  <result xmi:id="_iJlXO_21Ed2lbZNz8Ihdhg" name="isTrue" ordering="unordered">
+                    <eAnnotations xmi:id="_iJlXPP21Ed2lbZNz8Ihdhg" source="Parameter" references="_iJlYK_21Ed2lbZNz8Ihdhg"/>
+                    <ownedComment xmi:id="_iJlXPf21Ed2lbZNz8Ihdhg">
+                      <eAnnotations xmi:id="_iJlXPv21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                        <details xmi:id="_iJlXP_21Ed2lbZNz8Ihdhg" key="variable"/>
+                      </eAnnotations>
+                      <body>result</body>
+                    </ownedComment>
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+                    <upperBound xmi:type="uml:LiteralInteger" xmi:id="_iJlXQP21Ed2lbZNz8Ihdhg" value="1"/>
+                  </result>
+                </node>
+              </doActivity>
+            </subvertex>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_iJlXQf21Ed2lbZNz8Ihdhg" visibility="private"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_iJlXQv21Ed2lbZNz8Ihdhg" name="EVAL" kind="choice"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_iJlXQ_21Ed2lbZNz8Ihdhg"/>
+            <subvertex xmi:type="uml:State" xmi:id="_iJlXRP21Ed2lbZNz8Ihdhg" name="VERDICT_INCONC" visibility="private">
+              <doActivity xmi:type="uml:Activity" xmi:id="_iJlXRf21Ed2lbZNz8Ihdhg" name="setVerdictInconc" visibility="private">
+                <node xmi:type="uml:CallOperationAction" xmi:id="_iJlXRv21Ed2lbZNz8Ihdhg" name="">
+                  <argument xmi:id="_iJlXR_21Ed2lbZNz8Ihdhg" name="v" ordering="unordered">
+                    <eAnnotations xmi:id="_iJlXSP21Ed2lbZNz8Ihdhg" source="Parameter">
+                      <references xmi:type="uml:Parameter" href="UTPPredefined.library.uml#_iJlRdf21Ed2lbZNz8Ihdhg"/>
+                    </eAnnotations>
+                    <ownedComment xmi:id="_iJlXSf21Ed2lbZNz8Ihdhg" annotatedElement="_iJlXR_21Ed2lbZNz8Ihdhg">
+                      <eAnnotations xmi:id="_iJlXSv21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                        <details xmi:id="_iJlXS_21Ed2lbZNz8Ihdhg" key="value"/>
+                      </eAnnotations>
+                      <body>inconc&lt;br /></body>
+                    </ownedComment>
+                    <type xmi:type="uml:Enumeration" href="UTPPredefined.library.uml#_iJlRdv21Ed2lbZNz8Ihdhg"/>
+                  </argument>
+                  <operation href="UTPPredefined.library.uml#_iJlRdP21Ed2lbZNz8Ihdhg"/>
+                </node>
+              </doActivity>
+            </subvertex>
+            <transition xmi:id="_iJlXTP21Ed2lbZNz8Ihdhg" name="timeout" visibility="private" target="_iJlXRP21Ed2lbZNz8Ihdhg" source="_iJlXMP21Ed2lbZNz8Ihdhg">
+              <trigger xmi:id="_iJlXTf21Ed2lbZNz8Ihdhg" name=" callTimeoutTrigger" visibility="private" event="_iJlX-P21Ed2lbZNz8Ihdhg">
+                <eAnnotations xmi:id="_iJlXTv21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_iJlXT_21Ed2lbZNz8Ihdhg" key="after 5.0"/>
+                </eAnnotations>
+              </trigger>
+            </transition>
+            <transition xmi:id="_iJlXUP21Ed2lbZNz8Ihdhg" name="" visibility="private" target="_iJlXQv21Ed2lbZNz8Ihdhg" source="_iJlXMP21Ed2lbZNz8Ihdhg">
+              <eAnnotations xmi:id="_iJlXUf21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_iJlXUv21Ed2lbZNz8Ihdhg" key="reply"/>
+              </eAnnotations>
+            </transition>
+            <transition xmi:id="_iJlXU_21Ed2lbZNz8Ihdhg" name="" visibility="private" target="_iJlXKP21Ed2lbZNz8Ihdhg" source="_iJlXMP21Ed2lbZNz8Ihdhg">
+              <eAnnotations xmi:id="_iJlXVP21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_iJlXVf21Ed2lbZNz8Ihdhg" key="exception"/>
+              </eAnnotations>
+              <trigger xmi:id="_iJlXVv21Ed2lbZNz8Ihdhg" name="" visibility="private" event="_iJlYAf21Ed2lbZNz8Ihdhg"/>
+            </transition>
+            <transition xmi:id="_iJlXV_21Ed2lbZNz8Ihdhg" visibility="private" target="_iJlXQf21Ed2lbZNz8Ihdhg" source="_iJlXKP21Ed2lbZNz8Ihdhg"/>
+            <transition xmi:id="_iJlXWP21Ed2lbZNz8Ihdhg" visibility="private" target="_iJlXQf21Ed2lbZNz8Ihdhg" source="_iJlXIP21Ed2lbZNz8Ihdhg"/>
+            <transition xmi:id="_iJlXWf21Ed2lbZNz8Ihdhg" name="eval1  " visibility="private" guard="_iJlXWv21Ed2lbZNz8Ihdhg" target="_iJlXKP21Ed2lbZNz8Ihdhg" source="_iJlXQv21Ed2lbZNz8Ihdhg">
+              <ownedRule xmi:id="_iJlXWv21Ed2lbZNz8Ihdhg" constrainedElement="_iJlXWf21Ed2lbZNz8Ihdhg">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_iJlXW_21Ed2lbZNz8Ihdhg">
+                  <language></language>
+                  <body>result == false</body>
+                </specification>
+              </ownedRule>
+            </transition>
+            <transition xmi:id="_iJlXXP21Ed2lbZNz8Ihdhg" name="eval2  " visibility="private" guard="_iJlXXf21Ed2lbZNz8Ihdhg" target="_iJlXIP21Ed2lbZNz8Ihdhg" source="_iJlXQv21Ed2lbZNz8Ihdhg">
+              <ownedRule xmi:id="_iJlXXf21Ed2lbZNz8Ihdhg" constrainedElement="_iJlXXP21Ed2lbZNz8Ihdhg">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_iJlXXv21Ed2lbZNz8Ihdhg">
+                  <language></language>
+                  <body>result == true</body>
+                </specification>
+              </ownedRule>
+            </transition>
+            <transition xmi:id="_iJlXX_21Ed2lbZNz8Ihdhg" target="_iJlXQf21Ed2lbZNz8Ihdhg" source="_iJlXRP21Ed2lbZNz8Ihdhg"/>
+            <transition xmi:id="_iJlXYP21Ed2lbZNz8Ihdhg" target="_iJlXMP21Ed2lbZNz8Ihdhg" source="_iJlXQ_21Ed2lbZNz8Ihdhg"/>
+          </region>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_iJlXYf21Ed2lbZNz8Ihdhg" name="Send_TC_SM" visibility="private" specification="_iJlX9v21Ed2lbZNz8Ihdhg">
+          <ownedAttribute xmi:id="_iJlXYv21Ed2lbZNz8Ihdhg" name="timer1" visibility="private">
+            <type xmi:type="uml:Interface" href="UTPPredefined.library.uml#_iJlRe_21Ed2lbZNz8Ihdhg"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_iJlXY_21Ed2lbZNz8Ihdhg" value="5">
+              <type xmi:type="uml:Interface" href="UTPPredefined.library.uml#_iJlRe_21Ed2lbZNz8Ihdhg"/>
+            </defaultValue>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_iJlXZP21Ed2lbZNz8Ihdhg" name="sendMsg" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_iJlXZf21Ed2lbZNz8Ihdhg" name="expectedMsg" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_iJlXZv21Ed2lbZNz8Ihdhg" name="receivedMsg" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_iJlXZ_21Ed2lbZNz8Ihdhg" name="testComp" visibility="private" type="_iJlX_f21Ed2lbZNz8Ihdhg">
+            <eAnnotations xmi:id="_iJlXaP21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_iJlXaf21Ed2lbZNz8Ihdhg" key="runsOn"/>
+            </eAnnotations>
+          </ownedAttribute>
+          <region xmi:id="_iJlXav21Ed2lbZNz8Ihdhg" name="Region1" visibility="private">
+            <subvertex xmi:type="uml:State" xmi:id="_iJlXa_21Ed2lbZNz8Ihdhg" name="VERDICT_PASS" visibility="private">
+              <doActivity xmi:type="uml:Activity" xmi:id="_iJlXbP21Ed2lbZNz8Ihdhg" name="setVerdictPass" visibility="private">
+                <node xmi:type="uml:CallOperationAction" xmi:id="_iJlXbf21Ed2lbZNz8Ihdhg" name="">
+                  <argument xmi:id="_iJlXbv21Ed2lbZNz8Ihdhg" name="v" ordering="unordered">
+                    <eAnnotations xmi:id="_iJlXb_21Ed2lbZNz8Ihdhg" source="Parameter">
+                      <references xmi:type="uml:Parameter" href="UTPPredefined.library.uml#_iJlRdf21Ed2lbZNz8Ihdhg"/>
+                    </eAnnotations>
+                    <ownedComment xmi:id="_iJlXcP21Ed2lbZNz8Ihdhg" annotatedElement="_iJlXbv21Ed2lbZNz8Ihdhg">
+                      <eAnnotations xmi:id="_iJlXcf21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                        <details xmi:id="_iJlXcv21Ed2lbZNz8Ihdhg" key="value"/>
+                      </eAnnotations>
+                      <body>pass</body>
+                    </ownedComment>
+                    <type xmi:type="uml:Enumeration" href="UTPPredefined.library.uml#_iJlRdv21Ed2lbZNz8Ihdhg"/>
+                  </argument>
+                  <operation href="UTPPredefined.library.uml#_iJlRdP21Ed2lbZNz8Ihdhg"/>
+                </node>
+              </doActivity>
+            </subvertex>
+            <subvertex xmi:type="uml:State" xmi:id="_iJlXc_21Ed2lbZNz8Ihdhg" name="VERDICT_FAIL" visibility="private">
+              <doActivity xmi:type="uml:Activity" xmi:id="_iJlXdP21Ed2lbZNz8Ihdhg" name="setVerdictFail" visibility="private">
+                <node xmi:type="uml:CallOperationAction" xmi:id="_iJlXdf21Ed2lbZNz8Ihdhg" name="">
+                  <argument xmi:id="_iJlXdv21Ed2lbZNz8Ihdhg" name="v" ordering="unordered">
+                    <eAnnotations xmi:id="_iJlXd_21Ed2lbZNz8Ihdhg" source="Parameter">
+                      <references xmi:type="uml:Parameter" href="UTPPredefined.library.uml#_iJlRdf21Ed2lbZNz8Ihdhg"/>
+                    </eAnnotations>
+                    <ownedComment xmi:id="_iJlXeP21Ed2lbZNz8Ihdhg" annotatedElement="_iJlXdv21Ed2lbZNz8Ihdhg">
+                      <eAnnotations xmi:id="_iJlXef21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                        <details xmi:id="_iJlXev21Ed2lbZNz8Ihdhg" key="value"/>
+                      </eAnnotations>
+                      <body>fail</body>
+                    </ownedComment>
+                    <type xmi:type="uml:Enumeration" href="UTPPredefined.library.uml#_iJlRdv21Ed2lbZNz8Ihdhg"/>
+                  </argument>
+                  <operation href="UTPPredefined.library.uml#_iJlRdP21Ed2lbZNz8Ihdhg"/>
+                </node>
+              </doActivity>
+            </subvertex>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_iJlXe_21Ed2lbZNz8Ihdhg" visibility="private"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_iJlXfP21Ed2lbZNz8Ihdhg" name="EVAL" kind="choice"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_iJlXff21Ed2lbZNz8Ihdhg"/>
+            <subvertex xmi:type="uml:State" xmi:id="_iJlXfv21Ed2lbZNz8Ihdhg" name="VERDICT_INCONC" visibility="private">
+              <doActivity xmi:type="uml:Activity" xmi:id="_iJlXf_21Ed2lbZNz8Ihdhg" name="setVerdictInconc" visibility="private">
+                <node xmi:type="uml:CallOperationAction" xmi:id="_iJlXgP21Ed2lbZNz8Ihdhg" name="">
+                  <argument xmi:id="_iJlXgf21Ed2lbZNz8Ihdhg" name="v" ordering="unordered">
+                    <eAnnotations xmi:id="_iJlXgv21Ed2lbZNz8Ihdhg" source="Parameter">
+                      <references xmi:type="uml:Parameter" href="UTPPredefined.library.uml#_iJlRdf21Ed2lbZNz8Ihdhg"/>
+                    </eAnnotations>
+                    <ownedComment xmi:id="_iJlXg_21Ed2lbZNz8Ihdhg" annotatedElement="_iJlXgf21Ed2lbZNz8Ihdhg">
+                      <eAnnotations xmi:id="_iJlXhP21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                        <details xmi:id="_iJlXhf21Ed2lbZNz8Ihdhg" key="value"/>
+                      </eAnnotations>
+                      <body>inconc</body>
+                    </ownedComment>
+                    <type xmi:type="uml:Enumeration" href="UTPPredefined.library.uml#_iJlRdv21Ed2lbZNz8Ihdhg"/>
+                  </argument>
+                  <operation href="UTPPredefined.library.uml#_iJlRdP21Ed2lbZNz8Ihdhg"/>
+                </node>
+              </doActivity>
+            </subvertex>
+            <subvertex xmi:type="uml:State" xmi:id="_iJlXhv21Ed2lbZNz8Ihdhg" name="RECEIVE_MSG" visibility="private">
+              <eAnnotations xmi:id="_iJlXh_21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_iJlXiP21Ed2lbZNz8Ihdhg" key="RECEIVE"/>
+              </eAnnotations>
+            </subvertex>
+            <subvertex xmi:type="uml:State" xmi:id="_iJlXif21Ed2lbZNz8Ihdhg" name="SEND_MSG">
+              <eAnnotations xmi:id="_iJlXiv21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML"/>
+              <doActivity xmi:type="uml:Activity" xmi:id="_iJlXi_21Ed2lbZNz8Ihdhg" name="send_sendMsg" visibility="private">
+                <nestedClassifier xmi:type="uml:Signal" xmi:id="_iJlXjP21Ed2lbZNz8Ihdhg" name="ReceiveMsg">
+                  <ownedComment xmi:id="_iJlXjf21Ed2lbZNz8Ihdhg">
+                    <eAnnotations xmi:id="_iJlXjv21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                      <details xmi:id="_iJlXj_21Ed2lbZNz8Ihdhg" key="parameter"/>
+                    </eAnnotations>
+                    <body>receivedMsg</body>
+                  </ownedComment>
+                </nestedClassifier>
+                <nestedClassifier xmi:type="uml:Signal" xmi:id="_iJlXkP21Ed2lbZNz8Ihdhg" name="ReceiveAny"/>
+                <nestedClassifier xmi:type="uml:Signal" xmi:id="_iJlXkf21Ed2lbZNz8Ihdhg" name="SendMsg">
+                  <ownedComment xmi:id="_iJlXkv21Ed2lbZNz8Ihdhg">
+                    <eAnnotations xmi:id="_iJlXk_21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                      <details xmi:id="_iJlXlP21Ed2lbZNz8Ihdhg" key="variable"/>
+                    </eAnnotations>
+                    <body>sendMsg</body>
+                  </ownedComment>
+                </nestedClassifier>
+                <node xmi:type="uml:SendSignalAction" xmi:id="_iJlXlf21Ed2lbZNz8Ihdhg" name="sendAction" onPort="_iJlX_v21Ed2lbZNz8Ihdhg" signal="_iJlXkf21Ed2lbZNz8Ihdhg"/>
+                <node xmi:type="uml:CallOperationAction" xmi:id="_iJlXlv21Ed2lbZNz8Ihdhg" name="startTimer">
+                  <argument xmi:id="_iJlXl_21Ed2lbZNz8Ihdhg" name="expires" ordering="unordered">
+                    <eAnnotations xmi:id="_iJlXmP21Ed2lbZNz8Ihdhg" source="Parameter">
+                      <references xmi:type="uml:Parameter" href="UTPPredefined.library.uml#_iJlRfv21Ed2lbZNz8Ihdhg"/>
+                    </eAnnotations>
+                    <ownedComment xmi:id="_iJlXmf21Ed2lbZNz8Ihdhg" annotatedElement="_iJlXlv21Ed2lbZNz8Ihdhg">
+                      <eAnnotations xmi:id="_iJlXmv21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                        <details xmi:id="_iJlXm_21Ed2lbZNz8Ihdhg" key="value"/>
+                      </eAnnotations>
+                      <body>5.5</body>
+                    </ownedComment>
+                    <type xmi:type="uml:Class" href="UTPPredefined.library.uml#_iJlRaP21Ed2lbZNz8Ihdhg"/>
+                  </argument>
+                  <operation href="UTPPredefined.library.uml#_iJlRff21Ed2lbZNz8Ihdhg"/>
+                  <target xmi:id="_iJlXnP21Ed2lbZNz8Ihdhg">
+                    <ownedComment xmi:id="_iJlXnf21Ed2lbZNz8Ihdhg" annotatedElement="_iJlXlv21Ed2lbZNz8Ihdhg">
+                      <eAnnotations xmi:id="_iJlXnv21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                        <details xmi:id="_iJlXn_21Ed2lbZNz8Ihdhg" key="timer"/>
+                      </eAnnotations>
+                      <body>timer1</body>
+                    </ownedComment>
+                    <type xmi:type="uml:Interface" href="UTPPredefined.library.uml#_iJlRe_21Ed2lbZNz8Ihdhg"/>
+                  </target>
+                </node>
+              </doActivity>
+            </subvertex>
+            <transition xmi:id="_iJlXoP21Ed2lbZNz8Ihdhg" visibility="private" target="_iJlXe_21Ed2lbZNz8Ihdhg" source="_iJlXc_21Ed2lbZNz8Ihdhg"/>
+            <transition xmi:id="_iJlXof21Ed2lbZNz8Ihdhg" visibility="private" target="_iJlXe_21Ed2lbZNz8Ihdhg" source="_iJlXa_21Ed2lbZNz8Ihdhg"/>
+            <transition xmi:id="_iJlXov21Ed2lbZNz8Ihdhg" name="eval1  " visibility="private" guard="_iJlXo_21Ed2lbZNz8Ihdhg" target="_iJlXc_21Ed2lbZNz8Ihdhg" source="_iJlXfP21Ed2lbZNz8Ihdhg">
+              <ownedRule xmi:id="_iJlXo_21Ed2lbZNz8Ihdhg" constrainedElement="_iJlXov21Ed2lbZNz8Ihdhg">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_iJlXpP21Ed2lbZNz8Ihdhg">
+                  <body>receivedMsg == expectedMsg</body>
+                </specification>
+              </ownedRule>
+            </transition>
+            <transition xmi:id="_iJlXpf21Ed2lbZNz8Ihdhg" name="eval2  " visibility="private" guard="_iJlXpv21Ed2lbZNz8Ihdhg" target="_iJlXa_21Ed2lbZNz8Ihdhg" source="_iJlXfP21Ed2lbZNz8Ihdhg">
+              <ownedRule xmi:id="_iJlXpv21Ed2lbZNz8Ihdhg" constrainedElement="_iJlXpf21Ed2lbZNz8Ihdhg">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_iJlXp_21Ed2lbZNz8Ihdhg">
+                  <body>receivedMsg != expectedMsg</body>
+                </specification>
+              </ownedRule>
+            </transition>
+            <transition xmi:id="_iJlXqP21Ed2lbZNz8Ihdhg" target="_iJlXe_21Ed2lbZNz8Ihdhg" source="_iJlXfv21Ed2lbZNz8Ihdhg"/>
+            <transition xmi:id="_iJlXqf21Ed2lbZNz8Ihdhg" name="timeout" target="_iJlXfv21Ed2lbZNz8Ihdhg" source="_iJlXhv21Ed2lbZNz8Ihdhg">
+              <trigger xmi:id="_iJlXqv21Ed2lbZNz8Ihdhg" name="receiveTimeoutTrigger" event="_iJlYBv21Ed2lbZNz8Ihdhg">
+                <ownedComment xmi:id="_iJlXq_21Ed2lbZNz8Ihdhg">
+                  <eAnnotations xmi:id="_iJlXrP21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                    <details xmi:id="_iJlXrf21Ed2lbZNz8Ihdhg" key="timer"/>
+                  </eAnnotations>
+                  <body>timer1</body>
+                </ownedComment>
+              </trigger>
+            </transition>
+            <transition xmi:id="_iJlXrv21Ed2lbZNz8Ihdhg" name="receive_expected" target="_iJlXfP21Ed2lbZNz8Ihdhg" source="_iJlXhv21Ed2lbZNz8Ihdhg">
+              <eAnnotations xmi:id="_iJlXr_21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML"/>
+              <trigger xmi:id="_iJlXsP21Ed2lbZNz8Ihdhg" name="" event="_iJlYBf21Ed2lbZNz8Ihdhg" port="_iJlX_v21Ed2lbZNz8Ihdhg"/>
+            </transition>
+            <transition xmi:id="_iJlXsf21Ed2lbZNz8Ihdhg" name="receive_unexpected" target="_iJlXc_21Ed2lbZNz8Ihdhg" source="_iJlXhv21Ed2lbZNz8Ihdhg">
+              <eAnnotations xmi:id="_iJlXsv21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML"/>
+              <trigger xmi:id="_iJlXs_21Ed2lbZNz8Ihdhg" name="" event="_iJlYCP21Ed2lbZNz8Ihdhg" port="_iJlX_v21Ed2lbZNz8Ihdhg"/>
+            </transition>
+            <transition xmi:id="_iJlXtP21Ed2lbZNz8Ihdhg" target="_iJlXhv21Ed2lbZNz8Ihdhg" source="_iJlXif21Ed2lbZNz8Ihdhg"/>
+            <transition xmi:id="_iJlXtf21Ed2lbZNz8Ihdhg" target="_iJlXif21Ed2lbZNz8Ihdhg" source="_iJlXff21Ed2lbZNz8Ihdhg"/>
+          </region>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_iJlXtv21Ed2lbZNz8Ihdhg" name="Getcall_TC_SM" specification="_iJlX9P21Ed2lbZNz8Ihdhg">
+          <ownedAttribute xmi:id="_iJlXt_21Ed2lbZNz8Ihdhg" name="callValue" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_iJlXuP21Ed2lbZNz8Ihdhg" name="returnValue" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_iJlXuf21Ed2lbZNz8Ihdhg" value="1234">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </defaultValue>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_iJlXuv21Ed2lbZNz8Ihdhg" name="expectedValue" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_iJlXu_21Ed2lbZNz8Ihdhg" value="4711">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </defaultValue>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_iJlXvP21Ed2lbZNz8Ihdhg" name="testComp" visibility="private" type="_iJlX_f21Ed2lbZNz8Ihdhg">
+            <eAnnotations xmi:id="_iJlXvf21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_iJlXvv21Ed2lbZNz8Ihdhg" key="runsOn"/>
+            </eAnnotations>
+          </ownedAttribute>
+          <region xmi:id="_iJlXv_21Ed2lbZNz8Ihdhg" name="Region1" visibility="private">
+            <subvertex xmi:type="uml:State" xmi:id="_iJlXwP21Ed2lbZNz8Ihdhg" name="VERDICT_PASS" visibility="private">
+              <doActivity xmi:type="uml:Activity" xmi:id="_iJlXwf21Ed2lbZNz8Ihdhg" name="setVerdictPass" visibility="private">
+                <node xmi:type="uml:CallOperationAction" xmi:id="_iJlXwv21Ed2lbZNz8Ihdhg" name="">
+                  <argument xmi:id="_iJlXw_21Ed2lbZNz8Ihdhg" name="v" ordering="unordered">
+                    <eAnnotations xmi:id="_iJlXxP21Ed2lbZNz8Ihdhg" source="Parameter">
+                      <references xmi:type="uml:Parameter" href="UTPPredefined.library.uml#_iJlRdf21Ed2lbZNz8Ihdhg"/>
+                    </eAnnotations>
+                    <ownedComment xmi:id="_iJlXxf21Ed2lbZNz8Ihdhg" annotatedElement="_iJlXw_21Ed2lbZNz8Ihdhg">
+                      <eAnnotations xmi:id="_iJlXxv21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                        <details xmi:id="_iJlXx_21Ed2lbZNz8Ihdhg" key="value"/>
+                      </eAnnotations>
+                      <body>pass</body>
+                    </ownedComment>
+                    <type xmi:type="uml:Enumeration" href="UTPPredefined.library.uml#_iJlRdv21Ed2lbZNz8Ihdhg"/>
+                  </argument>
+                  <operation href="UTPPredefined.library.uml#_iJlRdP21Ed2lbZNz8Ihdhg"/>
+                </node>
+              </doActivity>
+            </subvertex>
+            <subvertex xmi:type="uml:State" xmi:id="_iJlXyP21Ed2lbZNz8Ihdhg" name="VERDICT_FAIL" visibility="private">
+              <doActivity xmi:type="uml:Activity" xmi:id="_iJlXyf21Ed2lbZNz8Ihdhg" name="setVerdictFail" visibility="private">
+                <node xmi:type="uml:CallOperationAction" xmi:id="_iJlXyv21Ed2lbZNz8Ihdhg" name="">
+                  <argument xmi:id="_iJlXy_21Ed2lbZNz8Ihdhg" name="v" ordering="unordered">
+                    <eAnnotations xmi:id="_iJlXzP21Ed2lbZNz8Ihdhg" source="Parameter">
+                      <references xmi:type="uml:Parameter" href="UTPPredefined.library.uml#_iJlRdf21Ed2lbZNz8Ihdhg"/>
+                    </eAnnotations>
+                    <ownedComment xmi:id="_iJlXzf21Ed2lbZNz8Ihdhg" annotatedElement="_iJlXy_21Ed2lbZNz8Ihdhg">
+                      <eAnnotations xmi:id="_iJlXzv21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                        <details xmi:id="_iJlXz_21Ed2lbZNz8Ihdhg" key="value"/>
+                      </eAnnotations>
+                      <body>fail&lt;br /></body>
+                    </ownedComment>
+                    <type xmi:type="uml:Enumeration" href="UTPPredefined.library.uml#_iJlRdv21Ed2lbZNz8Ihdhg"/>
+                  </argument>
+                  <operation href="UTPPredefined.library.uml#_iJlRdP21Ed2lbZNz8Ihdhg"/>
+                </node>
+              </doActivity>
+            </subvertex>
+            <subvertex xmi:type="uml:State" xmi:id="_iJlX0P21Ed2lbZNz8Ihdhg" name="GETCALL" visibility="private">
+              <eAnnotations xmi:id="_iJlX0f21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML"/>
+              <doActivity xmi:type="uml:Activity" xmi:id="_iJlX0v21Ed2lbZNz8Ihdhg" name="do" visibility="private">
+                <eAnnotations xmi:id="_iJlX0_21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_iJlX1P21Ed2lbZNz8Ihdhg" key="alt"/>
+                </eAnnotations>
+                <node xmi:type="uml:AcceptCallAction" xmi:id="_iJlX1f21Ed2lbZNz8Ihdhg" name="getcall_intOp">
+                  <trigger xmi:id="_iJlX1v21Ed2lbZNz8Ihdhg" name="" event="_iJlYA_21Ed2lbZNz8Ihdhg" port="_iJlX_v21Ed2lbZNz8Ihdhg"/>
+                  <returnInformation xmi:id="_iJlX1_21Ed2lbZNz8Ihdhg" name="">
+                    <ownedComment xmi:id="_iJlX2P21Ed2lbZNz8Ihdhg">
+                      <eAnnotations xmi:id="_iJlX2f21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                        <details xmi:id="_iJlX2v21Ed2lbZNz8Ihdhg" key="variable"/>
+                      </eAnnotations>
+                      <body>callValue</body>
+                    </ownedComment>
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                    <upperBound xmi:type="uml:LiteralInteger" xmi:id="_iJlX2_21Ed2lbZNz8Ihdhg"/>
+                    <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iJlX3P21Ed2lbZNz8Ihdhg" value="1"/>
+                  </returnInformation>
+                </node>
+              </doActivity>
+            </subvertex>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_iJlX3f21Ed2lbZNz8Ihdhg" visibility="private"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_iJlX3v21Ed2lbZNz8Ihdhg" name="EVAL" kind="choice"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_iJlX3_21Ed2lbZNz8Ihdhg"/>
+            <subvertex xmi:type="uml:State" xmi:id="_iJlX4P21Ed2lbZNz8Ihdhg" name="REPLY">
+              <doActivity xmi:type="uml:Activity" xmi:id="_iJlX4f21Ed2lbZNz8Ihdhg" name="Do">
+                <node xmi:type="uml:ReplyAction" xmi:id="_iJlX4v21Ed2lbZNz8Ihdhg" name="ReplyAction" replyToCall="_iJlX1v21Ed2lbZNz8Ihdhg">
+                  <returnInformation xmi:type="uml:ValuePin" xmi:id="_iJlX4_21Ed2lbZNz8Ihdhg" name="">
+                    <ownedComment xmi:id="_iJlX5P21Ed2lbZNz8Ihdhg">
+                      <eAnnotations xmi:id="_iJlX5f21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                        <details xmi:id="_iJlX5v21Ed2lbZNz8Ihdhg" key="variable"/>
+                      </eAnnotations>
+                      <body>returnValue</body>
+                    </ownedComment>
+                  </returnInformation>
+                </node>
+              </doActivity>
+            </subvertex>
+            <transition xmi:id="_iJlX5_21Ed2lbZNz8Ihdhg" name="" visibility="private" target="_iJlX0P21Ed2lbZNz8Ihdhg" source="_iJlX3_21Ed2lbZNz8Ihdhg">
+              <eAnnotations xmi:id="_iJlX6P21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML"/>
+            </transition>
+            <transition xmi:id="_iJlX6f21Ed2lbZNz8Ihdhg" visibility="private" target="_iJlX3f21Ed2lbZNz8Ihdhg" source="_iJlXyP21Ed2lbZNz8Ihdhg"/>
+            <transition xmi:id="_iJlX6v21Ed2lbZNz8Ihdhg" visibility="private" target="_iJlX3f21Ed2lbZNz8Ihdhg" source="_iJlXwP21Ed2lbZNz8Ihdhg"/>
+            <transition xmi:id="_iJlX6_21Ed2lbZNz8Ihdhg" name="eval1  " visibility="private" guard="_iJlX7P21Ed2lbZNz8Ihdhg" target="_iJlX4P21Ed2lbZNz8Ihdhg" source="_iJlX3v21Ed2lbZNz8Ihdhg">
+              <ownedRule xmi:id="_iJlX7P21Ed2lbZNz8Ihdhg" constrainedElement="_iJlX6_21Ed2lbZNz8Ihdhg">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_iJlX7f21Ed2lbZNz8Ihdhg">
+                  <body>expectedValue == callValue</body>
+                </specification>
+              </ownedRule>
+            </transition>
+            <transition xmi:id="_iJlX7v21Ed2lbZNz8Ihdhg" name="eval2  " visibility="private" guard="_iJlX7_21Ed2lbZNz8Ihdhg" target="_iJlXyP21Ed2lbZNz8Ihdhg" source="_iJlX3v21Ed2lbZNz8Ihdhg">
+              <ownedRule xmi:id="_iJlX7_21Ed2lbZNz8Ihdhg" constrainedElement="_iJlX7v21Ed2lbZNz8Ihdhg">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_iJlX8P21Ed2lbZNz8Ihdhg">
+                  <body>expectedValue != callValue</body>
+                </specification>
+              </ownedRule>
+            </transition>
+            <transition xmi:id="_iJlX8f21Ed2lbZNz8Ihdhg" name="" target="_iJlX3v21Ed2lbZNz8Ihdhg" source="_iJlX0P21Ed2lbZNz8Ihdhg">
+              <trigger xmi:id="_iJlX8v21Ed2lbZNz8Ihdhg" name="" event="_iJlYA_21Ed2lbZNz8Ihdhg"/>
+            </transition>
+            <transition xmi:id="_iJlX8_21Ed2lbZNz8Ihdhg" target="_iJlXwP21Ed2lbZNz8Ihdhg" source="_iJlX4P21Ed2lbZNz8Ihdhg"/>
+          </region>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_iJlX9P21Ed2lbZNz8Ihdhg" name="getcall_tc" method="_iJlXtv21Ed2lbZNz8Ihdhg"/>
+        <ownedOperation xmi:id="_iJlX9f21Ed2lbZNz8Ihdhg" name="call_tc" method="_iJlXD_21Ed2lbZNz8Ihdhg"/>
+        <ownedOperation xmi:id="_iJlX9v21Ed2lbZNz8Ihdhg" name="send_tc" visibility="public" method="_iJlXYf21Ed2lbZNz8Ihdhg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_iJlX9_21Ed2lbZNz8Ihdhg" supplier="_iJlYKP21Ed2lbZNz8Ihdhg" client="_iJlX__21Ed2lbZNz8Ihdhg"/>
+      <packagedElement xmi:type="uml:TimeEvent" xmi:id="_iJlX-P21Ed2lbZNz8Ihdhg" name="CallTimeoutEvent">
+        <when xmi:type="uml:TimeExpression" xmi:id="_iJlX-f21Ed2lbZNz8Ihdhg" name="">
+          <eAnnotations xmi:id="_iJlX-v21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML"/>
+        </when>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_iJlX-_21Ed2lbZNz8Ihdhg" supplier="_iJlXMf21Ed2lbZNz8Ihdhg" client="_iJlXD_21Ed2lbZNz8Ihdhg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_iJlX_P21Ed2lbZNz8Ihdhg" supplier="_iJlX_f21Ed2lbZNz8Ihdhg" client="_iJlXCf21Ed2lbZNz8Ihdhg"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_iJlX_f21Ed2lbZNz8Ihdhg" name="TestComponentType" visibility="private">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_iJlX_v21Ed2lbZNz8Ihdhg" name="testCompPort" type="_iJlX__21Ed2lbZNz8Ihdhg"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_iJlX__21Ed2lbZNz8Ihdhg" name="TestCompPortType" visibility="private" clientDependency="_iJlX9_21Ed2lbZNz8Ihdhg _iJlYAP21Ed2lbZNz8Ihdhg">
+          <interfaceRealization xmi:id="_iJlYAP21Ed2lbZNz8Ihdhg" supplier="_iJlYLv21Ed2lbZNz8Ihdhg" client="_iJlX__21Ed2lbZNz8Ihdhg" contract="_iJlYLv21Ed2lbZNz8Ihdhg"/>
+        </nestedClassifier>
+      </packagedElement>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_iJlYAf21Ed2lbZNz8Ihdhg" name="ExceptionEvent" signal="_iJlXHf21Ed2lbZNz8Ihdhg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_iJlYAv21Ed2lbZNz8Ihdhg" supplier="_iJlXIf21Ed2lbZNz8Ihdhg" client="_iJlXD_21Ed2lbZNz8Ihdhg"/>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_iJlYA_21Ed2lbZNz8Ihdhg" name="CallEvent_intOp" operation="_iJlYL_21Ed2lbZNz8Ihdhg">
+        <eAnnotations xmi:id="_iJlYBP21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_iJlYBf21Ed2lbZNz8Ihdhg" name="ReceiveEvent" signal="_iJlYDP21Ed2lbZNz8Ihdhg"/>
+      <packagedElement xmi:type="uml:TimeEvent" xmi:id="_iJlYBv21Ed2lbZNz8Ihdhg" name="ReceiveTimeoutEvent">
+        <when xmi:type="uml:TimeExpression" xmi:id="_iJlYB_21Ed2lbZNz8Ihdhg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_iJlYCP21Ed2lbZNz8Ihdhg" name="ReceiveAnyEvent" signal="_iJlXkP21Ed2lbZNz8Ihdhg"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_iJlYCf21Ed2lbZNz8Ihdhg" name="Templates" visibility="private">
+        <eAnnotations xmi:id="_iJlYCv21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_iJlYC_21Ed2lbZNz8Ihdhg" key="TemplateContainer"/>
+        </eAnnotations>
+        <nestedClassifier xmi:type="uml:Signal" xmi:id="_iJlYDP21Ed2lbZNz8Ihdhg" name="ReceiveMsgStringTemplate">
+          <eAnnotations xmi:id="_iJlYDf21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_iJlYDv21Ed2lbZNz8Ihdhg" key="msgTemplate"/>
+          </eAnnotations>
+          <ownedAttribute xmi:id="_iJlYD_21Ed2lbZNz8Ihdhg" name="name" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_iJlYEP21Ed2lbZNz8Ihdhg">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <body>StringTemplate</body>
+            </defaultValue>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_iJlYEf21Ed2lbZNz8Ihdhg" name="type" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_iJlYEv21Ed2lbZNz8Ihdhg" name="expression" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Signal" xmi:id="_iJlYE_21Ed2lbZNz8Ihdhg" name="SendMsgIntTemplate">
+          <eAnnotations xmi:id="_iJlYFP21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_iJlYFf21Ed2lbZNz8Ihdhg" key="msgTemplate"/>
+          </eAnnotations>
+          <ownedAttribute xmi:id="_iJlYFv21Ed2lbZNz8Ihdhg" name="name" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_iJlYF_21Ed2lbZNz8Ihdhg">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <body>integerTemplate</body>
+            </defaultValue>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_iJlYGP21Ed2lbZNz8Ihdhg" name="type" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_iJlYGf21Ed2lbZNz8Ihdhg" name="expression" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+        </nestedClassifier>
+        <ownedOperation xmi:id="_iJlYGv21Ed2lbZNz8Ihdhg" name="booleanOp_template1" raisedException="_iJlYLP21Ed2lbZNz8Ihdhg">
+          <eAnnotations xmi:id="_iJlYG_21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_iJlYHP21Ed2lbZNz8Ihdhg" key="sigTemplate"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_iJlYHf21Ed2lbZNz8Ihdhg" name="int">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_iJlYHv21Ed2lbZNz8Ihdhg" name="-"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_iJlYH_21Ed2lbZNz8Ihdhg" name="isTrue" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_iJlYIP21Ed2lbZNz8Ihdhg"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:CallEvent" xmi:id="_iJlYIf21Ed2lbZNz8Ihdhg" name="GetreplyEvent_booleanOp_template1" operation="_iJlYGv21Ed2lbZNz8Ihdhg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_iJlYIv21Ed2lbZNz8Ihdhg" supplier="_iJlYJP21Ed2lbZNz8Ihdhg" client="_iJlXCf21Ed2lbZNz8Ihdhg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_iJlYI_21Ed2lbZNz8Ihdhg" name="SUTPackage" visibility="private">
+      <packagedElement xmi:type="uml:Class" xmi:id="_iJlYJP21Ed2lbZNz8Ihdhg" name="SUTType" visibility="private">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_iJlYJf21Ed2lbZNz8Ihdhg" name="sutPort" type="_iJlYJv21Ed2lbZNz8Ihdhg"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_iJlYJv21Ed2lbZNz8Ihdhg" name="SUTPortType" visibility="private" clientDependency="_iJlYMv21Ed2lbZNz8Ihdhg _iJlYJ_21Ed2lbZNz8Ihdhg">
+          <interfaceRealization xmi:id="_iJlYJ_21Ed2lbZNz8Ihdhg" supplier="_iJlYKP21Ed2lbZNz8Ihdhg" client="_iJlYJv21Ed2lbZNz8Ihdhg" contract="_iJlYKP21Ed2lbZNz8Ihdhg"/>
+        </nestedClassifier>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_iJlYKP21Ed2lbZNz8Ihdhg" name="ISUTProvided">
+        <ownedOperation xmi:id="_iJlYKf21Ed2lbZNz8Ihdhg" name="booleanOp" raisedException="_iJlYLP21Ed2lbZNz8Ihdhg">
+          <ownedParameter xmi:id="_iJlYKv21Ed2lbZNz8Ihdhg" name="int">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_iJlYK_21Ed2lbZNz8Ihdhg" name="isTrue" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_iJlYLP21Ed2lbZNz8Ihdhg" name="SUTExceptionType" visibility="private">
+          <ownedAttribute xmi:id="_iJlYLf21Ed2lbZNz8Ihdhg" name="baseType" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+        </nestedClassifier>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_iJlYLv21Ed2lbZNz8Ihdhg" name="ISUTRequired">
+        <ownedOperation xmi:id="_iJlYL_21Ed2lbZNz8Ihdhg" name="intOp">
+          <ownedParameter xmi:id="_iJlYMP21Ed2lbZNz8Ihdhg" name="callValue">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_iJlYMf21Ed2lbZNz8Ihdhg" name="returnValue" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_iJlYMv21Ed2lbZNz8Ihdhg" supplier="_iJlYLv21Ed2lbZNz8Ihdhg" client="_iJlYJv21Ed2lbZNz8Ihdhg"/>
+    </packagedElement>
+    <profileApplication xmi:id="_iJlYM_21Ed2lbZNz8Ihdhg">
+      <eAnnotations xmi:id="_iJlYNP21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:id="_iJlYNf21Ed2lbZNz8Ihdhg">
+      <eAnnotations xmi:id="_iJlYNv21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="Default.profile.uml#_iJlVUP21Ed2lbZNz8Ihdhg"/>
+      </eAnnotations>
+      <appliedProfile href="Default.profile.uml#_iJlVTv21Ed2lbZNz8Ihdhg"/>
+    </profileApplication>
+    <profileApplication xmi:id="_iJlYN_21Ed2lbZNz8Ihdhg">
+      <eAnnotations xmi:id="_iJlYOP21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="Deployment.profile.uml#_iJlS1v21Ed2lbZNz8Ihdhg"/>
+      </eAnnotations>
+      <appliedProfile href="Deployment.profile.uml#_iJlS1P21Ed2lbZNz8Ihdhg"/>
+    </profileApplication>
+    <profileApplication xmi:id="_iJlYOf21Ed2lbZNz8Ihdhg">
+      <eAnnotations xmi:id="_iJlYOv21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="utp.profile.uml#_iJlZiP21Ed2lbZNz8Ihdhg"/>
+      </eAnnotations>
+      <appliedProfile href="utp.profile.uml#_iJlZhv21Ed2lbZNz8Ihdhg"/>
+    </profileApplication>
+  </uml:Model>
+  <utp:TestComponent xmi:id="_iJlYO_21Ed2lbZNz8Ihdhg" base_StructuredClassifier="_iJlX_f21Ed2lbZNz8Ihdhg"/>
+  <utp:TestContext xmi:id="_iJlYPP21Ed2lbZNz8Ihdhg" base_StructuredClassifier="_iJlXCf21Ed2lbZNz8Ihdhg"/>
+  <utp:TestCase xmi:id="_iJlYPf21Ed2lbZNz8Ihdhg" base_Operation="_iJlX9f21Ed2lbZNz8Ihdhg"/>
+  <utp:TestCase xmi:id="_iJlYPv21Ed2lbZNz8Ihdhg" base_Operation="_iJlX9P21Ed2lbZNz8Ihdhg"/>
+  <utp:TestCase xmi:id="_iJlYP_21Ed2lbZNz8Ihdhg" base_Operation="_iJlX9v21Ed2lbZNz8Ihdhg"/>
+  <utp:SUT xmi:id="_iJlYQP21Ed2lbZNz8Ihdhg" base_Property="_iJlXCv21Ed2lbZNz8Ihdhg"/>
+  <utp:TimeOut xmi:id="_iJlYQf21Ed2lbZNz8Ihdhg" base_Trigger="_iJlXTf21Ed2lbZNz8Ihdhg"/>
+</xmi:XMI>

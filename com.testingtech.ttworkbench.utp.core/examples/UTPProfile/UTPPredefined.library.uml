@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Standard="http://www.eclipse.org/uml2/schemas/Standard/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xsi:schemaLocation="http://www.eclipse.org/uml2/schemas/Standard/1 pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w">
+  <uml:Model xmi:id="_gmS_9EniEd6yRr8FkK64tQ" name="UTPPredefined" viewpoint="">
+    <packagedElement xmi:type="uml:Class" xmi:id="_gmS_9UniEd6yRr8FkK64tQ" name="Duration"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_gmS_9kniEd6yRr8FkK64tQ" name="Timezone"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_gmS_90niEd6yRr8FkK64tQ" name="Time"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_gmS_-EniEd6yRr8FkK64tQ" name="Scheduler">
+      <ownedOperation xmi:id="_gmS_-UniEd6yRr8FkK64tQ" name="Scheduler"/>
+      <ownedOperation xmi:id="_gmS_-kniEd6yRr8FkK64tQ" name="startTestCase">
+        <ownedParameter xmi:id="_gmS_-0niEd6yRr8FkK64tQ" name="t">
+          <type xmi:type="uml:Stereotype" href="utp.profile.uml#_gmS_RkniEd6yRr8FkK64tQ"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_gmS__EniEd6yRr8FkK64tQ" name="finishTestCase">
+        <ownedParameter xmi:id="_gmS__UniEd6yRr8FkK64tQ" name="t">
+          <type xmi:type="uml:Stereotype" href="utp.profile.uml#_gmS_RkniEd6yRr8FkK64tQ"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_gmS__kniEd6yRr8FkK64tQ" name="createTestComponent">
+        <ownedParameter xmi:id="_gmS__0niEd6yRr8FkK64tQ" name="t">
+          <type xmi:type="uml:Stereotype" href="utp.profile.uml#_gmS_RkniEd6yRr8FkK64tQ"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_gmTAAEniEd6yRr8FkK64tQ" name="Arbiter" clientDependency="_gmTAFEniEd6yRr8FkK64tQ">
+      <ownedOperation xmi:id="_gmTAAUniEd6yRr8FkK64tQ" name="getVerdict">
+        <ownedParameter xmi:id="_gmTAAkniEd6yRr8FkK64tQ" name="returnValue" type="_gmTABUniEd6yRr8FkK64tQ" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_gmTAA0niEd6yRr8FkK64tQ" name="setVerdict">
+        <ownedParameter xmi:id="_gmTABEniEd6yRr8FkK64tQ" name="v" type="_gmTABUniEd6yRr8FkK64tQ"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_gmTABUniEd6yRr8FkK64tQ" name="Verdict">
+      <ownedLiteral xmi:id="_gmTABkniEd6yRr8FkK64tQ" name="pass"/>
+      <ownedLiteral xmi:id="_gmTAB0niEd6yRr8FkK64tQ" name="fail"/>
+      <ownedLiteral xmi:id="_gmTACEniEd6yRr8FkK64tQ" name="inconc"/>
+      <ownedLiteral xmi:id="_gmTACUniEd6yRr8FkK64tQ" name="error"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_gmTACkniEd6yRr8FkK64tQ" name="Timer">
+      <ownedOperation xmi:id="_gmTAC0niEd6yRr8FkK64tQ" name="start">
+        <ownedParameter xmi:id="_gmTADEniEd6yRr8FkK64tQ" name="duration" type="_gmS_90niEd6yRr8FkK64tQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_gmTADUniEd6yRr8FkK64tQ" name="timeout"/>
+      <ownedOperation xmi:id="_gmTADkniEd6yRr8FkK64tQ" name="stop"/>
+      <ownedOperation xmi:id="_gmTAD0niEd6yRr8FkK64tQ" name="running">
+        <ownedParameter xmi:id="_gmTAEEniEd6yRr8FkK64tQ" name="isRunning" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_gmTAEUniEd6yRr8FkK64tQ" name="read">
+        <ownedParameter xmi:id="_gmTAEkniEd6yRr8FkK64tQ" name="elapsedTime" type="_gmS_90niEd6yRr8FkK64tQ" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_gmTAE0niEd6yRr8FkK64tQ" name="start"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Realization" xmi:id="_gmTAFEniEd6yRr8FkK64tQ" supplier="_gmTAAEniEd6yRr8FkK64tQ" client="_gmTAAEniEd6yRr8FkK64tQ"/>
+    <profileApplication xmi:id="_gmTAFUniEd6yRr8FkK64tQ">
+      <eAnnotations xmi:id="_gmTAFkniEd6yRr8FkK64tQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:id="_gmTAF0niEd6yRr8FkK64tQ">
+      <eAnnotations xmi:id="_gmTAGEniEd6yRr8FkK64tQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="Default.profile.uml#_gmS8zEniEd6yRr8FkK64tQ"/>
+      </eAnnotations>
+      <appliedProfile href="Default.profile.uml#_gmS8ykniEd6yRr8FkK64tQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_gmTAGUniEd6yRr8FkK64tQ">
+      <eAnnotations xmi:id="_gmTAGkniEd6yRr8FkK64tQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="Deployment.profile.uml#_gmTBaEniEd6yRr8FkK64tQ"/>
+      </eAnnotations>
+      <appliedProfile href="Deployment.profile.uml#_gmTBZkniEd6yRr8FkK64tQ"/>
+    </profileApplication>
+  </uml:Model>
+  <Standard:ModelLibrary xmi:id="_gmTAG0niEd6yRr8FkK64tQ" base_Package="_gmS_9EniEd6yRr8FkK64tQ"/>
+</xmi:XMI>

@@ -1,0 +1,7 @@
+module ISUTProvided {
+	type integer SUTExceptionType;
+
+
+	signature booleanOp(in integer int) return boolean
+	exception(SUTExceptionType);
+}

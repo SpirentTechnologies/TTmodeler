@@ -1,0 +1,12 @@
+module SimpleATMTest__ATMTest {
+  import from SimpleATMSystem__ATM__IHardware all;
+  import from SimpleATMSystem__ATM__IATM all;
+  type port HWEmulator__hwCom procedure{
+    in display__;
+    out isPinCorrect
+  }
+  type component HWEmulator{
+    port HWEmulator__hwCom hwCom
+  }
+  
+}

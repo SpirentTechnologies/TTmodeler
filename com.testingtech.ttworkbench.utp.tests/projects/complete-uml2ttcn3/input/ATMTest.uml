@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:u2tp="http:///schemas/u2tp/_qBVdkHvTEduQcLqKoqDnbA/1" xmlns:uml="http://www.eclipse.org/uml2/2.0.0/UML" xsi:schemaLocation="http:///schemas/u2tp/_qBVdkHvTEduQcLqKoqDnbA/1 ../../../../plugin/com.testingtech.ttworkbench.u2tp.core/model/u2tp.profile.uml#_qBtRAHvTEduQcLqKoqDnbA">
+  <uml:Package xmi:id="_VVYDsFnYEduaL8vvH0IpSQ" name="ATMTest">
+    <elementImport xmi:id="_5HxEUX-8Eduggeky5GDjcg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_5INwQH-8Eduggeky5GDjcg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </elementImport>
+    <elementImport xmi:id="_5IOXUH-8Eduggeky5GDjcg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_iyzSIFnYEduaL8vvH0IpSQ" name="ATMSuite">
+      <ownedAttribute xmi:id="_kgE6AFndEduaL8vvH0IpSQ" name="atm">
+        <type xmi:type="uml:Class" href="ATM.uml#_V-9msFntEduaL8vvH0IpSQ"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_NEye0FneEduaL8vvH0IpSQ" name="be" type="_3jwmUFndEduaL8vvH0IpSQ"/>
+      <ownedAttribute xmi:id="_cnNOkFoEEduaL8vvH0IpSQ" name="hwe" type="_A0uxsFn6EduaL8vvH0IpSQ" end="_yn7TAH4PEduQ06chW1itaA"/>
+      <ownedAttribute xmi:id="_VYw2MFqZEduUqZXITtR9Lg" name="verdict">
+        <type xmi:type="uml:Enumeration" href="../../../../plugin/com.testingtech.ttworkbench.u2tp.core/model/u2tp.profile.uml#_KxuxwFkHEduTLdVrJh9ATg"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_bFiLwFqZEduUqZXITtR9Lg" name="amount">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_eKrXwFqZEduUqZXITtR9Lg" name="targetBank">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_h-KQcFqZEduUqZXITtR9Lg" name="targetAccount">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_loP8kFqZEduUqZXITtR9Lg" name="sourceAccount">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_d4LdEFqaEduUqZXITtR9Lg" name="current" end="_DszwUH4QEduQ06chW1itaA">
+        <type xmi:type="uml:Class" href="ATM.uml#_T6RfAFnVEduaL8vvH0IpSQ"/>
+      </ownedAttribute>
+      <ownedConnector xmi:id="_-xszsFndEduaL8vvH0IpSQ" name="atm_be">
+        <end xmi:id="_GCxNkFneEduaL8vvH0IpSQ" partWithPort="_kgE6AFndEduaL8vvH0IpSQ">
+          <role xmi:type="uml:Port" href="ATM.uml#_a1M84FntEduaL8vvH0IpSQ"/>
+        </end>
+        <end xmi:id="_RLo_cFneEduaL8vvH0IpSQ" partWithPort="_NEye0FneEduaL8vvH0IpSQ" role="_YPs1EFn_EduaL8vvH0IpSQ"/>
+      </ownedConnector>
+      <ownedConnector xmi:id="_TWl-0FoEEduaL8vvH0IpSQ" name="atm_hwe">
+        <end xmi:id="_VMAoUFoEEduaL8vvH0IpSQ" partWithPort="_kgE6AFndEduaL8vvH0IpSQ">
+          <role xmi:type="uml:Port" href="ATM.uml#_Ye_6gFntEduaL8vvH0IpSQ"/>
+        </end>
+        <end xmi:id="_Z-hVEFoEEduaL8vvH0IpSQ" partWithPort="_cnNOkFoEEduaL8vvH0IpSQ" role="_3slsAFn6EduaL8vvH0IpSQ"/>
+      </ownedConnector>
+      <ownedConnector xmi:id="_vMcqoX4PEduQ06chW1itaA" name="hwe_current">
+        <end xmi:id="_yn7TAH4PEduQ06chW1itaA" role="_cnNOkFoEEduaL8vvH0IpSQ"/>
+        <end xmi:id="_DszwUH4QEduQ06chW1itaA" role="_d4LdEFqaEduUqZXITtR9Lg"/>
+      </ownedConnector>
+      <ownedOperation xmi:id="_qSbMsFqZEduUqZXITtR9Lg" name="validWiring">
+        <ownedParameter xmi:id="_wkckYFqZEduUqZXITtR9Lg" direction="return">
+          <type xmi:type="uml:Enumeration" href="../../../../plugin/com.testingtech.ttworkbench.u2tp.core/model/u2tp.profile.uml#_KxuxwFkHEduTLdVrJh9ATg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_1eakAFqZEduUqZXITtR9Lg" name="invalidPIN">
+        <ownedParameter xmi:id="_6C6p8FqZEduUqZXITtR9Lg" direction="return">
+          <type xmi:type="uml:Enumeration" href="../../../../plugin/com.testingtech.ttworkbench.u2tp.core/model/u2tp.profile.uml#_KxuxwFkHEduTLdVrJh9ATg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_-b9GwFqZEduUqZXITtR9Lg" name="authorizeCard">
+        <ownedParameter xmi:id="_DHdMkFqaEduUqZXITtR9Lg" direction="return">
+          <type xmi:type="uml:Enumeration" href="../../../../plugin/com.testingtech.ttworkbench.u2tp.core/model/u2tp.profile.uml#_KxuxwFkHEduTLdVrJh9ATg"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_3jwmUFndEduaL8vvH0IpSQ" name="BankEmulator" clientDependency="_2IeDUFn5EduaL8vvH0IpSQ">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_YPs1EFn_EduaL8vvH0IpSQ" name="bankCom" clientDependency="_2IeDUFn5EduaL8vvH0IpSQ" end="_RLo_cFneEduaL8vvH0IpSQ" aggregation="composite"/>
+      <interfaceRealization xmi:id="_2IeDUFn5EduaL8vvH0IpSQ" name="IBank_Realization" client="_3jwmUFndEduaL8vvH0IpSQ _YPs1EFn_EduaL8vvH0IpSQ">
+        <supplier xmi:type="uml:Interface" href="ATM.uml#_T3WLMFnzEduaL8vvH0IpSQ"/>
+        <contract href="ATM.uml#_T3WLMFnzEduaL8vvH0IpSQ"/>
+      </interfaceRealization>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_A0uxsFn6EduaL8vvH0IpSQ" name="HWEmulator" clientDependency="_ErCU4Fn6EduaL8vvH0IpSQ">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_3slsAFn6EduaL8vvH0IpSQ" name="hwCom" clientDependency="_Rl-IAFn_EduaL8vvH0IpSQ _ErCU4Fn6EduaL8vvH0IpSQ" end="_Z-hVEFoEEduaL8vvH0IpSQ" aggregation="composite"/>
+      <ownedAttribute xmi:id="_IuuXEFqaEduUqZXITtR9Lg" name="pinOk">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_KyvdQFqaEduUqZXITtR9Lg" value=""/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_NpbWgFqaEduUqZXITtR9Lg" name="enteredPIN">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_QyJa8FqaEduUqZXITtR9Lg" name="message">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TjBnIFqaEduUqZXITtR9Lg" name="t1">
+        <type xmi:type="uml:Interface" href="../../../../plugin/com.testingtech.ttworkbench.u2tp.core/model/u2tp.profile.uml#_cZLP8FkPEduTLdVrJh9ATg"/>
+      </ownedAttribute>
+      <interfaceRealization xmi:id="_ErCU4Fn6EduaL8vvH0IpSQ" name="IHardware_Realization" client="_A0uxsFn6EduaL8vvH0IpSQ _3slsAFn6EduaL8vvH0IpSQ">
+        <supplier xmi:type="uml:Interface" href="ATM.uml#_VkeGQFnxEduaL8vvH0IpSQ"/>
+        <contract href="ATM.uml#_VkeGQFnxEduaL8vvH0IpSQ"/>
+      </interfaceRealization>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_Rl-IAFn_EduaL8vvH0IpSQ" name="IATM_Usage" client="_3slsAFn6EduaL8vvH0IpSQ">
+      <supplier xmi:type="uml:Interface" href="ATM.uml#_OwWX0FnVEduaL8vvH0IpSQ"/>
+    </packagedElement>
+    <profileApplication xmi:id="_mLDZcHvcEduQcLqKoqDnbA">
+      <eAnnotations xmi:id="_mLDZcXvcEduQcLqKoqDnbA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../../../../plugin/com.testingtech.ttworkbench.u2tp.core/model/u2tp.profile.uml#_qBtRAHvTEduQcLqKoqDnbA"/>
+      </eAnnotations>
+      <appliedProfile href="../../../../plugin/com.testingtech.ttworkbench.u2tp.core/model/u2tp.profile.uml#_M298cDNWEdubUuKc_0B7Rw"/>
+    </profileApplication>
+  </uml:Package>
+  <u2tp:TestContext xmi:id="_t9DgsHvdEduQcLqKoqDnbA" base_StructuredClassifier="_iyzSIFnYEduaL8vvH0IpSQ"/>
+  <u2tp:SUT xmi:id="_vtOd0HvdEduQcLqKoqDnbA" base_Property="_kgE6AFndEduaL8vvH0IpSQ"/>
+  <u2tp:TestComponent xmi:id="_xOuFwHvdEduQcLqKoqDnbA" base_StructuredClassifier="_3jwmUFndEduaL8vvH0IpSQ"/>
+  <u2tp:TestComponent xmi:id="_yeg5sHvdEduQcLqKoqDnbA" base_StructuredClassifier="_A0uxsFn6EduaL8vvH0IpSQ"/>
+</xmi:XMI>

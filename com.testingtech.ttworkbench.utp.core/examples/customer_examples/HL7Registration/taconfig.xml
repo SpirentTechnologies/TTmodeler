@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testadapter>
+  <codec encode="HL7">
+    <plugin id="com.testingtech.ttcn.XTestAdapter.builtin.tci.codecs">
+      <parameter id="class" value="com.testingtech.ttcn.tci.codec.plugin.BaseCodecPluginProvider"/>
+    </plugin>
+    <parameter id="default" value="true"/>
+  </codec>
+  <port>
+    <plugin id="com.testingtech.ttcn.tri.LoopbackPortPlugin">
+      <parameter id="class" value="com.testingtech.ttcn.tri.LoopbackPortProvider"/>
+    </plugin>
+    <parameter id="default" value="true"/>
+  </port>
+</testadapter>

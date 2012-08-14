@@ -1,0 +1,10 @@
+#Fri May 30 18:52:29 CEST 2008
+eclipse.preferences.version=1
+ttcn3.continue_on_fail=false
+ttcn3.gen_debug_code_record_init=false
+ttcn3.generate_mlf=true
+ttcn3.main_module=
+ttcn3.mlf_class=
+ttcn3.mlf_jar=
+ttcn3.source_folders=//PROJECT_NAME//ttcn3
+ttcn3.use_bigint=false

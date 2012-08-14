@@ -1,0 +1,73 @@
+<!-- ===================================================================== -->
+<!-- Custom targets called from a project's generated build.xml            -->
+<!-- Set customBuildCallbacks=<path/to/this/file> in your build.properties.-->
+<!-- ===================================================================== -->
+<project name="utp.topcased" default="pre.@dot">
+
+	<property environment="env" />
+	<condition property="build-tools" value="${env.BUILD_TOOLS}">
+		<isset property="env.BUILD_TOOLS" />
+	</condition>
+	<property file="user.build.properties" />
+	<property file="default.build.properties" />
+	<property file="${build-tools}/build-tools.properties" />
+
+	<taskdef resource="net/sf/antcontrib/antlib.xml"
+	         classpath="${ant-contrib-jar}" />
+
+	<macrodef name="zip-packet">
+		<attribute name="packetname" />
+		<attribute name="packet.basedir" />
+		<sequential>
+			<echo>packing project @{packetname} with ant zip task (preserving no file attributes)</echo>
+			<mkdir dir="archives" />
+			<delete>
+				<fileset dir="archives">
+					<filename name="@{packetname}.zip" />
+				</fileset>
+			</delete>
+			<zip destfile="archives/@{packetname}.zip"
+			     basedir="@{packet.basedir}"
+			     encoding="UTF-8" />
+		</sequential>
+	</macrodef>
+
+	<target name="setmarker">
+		<echo file="${markerfile}">should be removed upon completion</echo>
+	</target>
+
+	<target name="clearmarker">
+		<delete file="${markerfile}" />
+	</target>
+
+	<target name="clean"
+	        description="remove archives">
+		<delete dir="archives" />
+	</target>
+
+	<target name="zip-samples" description="zip-samples">
+		<for list="${projects-to-zip}" param="projectname">
+			<sequential>
+				<uptodate property="@{projectname}.uptodate"
+				          targetfile="archives/@{projectname}.zip">
+					<srcfiles dir="projects/@{projectname}" />
+				</uptodate>
+				<if>
+					<isset property="@{projectname}.uptodate" />
+					<then>
+						<echo level="info">archives/@{projectname}.zip is up to date</echo>
+					</then>
+					<else>
+						<delete file="archives/@{projectname}.zip" />
+						<zip-packet packetname="@{projectname}"
+						            packet.basedir="projects/@{projectname}" />
+					</else>
+				</if>
+			</sequential>
+		</for>
+	</target>
+
+	<target name="pre.@dot"
+	        depends="setmarker,zip-samples,clearmarker"
+	        description="creating classes from ecore model" />
+</project>

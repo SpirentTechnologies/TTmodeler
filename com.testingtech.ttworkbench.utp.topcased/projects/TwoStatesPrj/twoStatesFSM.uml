@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="idModel" name="twoStatesFSMModel">
+  <packagedElement xmi:type="uml:Package" xmi:id="idPackage" name="twoStatesFSMPackage">
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="idStateMachine" name="twoStatesFSMStateMachine">
+      <region xmi:id="idRegion" name="MainRegion">
+        <subvertex xmi:type="uml:State" xmi:id="_it7IMETzEdy9fpPhDUTBig" name="State1-ON"/>
+        <subvertex xmi:type="uml:State" xmi:id="_kv61IETzEdy9fpPhDUTBig" name="State2-OFF"/>
+        <transition xmi:id="_wG3CwkT0Edy9fpPhDUTBig" name="Turn ON" target="_it7IMETzEdy9fpPhDUTBig" source="_kv61IETzEdy9fpPhDUTBig"/>
+        <transition xmi:id="_PskFM0T1Edy9fpPhDUTBig" name="Turn OFF" target="_kv61IETzEdy9fpPhDUTBig" source="_it7IMETzEdy9fpPhDUTBig"/>
+        <transition xmi:id="_mcpx00T1Edy9fpPhDUTBig" name="Turn ON1" target="_it7IMETzEdy9fpPhDUTBig" source="_it7IMETzEdy9fpPhDUTBig"/>
+        <transition xmi:id="_nsqoMET1Edy9fpPhDUTBig" name="Turn OFF1" target="_kv61IETzEdy9fpPhDUTBig" source="_kv61IETzEdy9fpPhDUTBig"/>
+      </region>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

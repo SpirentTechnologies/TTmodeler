@@ -1,0 +1,51 @@
+module ClientRegistrationTest_SC {
+	import from IMPI all;
+	import from RegistrationTest all;
+	import from UTPAUX all;
+
+	type port TSI__mpiPort procedure {
+		out findCandidates, getPersonDemographics;
+	}
+
+	type component sut {
+		port TSI__mpiPort mpiPort;
+	}
+
+	type component TSI__MAIN extends sut {
+	}
+
+	function CONFIG(in TSI__MAIN tsi, inout RegistrationSystem client) {
+		map(tsi:mpiPort, client:mpiPort);
+	}
+
+	function client__lifeline() runs on RegistrationSystem {
+		var charstring candidate;
+		var charstring candidateAddress;
+		var charstring candidateName := "Adam Everyman";
+		mpiPort.call(findCandidates:{candidateName, true, "Oakland"}, 6.0) {
+			[] mpiPort.catch(timeout) {}
+			[] mpiPort.getreply(findCandidates:{-, -, -}) -> value candidate {}
+		};
+		mpiPort.call(getPersonDemographics:{candidate}) {
+			[] mpiPort.getreply(getPersonDemographics:{-}) ->
+			   value candidateAddress {}
+		};
+		if (candidateAddress == "") {
+			setverdict(fail);
+		} else if (candidateAddress == "Adam Everyman, Male, Oakland, CA 94612")
+		{
+			setverdict(pass);
+		} else {
+			setverdict(inconc);
+		}
+	}
+
+	testcase ClientRegistration_SC() runs on MTC__DEFAULT system TSI__MAIN {
+		var RegistrationSystem client := RegistrationSystem.create;
+		CONFIG(system, client);
+		client.start(client__lifeline());
+		alt {
+			[] all component.done {}
+		}
+	}
+}

@@ -1,0 +1,106 @@
+module ClientRegistrationTest_SM {
+	import from IMPI all;
+	import from RegistrationTest all;
+	import from UTPAUX all;
+
+	type port TSI__mpiPort procedure {
+		out findCandidates, getPersonDemographics;
+	}
+
+	type component sut {
+		port TSI__mpiPort mpiPort;
+	}
+
+	type component TSI__MAIN extends sut {
+	}
+
+	function CONFIG(in TSI__MAIN tsi, inout RegistrationSystem client) {
+		map(tsi:mpiPort, client:mpiPort);
+	}
+
+	function ClientRegStateMachine__statemachine()
+	runs on ClientRegStateMachine__testComp {
+		ClientRegStateMachine__call_findCandidates__state();
+	}
+
+	type component ClientRegStateMachine__testComp extends RegistrationSystem {
+		timer timer1 := 3.0;
+		var charstring candidateName := "Adam Everyman";
+		var boolean gender := false;
+		var charstring candidateAddress;
+		var charstring candidate;
+		var integer inputNumber := 5;
+	}
+
+	function ClientRegStateMachine__VERDICT_PASS__state()
+	runs on ClientRegStateMachine__testComp {
+		setverdict(pass);
+	}
+
+	function ClientRegStateMachine__VERDICT_FAIL__state()
+	runs on ClientRegStateMachine__testComp {
+		setverdict(fail);
+	}
+
+	function ClientRegStateMachine__call_findCandidates__state()
+	runs on ClientRegStateMachine__testComp {
+		mpiPort
+		.call(findCandidates:
+			  {name := candidateName, gender := gender, place := "Oakland"},
+			  5.0) {
+			[] mpiPort.getreply(findCandidates:{?}) -> value candidate {
+				ClientRegStateMachine__UNNAMED_CHOICE_1__state();
+			}
+			[] mpiPort.catch(findCandidates, MPIExceptionType:?) {
+				ClientRegStateMachine__VERDICT_FAIL__state();
+			}
+			[] mpiPort.catch(timeout) {
+				ClientRegStateMachine__VERDICT_INCONC__state();
+			}
+		};
+	}
+
+	function ClientRegStateMachine__UNNAMED_CHOICE_1__state()
+	runs on ClientRegStateMachine__testComp {
+		if (candidate == "") {
+			ClientRegStateMachine__VERDICT_FAIL__state();
+		} else {
+			ClientRegStateMachine__call_getPersonDemographics__state();
+		}
+	}
+
+	function ClientRegStateMachine__VERDICT_INCONC__state()
+	runs on ClientRegStateMachine__testComp {
+		setverdict(inconc);
+	}
+
+	function ClientRegStateMachine__call_getPersonDemographics__state()
+	runs on ClientRegStateMachine__testComp {
+		mpiPort.call(getPersonDemographics:{candidate := candidate}) {
+			[] mpiPort.getreply(getPersonDemographics:{?}) ->
+			   value candidateAddress {
+				ClientRegStateMachine__UNNAMED_CHOICE_2__state();
+			}
+		};
+	}
+
+	function ClientRegStateMachine__UNNAMED_CHOICE_2__state()
+	runs on ClientRegStateMachine__testComp {
+		if (candidateAddress == "Adam Everyman, Male, Oakland, CA 94612") {
+			ClientRegStateMachine__VERDICT_PASS__state();
+		} else {
+			ClientRegStateMachine__VERDICT_FAIL__state();
+		}
+	}
+
+	testcase ClientRegistration_SM() runs on MTC__DEFAULT system TSI__MAIN {
+		var
+		ClientRegStateMachine__testComp
+			client := ClientRegStateMachine__testComp.create;
+		CONFIG(system, client);
+		client.start(ClientRegStateMachine__statemachine());
+		alt {
+			[] all component.done {}
+		}
+	}
+}

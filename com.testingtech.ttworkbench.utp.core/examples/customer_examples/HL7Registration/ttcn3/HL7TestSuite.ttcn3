@@ -1,0 +1,4 @@
+module HL7TestSuite {
+	import from ClientRegistrationTest_SC all;
+	import from ClientRegistrationTest_SM all;
+}

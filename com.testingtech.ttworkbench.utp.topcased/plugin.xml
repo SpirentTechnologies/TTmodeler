@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+<!--
+  <extension
+    point="org.eclipse.emf.ecore.uri_mapping">
+    <mapping
+       source="pathmap://UTP_LIBRARIES/"
+       target="platform:/plugin/com.testingtech.ttworkbench.utp.topcased/libraries/">
+    </mapping>
+  </extension>
+
+  <extension
+    point="org.eclipse.emf.ecore.uri_mapping">
+    <mapping
+       source="pathmap://UTP_PROFILES/"
+       target="platform:/plugin/com.testingtech.ttworkbench.utp.topcased/profiles/">
+    </mapping>
+  </extension>-->
+
+</plugin>
+

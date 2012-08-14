@@ -1,0 +1,8 @@
+module SimpleATMSystem__ATM__IHardware {
+  import from U2TPAUX all;
+  signature display__(charstring message__);
+  
+  type address SimpleATMSystem__ATM__IHardware__OBJ;
+  
+  external function INIT__ () return SimpleATMSystem__ATM__IHardware__OBJ;
+}

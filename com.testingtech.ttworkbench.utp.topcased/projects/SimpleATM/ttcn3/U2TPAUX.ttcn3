@@ -1,0 +1,11 @@
+module U2TPAUX {
+  type enumerated Verdict{
+    pass__, inconc__, fail__, error__
+  }
+  
+  type charstring address;
+  
+  type component MTC__DEFAULT{
+  }
+  
+}

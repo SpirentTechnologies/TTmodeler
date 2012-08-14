@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Standard="http://www.eclipse.org/uml2/schemas/Standard/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xsi:schemaLocation="http://www.eclipse.org/uml2/schemas/Standard/1 pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w">
+  <uml:Model xmi:id="_3kyfIxZYEd-DIOK_NLelwQ" name="UTPPredefined" viewpoint="">
+    <packagedElement xmi:type="uml:Class" xmi:id="_3kyfJBZYEd-DIOK_NLelwQ" name="Duration"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_3kyfJRZYEd-DIOK_NLelwQ" name="Timezone"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_3kyfJhZYEd-DIOK_NLelwQ" name="Time"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_3kyfJxZYEd-DIOK_NLelwQ" name="Scheduler">
+      <ownedOperation xmi:id="_3kyfKBZYEd-DIOK_NLelwQ" name="Scheduler"/>
+      <ownedOperation xmi:id="_3kyfKRZYEd-DIOK_NLelwQ" name="startTestCase">
+        <ownedParameter xmi:id="_3kyfKhZYEd-DIOK_NLelwQ" name="t">
+          <type xmi:type="uml:Stereotype" href="utp.profile.uml#_3kotIhZYEd-DIOK_NLelwQ"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_3kyfKxZYEd-DIOK_NLelwQ" name="finishTestCase">
+        <ownedParameter xmi:id="_3kyfLBZYEd-DIOK_NLelwQ" name="t">
+          <type xmi:type="uml:Stereotype" href="utp.profile.uml#_3kotIhZYEd-DIOK_NLelwQ"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_3kyfLRZYEd-DIOK_NLelwQ" name="createTestComponent">
+        <ownedParameter xmi:id="_3kyfLhZYEd-DIOK_NLelwQ" name="t">
+          <type xmi:type="uml:Stereotype" href="utp.profile.uml#_3kotIhZYEd-DIOK_NLelwQ"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_3kyfLxZYEd-DIOK_NLelwQ" name="Arbiter" clientDependency="_3kyfQxZYEd-DIOK_NLelwQ">
+      <ownedOperation xmi:id="_3kyfMBZYEd-DIOK_NLelwQ" name="getVerdict">
+        <ownedParameter xmi:id="_3kyfMRZYEd-DIOK_NLelwQ" name="returnValue" type="_3kyfNBZYEd-DIOK_NLelwQ" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_3kyfMhZYEd-DIOK_NLelwQ" name="setVerdict">
+        <ownedParameter xmi:id="_3kyfMxZYEd-DIOK_NLelwQ" name="v" type="_3kyfNBZYEd-DIOK_NLelwQ"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_3kyfNBZYEd-DIOK_NLelwQ" name="Verdict">
+      <ownedLiteral xmi:id="_3kyfNRZYEd-DIOK_NLelwQ" name="pass"/>
+      <ownedLiteral xmi:id="_3kyfNhZYEd-DIOK_NLelwQ" name="fail"/>
+      <ownedLiteral xmi:id="_3kyfNxZYEd-DIOK_NLelwQ" name="inconc"/>
+      <ownedLiteral xmi:id="_3kyfOBZYEd-DIOK_NLelwQ" name="error"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_3kyfORZYEd-DIOK_NLelwQ" name="Timer">
+      <ownedOperation xmi:id="_3kyfOhZYEd-DIOK_NLelwQ" name="start">
+        <ownedParameter xmi:id="_3kyfOxZYEd-DIOK_NLelwQ" name="duration" type="_3kyfJhZYEd-DIOK_NLelwQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_3kyfPBZYEd-DIOK_NLelwQ" name="timeout"/>
+      <ownedOperation xmi:id="_3kyfPRZYEd-DIOK_NLelwQ" name="stop"/>
+      <ownedOperation xmi:id="_3kyfPhZYEd-DIOK_NLelwQ" name="running">
+        <ownedParameter xmi:id="_3kyfPxZYEd-DIOK_NLelwQ" name="isRunning" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_3kyfQBZYEd-DIOK_NLelwQ" name="read">
+        <ownedParameter xmi:id="_3kyfQRZYEd-DIOK_NLelwQ" name="elapsedTime" type="_3kyfJhZYEd-DIOK_NLelwQ" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_3kyfQhZYEd-DIOK_NLelwQ" name="start"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Realization" xmi:id="_3kyfQxZYEd-DIOK_NLelwQ" supplier="_3kyfLxZYEd-DIOK_NLelwQ" client="_3kyfLxZYEd-DIOK_NLelwQ"/>
+    <profileApplication xmi:id="_3kyfRBZYEd-DIOK_NLelwQ">
+      <eAnnotations xmi:id="_3kyfRRZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:id="_3kyfRhZYEd-DIOK_NLelwQ">
+      <eAnnotations xmi:id="_3kyfRxZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="Default.profile.uml#_3kygNxZYEd-DIOK_NLelwQ"/>
+      </eAnnotations>
+      <appliedProfile href="Default.profile.uml#_3kygNRZYEd-DIOK_NLelwQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_3kyfSBZYEd-DIOK_NLelwQ">
+      <eAnnotations xmi:id="_3kyfSRZYEd-DIOK_NLelwQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="Deployment.profile.uml#_3kycdRZYEd-DIOK_NLelwQ"/>
+      </eAnnotations>
+      <appliedProfile href="Deployment.profile.uml#_3kyccxZYEd-DIOK_NLelwQ"/>
+    </profileApplication>
+  </uml:Model>
+  <Standard:ModelLibrary xmi:id="_3kyfShZYEd-DIOK_NLelwQ" base_Package="_3kyfIxZYEd-DIOK_NLelwQ"/>
+</xmi:XMI>

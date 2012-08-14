@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: com.testingtech.ttworkbench.utp.topcased;singleton:=true
+Bundle-Version: 0.0.12.qualifier
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Require-Bundle: com.testingtech.ttworkbench.core,
+ org.eclipse.uml2.uml
+Eclipse-LazyStart: true

@@ -1,0 +1,45 @@
+module SimpleATMTest__ATMTest__ATMSuite {
+  import from SimpleATMSystem__ATM__IHardware all;
+  import from SimpleATMSystem__ATM__IATM all;
+  import from SimpleATMTest__ATMTest all;
+  import from U2TPAUX all;
+  type port TSI__SimpleATMSystem__ATM__Bank__atmPort procedure{
+    in display__;
+    out isPinCorrect
+  }
+  type component TSI__SimpleATMSystem__ATM__Bank__atm{
+    port TSI__SimpleATMSystem__ATM__Bank__atmPort atmPort
+  }
+  
+  type component TSI__MAIN extends TSI__SimpleATMSystem__ATM__Bank__atm{
+  }
+  
+  function CONFIG (in TSI__MAIN tsi__, inout HWEmulator hwe){
+    hwe := HWEmulator.create;
+    map(tsi__:atmPort,hwe:hwCom);
+  }
+  function invalidPIN__hwe () runs on HWEmulator{
+    var integer invalidPIN__VAR := INIT__invalidPIN__invalidPIN();
+    alt{
+      [] hwCom.getcall(display__ : {
+      "hello"
+      }){}
+    }
+    alt{
+      [] hwCom.getreply(isPinCorrect : {
+      omit
+      } value true){}
+    }
+    setverdict(pass);
+    self.stop;
+  }
+  external function INIT__invalidPIN__invalidPIN () return integer;
+  testcase invalidPIN () runs on MTC__DEFAULT system TSI__MAIN{
+    var HWEmulator hwe__VAR;
+    CONFIG(system, hwe__VAR);
+    hwe__VAR.start(invalidPIN__hwe());
+    alt{
+      [] all component.done{}
+    }
+  }
+}

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.uml.msl.model" version="7.0.0"><feature description="" name="com.ibm.xtools.ruml.feature" url="" version="7.0.0"/></signature>?>
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.mmi.ui.signatures.diagram" version="7.0.0"><feature description="" name="Rational Modeling Platform (com.ibm.xtools.rmp)" url="" version="7.0.0"/></signature>?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Standard="http://www.eclipse.org/uml2/schemas/Standard/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.0/notation" xmlns:uml="http://www.eclipse.org/uml2/2.0.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.2/Umlnotation" xsi:schemaLocation="http://www.eclipse.org/uml2/schemas/Standard/1 pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w">
+  <uml:Model xmi:id="_z8t-cIPIEdyOppKXINO-eg" name="U2TPEnumsAndPrimitives">
+    <eAnnotations xmi:id="_z8t-cYPIEdyOppKXINO-eg" source="uml2.diagrams" references="_z8t-coPIEdyOppKXINO-eg">
+      <contents xmi:type="notation:Diagram" xmi:id="_z8t-coPIEdyOppKXINO-eg" type="Class" name="U2TPEnumsAndPrimitives">
+        <children xmi:id="_4IgpcIPIEdyOppKXINO-eg" element="_4Iai0IPIEdyOppKXINO-eg">
+          <children xmi:id="_4Igpc4PIEdyOppKXINO-eg" type="ImageCompartment">
+            <layoutConstraint xmi:type="notation:Size" xmi:id="_4IgpdIPIEdyOppKXINO-eg" width="1320" height="1320"/>
+          </children>
+          <children xmi:id="_4IgpdYPIEdyOppKXINO-eg" type="Stereotype"/>
+          <children xmi:id="_4IgpdoPIEdyOppKXINO-eg" type="Kind"/>
+          <children xmi:id="_4Igpd4PIEdyOppKXINO-eg" type="Name"/>
+          <children xmi:id="_4ImwEIPIEdyOppKXINO-eg" type="Parent"/>
+          <children xmi:id="_4ImwEYPIEdyOppKXINO-eg" type="EnumerationCompartment">
+            <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_4ImwEoPIEdyOppKXINO-eg"/>
+          </children>
+          <children xmi:id="_4ImwE4PIEdyOppKXINO-eg" visible="false" type="AttributeCompartment">
+            <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_4ImwFIPIEdyOppKXINO-eg"/>
+          </children>
+          <children xmi:id="_4ImwFYPIEdyOppKXINO-eg" visible="false" type="OperationCompartment">
+            <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_4ImwFoPIEdyOppKXINO-eg"/>
+          </children>
+          <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_4IgpcYPIEdyOppKXINO-eg" showStereotype="Label"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4IgpcoPIEdyOppKXINO-eg" x="634" y="1268" width="4837" height="6692"/>
+        </children>
+        <children xmi:id="_42ctgIPIEdyOppKXINO-eg" element="_42Wm4IPIEdyOppKXINO-eg">
+          <children xmi:id="_42ctg4PIEdyOppKXINO-eg" type="ImageCompartment">
+            <layoutConstraint xmi:type="notation:Size" xmi:id="_42cthIPIEdyOppKXINO-eg" width="1320" height="1320"/>
+          </children>
+          <children xmi:id="_42cthYPIEdyOppKXINO-eg" type="Stereotype"/>
+          <children xmi:id="_42cthoPIEdyOppKXINO-eg" type="Kind"/>
+          <children xmi:id="_42cth4PIEdyOppKXINO-eg" type="Name"/>
+          <children xmi:id="_42i0IIPIEdyOppKXINO-eg" type="Parent"/>
+          <children xmi:id="_42i0IYPIEdyOppKXINO-eg" type="EnumerationCompartment">
+            <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_42i0IoPIEdyOppKXINO-eg"/>
+          </children>
+          <children xmi:id="_42i0I4PIEdyOppKXINO-eg" visible="false" type="AttributeCompartment">
+            <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_42i0JIPIEdyOppKXINO-eg"/>
+          </children>
+          <children xmi:id="_42i0JYPIEdyOppKXINO-eg" visible="false" type="OperationCompartment">
+            <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_42i0JoPIEdyOppKXINO-eg"/>
+          </children>
+          <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_42ctgYPIEdyOppKXINO-eg" showStereotype="Label"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_42ctgoPIEdyOppKXINO-eg" x="6340" y="1268" width="2935" height="2881"/>
+        </children>
+        <children xmi:id="_Q3IC0IPKEdyOppKXINO-eg" element="_HuEMkIPKEdyOppKXINO-eg">
+          <children xmi:id="_Q3OJcIPKEdyOppKXINO-eg" type="ImageCompartment">
+            <layoutConstraint xmi:type="notation:Size" xmi:id="_Q3OJcYPKEdyOppKXINO-eg" width="1320" height="1320"/>
+          </children>
+          <children xmi:id="_Q3OJcoPKEdyOppKXINO-eg" type="Stereotype"/>
+          <children xmi:id="_Q3OJc4PKEdyOppKXINO-eg" type="Kind"/>
+          <children xmi:id="_Q3OJdIPKEdyOppKXINO-eg" type="Name"/>
+          <children xmi:id="_Q3OJdYPKEdyOppKXINO-eg" type="Parent"/>
+          <children xmi:id="_Q3OJdoPKEdyOppKXINO-eg" visible="false" type="AttributeCompartment">
+            <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_Q3OJd4PKEdyOppKXINO-eg"/>
+          </children>
+          <children xmi:id="_Q3UQEIPKEdyOppKXINO-eg" visible="false" type="OperationCompartment">
+            <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_Q3UQEYPKEdyOppKXINO-eg"/>
+          </children>
+          <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_Q3IC0YPKEdyOppKXINO-eg" showStereotype="Label"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Q3IC0oPKEdyOppKXINO-eg" x="10144" y="1268"/>
+        </children>
+        <children xmi:id="_SUJacIPKEdyOppKXINO-eg" element="_KXTfsIPKEdyOppKXINO-eg">
+          <children xmi:id="_SUJac4PKEdyOppKXINO-eg" type="ImageCompartment">
+            <layoutConstraint xmi:type="notation:Size" xmi:id="_SUJadIPKEdyOppKXINO-eg" width="1320" height="1320"/>
+          </children>
+          <children xmi:id="_SUJadYPKEdyOppKXINO-eg" type="Stereotype"/>
+          <children xmi:id="_SUJadoPKEdyOppKXINO-eg" type="Kind"/>
+          <children xmi:id="_SUJad4PKEdyOppKXINO-eg" type="Name"/>
+          <children xmi:id="_SUJaeIPKEdyOppKXINO-eg" type="Parent"/>
+          <children xmi:id="_SUJaeYPKEdyOppKXINO-eg" visible="false" type="AttributeCompartment">
+            <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_SUJaeoPKEdyOppKXINO-eg"/>
+          </children>
+          <children xmi:id="_SUJae4PKEdyOppKXINO-eg" visible="false" type="OperationCompartment">
+            <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_SUJafIPKEdyOppKXINO-eg"/>
+          </children>
+          <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_SUJacYPKEdyOppKXINO-eg" showStereotype="Label"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SUJacoPKEdyOppKXINO-eg" x="10144" y="3170"/>
+        </children>
+        <children xmi:id="_TE3FsIPKEdyOppKXINO-eg" element="_MP1HkIPKEdyOppKXINO-eg">
+          <children xmi:id="_TE3Fs4PKEdyOppKXINO-eg" type="ImageCompartment">
+            <layoutConstraint xmi:type="notation:Size" xmi:id="_TE3FtIPKEdyOppKXINO-eg" width="1320" height="1320"/>
+          </children>
+          <children xmi:id="_TE3FtYPKEdyOppKXINO-eg" type="Stereotype"/>
+          <children xmi:id="_TE3FtoPKEdyOppKXINO-eg" type="Kind"/>
+          <children xmi:id="_TE3Ft4PKEdyOppKXINO-eg" type="Name"/>
+          <children xmi:id="_TE3FuIPKEdyOppKXINO-eg" type="Parent"/>
+          <children xmi:id="_TE3FuYPKEdyOppKXINO-eg" visible="false" type="AttributeCompartment">
+            <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_TE3FuoPKEdyOppKXINO-eg"/>
+          </children>
+          <children xmi:id="_TE3Fu4PKEdyOppKXINO-eg" visible="false" type="OperationCompartment">
+            <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_TE3FvIPKEdyOppKXINO-eg"/>
+          </children>
+          <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_TE3FsYPKEdyOppKXINO-eg" showStereotype="Label"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TE3FsoPKEdyOppKXINO-eg" x="9827" y="5072"/>
+        </children>
+        <styles xmi:type="umlnotation:UMLDiagramStyle" xmi:id="_z8t-c4PIEdyOppKXINO-eg"/>
+      </contents>
+    </eAnnotations>
+    <packageImport xmi:id="_z8t-dIPIEdyOppKXINO-eg">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_4Iai0IPIEdyOppKXINO-eg" name="InteractionOperator">
+      <ownedLiteral xmi:id="_ORO0EIPJEdyOppKXINO-eg" name="alt"/>
+      <ownedLiteral xmi:id="_TuAl0IPJEdyOppKXINO-eg" name="assert"/>
+      <ownedLiteral xmi:id="_VZ78IIPJEdyOppKXINO-eg" name="break"/>
+      <ownedLiteral xmi:id="_XVaxYIPJEdyOppKXINO-eg" name="consider"/>
+      <ownedLiteral xmi:id="_YScaUIPJEdyOppKXINO-eg" name="determAlt"/>
+      <ownedLiteral xmi:id="_boMOIIPJEdyOppKXINO-eg" name="ignore"/>
+      <ownedLiteral xmi:id="_cgV-IIPJEdyOppKXINO-eg" name="loop"/>
+      <ownedLiteral xmi:id="_dLtPUIPJEdyOppKXINO-eg" name="neg"/>
+      <ownedLiteral xmi:id="_eFMcEIPJEdyOppKXINO-eg" name="opt"/>
+      <ownedLiteral xmi:id="_fGPCUIPJEdyOppKXINO-eg" name="par"/>
+      <ownedLiteral xmi:id="_gJFmcIPJEdyOppKXINO-eg" name="region"/>
+      <ownedLiteral xmi:id="_hDojIIPJEdyOppKXINO-eg" name="seq"/>
+      <ownedLiteral xmi:id="_iCwd0IPJEdyOppKXINO-eg" name="strict"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_42Wm4IPIEdyOppKXINO-eg" name="Verdict">
+      <ownedLiteral xmi:id="_1tzFEIPJEdyOppKXINO-eg" name="error"/>
+      <ownedLiteral xmi:id="_23bmoIPJEdyOppKXINO-eg" name="fail"/>
+      <ownedLiteral xmi:id="_3jdmMIPJEdyOppKXINO-eg" name="inconclusive"/>
+      <ownedLiteral xmi:id="_4woj8IPJEdyOppKXINO-eg" name="pass"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_HuEMkIPKEdyOppKXINO-eg" name="Duration"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_KXTfsIPKEdyOppKXINO-eg" name="Time"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_MP1HkIPKEdyOppKXINO-eg" name="Timezone"/>
+    <profileApplication xmi:id="_z8t-dYPIEdyOppKXINO-eg">
+      <eAnnotations xmi:id="_z8t-doPIEdyOppKXINO-eg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:id="_z8t-d4PIEdyOppKXINO-eg">
+      <eAnnotations xmi:id="_z8t-eIPIEdyOppKXINO-eg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Default.epx#_IN8k8MmBEdqBcN1R6EvWUw?Default/Default?"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML2_MSL_PROFILES/Default.epx#_a_S3wNWLEdiy4IqP8whjFA?Default?"/>
+    </profileApplication>
+    <profileApplication xmi:id="_z8t-eYPIEdyOppKXINO-eg">
+      <eAnnotations xmi:id="_z8t-eoPIEdyOppKXINO-eg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_IrdAUMmBEdqBcN1R6EvWUw?Deployment/Deployment?"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_vjbuwOvHEdiDX5bji0iVSA?Deployment?"/>
+    </profileApplication>
+  </uml:Model>
+  <Standard:ModelLibrary xmi:id="_JVJmYIfAEdykD8hdrPUGcg" base_Package="_z8t-cIPIEdyOppKXINO-eg"/>
+</xmi:XMI>

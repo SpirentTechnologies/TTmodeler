@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA" name="BankATMsystemMdl">
+  <elementImport xmi:id="_F-frsGBEEdydLMC0IfSMUQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_F-frsWBEEdydLMC0IfSMUQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <elementImport xmi:id="_F-frsmBEEdydLMC0IfSMUQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_F-frs2BEEdydLMC0IfSMUQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="BankATMpkg">
+    <packagedElement xmi:type="uml:Interface" xmi:id="_381auGA2EdydLMC0IfSMUQ" name="IBankATM">
+      <ownedOperation xmi:id="_SI8s0mA4EdydLMC0IfSMUQ" name="isPinCorrect">
+        <ownedParameter xmi:id="_09EyEGBDEdydLMC0IfSMUQ" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_vSpJYGBEEdydLMC0IfSMUQ" name="aPinNr">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_X_JEImA4EdydLMC0IfSMUQ" name="storeCardData">
+        <ownedParameter xmi:id="_ldpkwGBFEdydLMC0IfSMUQ" name="aCardInfo">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_dTtVEGA4EdydLMC0IfSMUQ" name="depositMoney">
+        <ownedParameter xmi:id="_M0Se0GBEEdydLMC0IfSMUQ" name="aSum">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_gCxjYmA4EdydLMC0IfSMUQ" name="withdrawMoney">
+        <ownedParameter xmi:id="_yMHbcGBFEdydLMC0IfSMUQ" name="aSum">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_4TLeIGA2EdydLMC0IfSMUQ" name="IHardWareATM">
+      <ownedOperation xmi:id="_k0rMImA4EdydLMC0IfSMUQ" name="display">
+        <ownedParameter xmi:id="_5wImgGBFEdydLMC0IfSMUQ" name="aMsg">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_mgsCAmA4EdydLMC0IfSMUQ" name="acceptMoney">
+        <ownedParameter xmi:id="_3SdDIGBFEdydLMC0IfSMUQ" name="aSum">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ocXrkmA4EdydLMC0IfSMUQ" name="ejectMoney">
+        <ownedParameter xmi:id="_DYC78GBGEdydLMC0IfSMUQ" name="aSum"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_scB_EmA4EdydLMC0IfSMUQ" name="ejectCard"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_IG9f8GA3EdydLMC0IfSMUQ" name="BankATM">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="__OlQYGA-EdydLMC0IfSMUQ" name="atm" type="_HdIqYGA4EdydLMC0IfSMUQ" aggregation="composite"/>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_HdIqYGA4EdydLMC0IfSMUQ" name="ATMPortType" clientDependency="_vtq5gGA5EdydLMC0IfSMUQ _Wnu2MGBBEdydLMC0IfSMUQ">
+        <interfaceRealization xmi:id="_vtq5gGA5EdydLMC0IfSMUQ" supplier="_381auGA2EdydLMC0IfSMUQ" client="_HdIqYGA4EdydLMC0IfSMUQ" contract="_381auGA2EdydLMC0IfSMUQ"/>
+      </nestedClassifier>
+      <ownedOperation xmi:id="_uQvd8mA4EdydLMC0IfSMUQ" name="crossCheckPin" visibility="private"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_Wnu2MGBBEdydLMC0IfSMUQ" supplier="_4TLeIGA2EdydLMC0IfSMUQ" client="_HdIqYGA4EdydLMC0IfSMUQ"/>
+  </packagedElement>
+</uml:Model>

@@ -1,0 +1,37 @@
+module TestSuite {
+	import from PingInterface all;
+	import from root all;
+	import from UTPAUX all;
+
+	type port TSI__pingServerPort procedure {
+		out ping;
+	}
+
+	type component echoserver {
+		port TSI__pingServerPort pingServerPort;
+	}
+
+	type component TSI__MAIN extends echoserver {
+	}
+
+	function CONFIG(in TSI__MAIN tsi, inout EchoClient echoclient) {
+		map(tsi:pingServerPort, echoclient:pingClientPort);
+	}
+
+	function echoclient__lifeline() runs on EchoClient {
+		pingClientPort.call(ping:{-}) {
+			[] pingClientPort.getreply(ping:{-}) {}
+		};
+
+		setverdict(pass);
+	}
+
+	testcase pingTest() runs on MTC__DEFAULT system TSI__MAIN {
+		var EchoClient echoclient := EchoClient.create;
+		CONFIG(system, echoclient);
+		echoclient.start(echoclient__lifeline());
+		alt {
+			[] all component.done {}
+		}
+	}
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagrams:Diagrams xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.topcased.org/DI/1.0" xmlns:diagrams="http://www.topcased.org/Diagrams/1.0" xmi:id="_WW26UETyEdy9fpPhDUTBig" activeDiagram="_WW-2IETyEdy9fpPhDUTBig">
+  <model href="twoStatesFSM.uml#idStateMachine"/>
+  <diagrams xmi:id="_WW-2IETyEdy9fpPhDUTBig" position="0,0" size="100,100" name="twoStatesFSM" viewport="5,0">
+    <property xmi:id="_WxmVkETyEdy9fpPhDUTBig" key="pageFormatName" value="A4"/>
+    <property xmi:id="_WxmVkUTyEdy9fpPhDUTBig" key="diagramWidth" value="840"/>
+    <property xmi:id="_Wxm8oETyEdy9fpPhDUTBig" key="diagramHeight" value="1188"/>
+    <property xmi:id="_Wxm8oUTyEdy9fpPhDUTBig" key="pageMarginName" value="Small Margin"/>
+    <property xmi:id="_Wxm8okTyEdy9fpPhDUTBig" key="diagramTopMargin" value="20"/>
+    <property xmi:id="_Wxm8o0TyEdy9fpPhDUTBig" key="diagramBottomMargin" value="20"/>
+    <property xmi:id="_Wxm8pETyEdy9fpPhDUTBig" key="diagramLeftMargin" value="20"/>
+    <property xmi:id="_Wxm8pUTyEdy9fpPhDUTBig" key="diagramRightMargin" value="20"/>
+    <property xmi:id="_Wxm8pkTyEdy9fpPhDUTBig" key="orientation" value="portrait"/>
+    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_WXArUETyEdy9fpPhDUTBig" presentation="org.topcased.modeler.uml.statemachinediagram">
+      <element href="twoStatesFSM.uml#idStateMachine"/>
+    </semanticModel>
+    <contained xsi:type="di:GraphNode" xmi:id="_WXArUUTyEdy9fpPhDUTBig" position="0,0" size="0,0">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_WXArUkTyEdy9fpPhDUTBig" presentation="default">
+        <element href="twoStatesFSM.uml#idRegion"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_itdOIETzEdy9fpPhDUTBig" position="149,22" size="91,73">
+        <anchorage xmi:id="_wGTpIUT0Edy9fpPhDUTBig" graphEdge="_wG2bsET0Edy9fpPhDUTBig _PskFMET1Edy9fpPhDUTBig _mcpx0ET1Edy9fpPhDUTBig"/>
+        <anchorage xmi:id="_mcojsET1Edy9fpPhDUTBig" graphEdge="_mcpx0ET1Edy9fpPhDUTBig"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_itdOIUTzEdy9fpPhDUTBig" presentation="default">
+          <element href="twoStatesFSM.uml#_it7IMETzEdy9fpPhDUTBig"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_kv0HcETzEdy9fpPhDUTBig" position="154,169" size="85,74">
+        <anchorage xmi:id="_wGTpIET0Edy9fpPhDUTBig" graphEdge="_wG2bsET0Edy9fpPhDUTBig _PskFMET1Edy9fpPhDUTBig _nsqBIET1Edy9fpPhDUTBig"/>
+        <anchorage xmi:id="_nspaEET1Edy9fpPhDUTBig" graphEdge="_nsqBIET1Edy9fpPhDUTBig"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_kv0HcUTzEdy9fpPhDUTBig" presentation="default">
+          <element href="twoStatesFSM.uml#_kv61IETzEdy9fpPhDUTBig"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphEdge" xmi:id="_wG2bsET0Edy9fpPhDUTBig" anchor="_wGTpIET0Edy9fpPhDUTBig _wGTpIUT0Edy9fpPhDUTBig">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_wG3CwET0Edy9fpPhDUTBig" presentation="default">
+          <element href="twoStatesFSM.uml#_wG3CwkT0Edy9fpPhDUTBig"/>
+        </semanticModel>
+        <contained xsi:type="di:EdgeObjectOffset" xmi:id="_wG3CwUT0Edy9fpPhDUTBig" id="nameEdgeObject" offset="-28,10"/>
+        <waypoints>[-121, 0, -119, 148]</waypoints>
+        <waypoints>[-121, -148, -119, 0]</waypoints>
+      </contained>
+      <contained xsi:type="di:GraphEdge" xmi:id="_PskFMET1Edy9fpPhDUTBig" anchor="_wGTpIUT0Edy9fpPhDUTBig _wGTpIET0Edy9fpPhDUTBig">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_PskFMUT1Edy9fpPhDUTBig" presentation="default">
+          <element href="twoStatesFSM.uml#_PskFM0T1Edy9fpPhDUTBig"/>
+        </semanticModel>
+        <contained xsi:type="di:EdgeObjectOffset" xmi:id="_PskFMkT1Edy9fpPhDUTBig" id="nameEdgeObject" offset="32,13"/>
+        <waypoints>[105, 0, 103, -148]</waypoints>
+        <waypoints>[105, 148, 103, 0]</waypoints>
+      </contained>
+      <contained xsi:type="di:GraphEdge" xmi:id="_mcpx0ET1Edy9fpPhDUTBig" anchor="_wGTpIUT0Edy9fpPhDUTBig _mcojsET1Edy9fpPhDUTBig">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_mcpx0UT1Edy9fpPhDUTBig" presentation="default">
+          <element href="twoStatesFSM.uml#_mcpx00T1Edy9fpPhDUTBig"/>
+        </semanticModel>
+        <contained xsi:type="di:EdgeObjectOffset" xmi:id="_mcpx0kT1Edy9fpPhDUTBig" id="nameEdgeObject" offset="43,-10"/>
+        <waypoints>[17, 70, 17, 70]</waypoints>
+        <waypoints>[-10, 70, -10, 70]</waypoints>
+      </contained>
+      <contained xsi:type="di:GraphEdge" xmi:id="_nsqBIET1Edy9fpPhDUTBig" anchor="_wGTpIET0Edy9fpPhDUTBig _nspaEET1Edy9fpPhDUTBig">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_nsqBIUT1Edy9fpPhDUTBig" presentation="default">
+          <element href="twoStatesFSM.uml#_nsqoMET1Edy9fpPhDUTBig"/>
+        </semanticModel>
+        <contained xsi:type="di:EdgeObjectOffset" xmi:id="_nsqBIkT1Edy9fpPhDUTBig" id="nameEdgeObject" offset="-49,-7"/>
+        <waypoints>[14, 68, 14, 68]</waypoints>
+        <waypoints>[-7, 68, -7, 68]</waypoints>
+      </contained>
+    </contained>
+  </diagrams>
+</diagrams:Diagrams>

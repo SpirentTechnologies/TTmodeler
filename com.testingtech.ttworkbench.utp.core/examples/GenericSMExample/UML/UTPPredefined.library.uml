@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Standard="http://www.eclipse.org/uml2/schemas/Standard/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xsi:schemaLocation="http://www.eclipse.org/uml2/schemas/Standard/1 pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w">
+  <uml:Model xmi:id="_iJlRZf21Ed2lbZNz8Ihdhg" name="UTPPredefined" viewpoint="">
+    <packagedElement xmi:type="uml:Class" xmi:id="_iJlRZv21Ed2lbZNz8Ihdhg" name="Duration"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_iJlRZ_21Ed2lbZNz8Ihdhg" name="Timezone"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_iJlRaP21Ed2lbZNz8Ihdhg" name="Time"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_iJlRaf21Ed2lbZNz8Ihdhg" name="Scheduler">
+      <ownedOperation xmi:id="_iJlRav21Ed2lbZNz8Ihdhg" name="Scheduler"/>
+      <ownedOperation xmi:id="_iJlRa_21Ed2lbZNz8Ihdhg" name="startTestCase">
+        <ownedParameter xmi:id="_iJlRbP21Ed2lbZNz8Ihdhg" name="t">
+          <type xmi:type="uml:Stereotype" href="utp.profile.uml#_iJlaRP21Ed2lbZNz8Ihdhg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_iJlRbf21Ed2lbZNz8Ihdhg" name="finishTestCase">
+        <ownedParameter xmi:id="_iJlRbv21Ed2lbZNz8Ihdhg" name="t">
+          <type xmi:type="uml:Stereotype" href="utp.profile.uml#_iJlaRP21Ed2lbZNz8Ihdhg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_iJlRb_21Ed2lbZNz8Ihdhg" name="createTestComponent">
+        <ownedParameter xmi:id="_iJlRcP21Ed2lbZNz8Ihdhg" name="t">
+          <type xmi:type="uml:Stereotype" href="utp.profile.uml#_iJlaRP21Ed2lbZNz8Ihdhg"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_iJlRcf21Ed2lbZNz8Ihdhg" name="Arbiter" clientDependency="_iJlRgv21Ed2lbZNz8Ihdhg">
+      <ownedOperation xmi:id="_iJlRcv21Ed2lbZNz8Ihdhg" name="getVerdict">
+        <ownedParameter xmi:id="_iJlRc_21Ed2lbZNz8Ihdhg" name="returnValue" type="_iJlRdv21Ed2lbZNz8Ihdhg" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_iJlRdP21Ed2lbZNz8Ihdhg" name="setVerdict">
+        <ownedParameter xmi:id="_iJlRdf21Ed2lbZNz8Ihdhg" name="v" type="_iJlRdv21Ed2lbZNz8Ihdhg"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_iJlRdv21Ed2lbZNz8Ihdhg" name="Verdict">
+      <ownedLiteral xmi:id="_iJlRd_21Ed2lbZNz8Ihdhg" name="pass"/>
+      <ownedLiteral xmi:id="_iJlReP21Ed2lbZNz8Ihdhg" name="fail"/>
+      <ownedLiteral xmi:id="_iJlRef21Ed2lbZNz8Ihdhg" name="inconc"/>
+      <ownedLiteral xmi:id="_iJlRev21Ed2lbZNz8Ihdhg" name="error"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_iJlRe_21Ed2lbZNz8Ihdhg" name="Timer">
+      <ownedAttribute xmi:id="_iJlRfP21Ed2lbZNz8Ihdhg" name="isRunning">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_iJlRff21Ed2lbZNz8Ihdhg" name="start">
+        <ownedParameter xmi:id="_iJlRfv21Ed2lbZNz8Ihdhg" name="expires" type="_iJlRaP21Ed2lbZNz8Ihdhg"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_iJlRf_21Ed2lbZNz8Ihdhg" name="stop"/>
+      <ownedOperation xmi:id="_iJlRgP21Ed2lbZNz8Ihdhg" name="read">
+        <ownedParameter xmi:id="_iJlRgf21Ed2lbZNz8Ihdhg" name="returnValue" type="_iJlRaP21Ed2lbZNz8Ihdhg" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Realization" xmi:id="_iJlRgv21Ed2lbZNz8Ihdhg" supplier="_iJlRcf21Ed2lbZNz8Ihdhg" client="_iJlRcf21Ed2lbZNz8Ihdhg"/>
+    <profileApplication xmi:id="_iJlRg_21Ed2lbZNz8Ihdhg">
+      <eAnnotations xmi:id="_iJlRhP21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:id="_iJlRhf21Ed2lbZNz8Ihdhg">
+      <eAnnotations xmi:id="_iJlRhv21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="Default.profile.uml#_iJlVUP21Ed2lbZNz8Ihdhg"/>
+      </eAnnotations>
+      <appliedProfile href="Default.profile.uml#_iJlVTv21Ed2lbZNz8Ihdhg"/>
+    </profileApplication>
+    <profileApplication xmi:id="_iJlRh_21Ed2lbZNz8Ihdhg">
+      <eAnnotations xmi:id="_iJlRiP21Ed2lbZNz8Ihdhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="Deployment.profile.uml#_iJlS1v21Ed2lbZNz8Ihdhg"/>
+      </eAnnotations>
+      <appliedProfile href="Deployment.profile.uml#_iJlS1P21Ed2lbZNz8Ihdhg"/>
+    </profileApplication>
+  </uml:Model>
+  <Standard:ModelLibrary xmi:id="_iJlRif21Ed2lbZNz8Ihdhg" base_Package="_iJlRZf21Ed2lbZNz8Ihdhg"/>
+</xmi:XMI>

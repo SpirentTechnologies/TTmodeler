@@ -1,0 +1,102 @@
+/*
+ * ----------------------------------------------------------------------------
+ *  (C) Copyright Testing Technologies, 2001-2012.  All Rights Reserved.
+ *
+ *  All rights reserved. This program and the accompanying materials
+ *  are made available under the terms of the Eclipse Public License v1.0
+ *  which accompanies this distribution, and is available at
+ *  http://www.eclipse.org/legal/epl-v10.html
+ *
+ *  Contributors:
+ *     Testing Technologies - initial API and implementation
+ *
+ *  All copies of this program, whether in whole or in part, and whether
+ *  modified or not, must display this and all other embedded copyright
+ *  and ownership notices in full.
+ *
+ *  See the file COPYRIGHT for details of redistribution and use.
+ *
+ *  You should have received a copy of the COPYRIGHT file along with
+ *  this file; if not, write to the Testing Technologies,
+ *  Michaelkirchstr. 17/18, 10179 Berlin, Germany.
+ *
+ *  TESTING TECHNOLOGIES DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS
+ *  SOFTWARE. IN NO EVENT SHALL TESTING TECHNOLOGIES BE LIABLE FOR ANY
+ *  SPECIAL, DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ *  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN
+ *  AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
+ *  ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
+ *  THIS SOFTWARE.
+ *
+ *  THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND,
+ *  EITHER EXPRESSED OR IMPLIED, INCLUDING ANY KIND OF IMPLIED OR
+ *  EXPRESSED WARRANTY OF NON-INFRINGEMENT OR THE IMPLIED WARRANTIES
+ *  OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+ * -----------------------------------------------------------------------------
+ */
+package com.testingtech.ttworkbench.utp.ttcn3.umltransformer;
+
+import org.eclipse.uml2.uml.Constraint;
+import org.eclipse.uml2.uml.Element;
+import org.eclipse.uml2.uml.Port;
+import org.eclipse.uml2.uml.Transition;
+import org.eclipse.uml2.uml.Trigger;
+import org.eclipse.uml2.uml.ValueSpecification;
+
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
+import com.testingtech.muttcn.kernel.Expression;
+import com.testingtech.muttcn.statements.AltAlternative;
+import com.testingtech.ttworkbench.utp.core.StateMachineConsts;
+import com.testingtech.ttworkbench.utp.ttcn3.umlextractor.TransitionExtractor;
+
+public class AltTransitionTransformer extends TransitionExtractor implements
+UML2TTCN3Transformer<Transition, AltAlternative> {
+
+  AltAlternative altAlternative;
+
+  public AltTransitionTransformer(Transition altTransition) {
+    super(altTransition);
+  }
+
+  public AltAlternative transform(Transition altTransition) {
+
+    if (guardValue != null) {
+      Expression guardExpression = new ValueSpecificationTransformer().transform(guardValue);
+      altAlternative.setTheAltGuard(guardExpression);
+    }
+
+    String altKind = keyword;
+
+    if (altKind.equals(StateMachineConsts.RECEIVE_TRANSITION_KEYWORD)) {
+      throw new NotImplementedException();
+    }
+    else if (altKind.equals(StateMachineConsts.EXCEPTION_TRANSITION_KEYWORD)) {
+      throw new NotImplementedException();
+    }
+    else if (altKind.equals(StateMachineConsts.GETCALL_TRANSITION_KEYWORD)) {
+      throw new NotImplementedException();
+    }
+    else if (altKind.equals(StateMachineConsts.REPLY_TRANSITION_KEYWORD)) {
+      throw new NotImplementedException();
+    }
+    else if (altKind.equals(StateMachineConsts.TIMEOUT_TRANSITION_KEYWORD)) {
+      return transformTimeoutTransition();
+    }
+
+    // todo: add error handling here: keyword present, but not one of the allowed transition keywords
+    return null;
+  }
+
+  private AltAlternative transformTimeoutTransition() { 
+
+    //set expression
+    // set body -> funktionsaufruf des target state 
+
+    // if calltrigger: catch timeout, if timer.timeout ...
+
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+}

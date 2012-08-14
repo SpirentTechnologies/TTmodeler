@@ -1,0 +1,11 @@
+module RegistrationTest {
+	import from IMPI all;
+
+	type port RegistrationSystem__mpiPort procedure {
+		out findCandidates, getPersonDemographics;
+	}
+
+	type component RegistrationSystem {
+		port RegistrationSystem__mpiPort mpiPort;
+	}
+}

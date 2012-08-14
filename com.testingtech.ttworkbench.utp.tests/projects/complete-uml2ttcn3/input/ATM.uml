@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.0.0/UML" xmi:id="_JHlYgFnVEduaL8vvH0IpSQ" name="BankATMSystem">
+  <elementImport xmi:id="_mI6ZsFnVEduaL8vvH0IpSQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <elementImport xmi:id="_mI6ZsVnVEduaL8vvH0IpSQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_mI6ZslnVEduaL8vvH0IpSQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_CaX-AFnzEduaL8vvH0IpSQ" name="ATM">
+    <packagedElement xmi:type="uml:Interface" xmi:id="_OwWX0FnVEduaL8vvH0IpSQ" name="IATM">
+      <ownedOperation xmi:id="_RXGXoFnVEduaL8vvH0IpSQ" name="withdraw">
+        <ownedParameter xmi:id="_JqsQIFnWEduaL8vvH0IpSQ" name="amount">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_neMVIFnWEduaL8vvH0IpSQ" name="returnValue" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_1tiIsFnWEduaL8vvH0IpSQ" name="deposit">
+        <ownedParameter xmi:id="_4ZMdsFnWEduaL8vvH0IpSQ" name="amount">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_-iSi4FnWEduaL8vvH0IpSQ" name="returnValue" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_GiSfUFnXEduaL8vvH0IpSQ" name="isPinCorrect">
+        <ownedParameter xmi:id="_JAiqcFnXEduaL8vvH0IpSQ" name="c">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_La6bIFnXEduaL8vvH0IpSQ" name="returnValue" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_PWcckFnXEduaL8vvH0IpSQ" name="selectOperation">
+        <ownedParameter xmi:id="_R6MywFnXEduaL8vvH0IpSQ" name="op" type="_WVinkFnVEduaL8vvH0IpSQ"/>
+        <ownedParameter xmi:id="_UcxdMFnXEduaL8vvH0IpSQ" name="returnValue" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_YAT1YFnXEduaL8vvH0IpSQ" name="storeCardData">
+        <ownedParameter xmi:id="_amwTMFnXEduaL8vvH0IpSQ" name="card" type="_T6RfAFnVEduaL8vvH0IpSQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_eq7TQFnXEduaL8vvH0IpSQ" name="storeSWIFTNumber">
+        <ownedParameter xmi:id="_iE7U8FnXEduaL8vvH0IpSQ" name="id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_F9nPgFnYEduaL8vvH0IpSQ" name="account">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_V-9msFntEduaL8vvH0IpSQ" name="BankATM" clientDependency="_r4mFEFnwEduaL8vvH0IpSQ">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_Ye_6gFntEduaL8vvH0IpSQ" name="atmPort" clientDependency="_r4mFEFnwEduaL8vvH0IpSQ _JoiGcFn2EduaL8vvH0IpSQ" aggregation="composite">
+        <end href="ATMTest.uml#_VMAoUFoEEduaL8vvH0IpSQ"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_a1M84FntEduaL8vvH0IpSQ" name="bankCom" clientDependency="_fMEgYFn2EduaL8vvH0IpSQ" aggregation="composite">
+        <end href="ATMTest.uml#_GCxNkFneEduaL8vvH0IpSQ"/>
+      </ownedAttribute>
+      <interfaceRealization xmi:id="_r4mFEFnwEduaL8vvH0IpSQ" name="IATM_Realization" supplier="_OwWX0FnVEduaL8vvH0IpSQ" client="_V-9msFntEduaL8vvH0IpSQ _Ye_6gFntEduaL8vvH0IpSQ" contract="_OwWX0FnVEduaL8vvH0IpSQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_fMEgYFn2EduaL8vvH0IpSQ" name="IBank_Usage" supplier="_T3WLMFnzEduaL8vvH0IpSQ" client="_a1M84FntEduaL8vvH0IpSQ"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_JoiGcFn2EduaL8vvH0IpSQ" name="IHardware_Usage" supplier="_VkeGQFnxEduaL8vvH0IpSQ" client="_Ye_6gFntEduaL8vvH0IpSQ"/>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_WVinkFnVEduaL8vvH0IpSQ" name="OpKind">
+      <ownedLiteral xmi:id="_X-mQEFnVEduaL8vvH0IpSQ" name="withdrawMoney"/>
+      <ownedLiteral xmi:id="_Zs3vwFnVEduaL8vvH0IpSQ" name="getBalance"/>
+      <ownedLiteral xmi:id="_bPOTUFnVEduaL8vvH0IpSQ" name="wireMoney"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_T6RfAFnVEduaL8vvH0IpSQ" name="CardData">
+      <ownedAttribute xmi:id="_eUNuUFnVEduaL8vvH0IpSQ" name="pinCode">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_ezz0YFnVEduaL8vvH0IpSQ" value=""/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_qlFDAFnVEduaL8vvH0IpSQ" name="cardNumber">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_ufIdwFnVEduaL8vvH0IpSQ" name="isPinCorrect">
+        <ownedParameter xmi:id="_wxKx0FnVEduaL8vvH0IpSQ" name="c">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_z5SZUFnVEduaL8vvH0IpSQ" name="returnValue" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_MkWesFnzEduaL8vvH0IpSQ" name="HWControl">
+    <packagedElement xmi:type="uml:Interface" xmi:id="_VkeGQFnxEduaL8vvH0IpSQ" name="IHardware">
+      <ownedOperation xmi:id="_YV8IUFnxEduaL8vvH0IpSQ" name="getStatus">
+        <ownedParameter xmi:id="_aHVNcFnxEduaL8vvH0IpSQ" name="returnValue" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_eXbJoFnxEduaL8vvH0IpSQ" name="ejectMoney">
+        <ownedParameter xmi:id="_2SWRsFnxEduaL8vvH0IpSQ" name="amount">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5m_SQFnxEduaL8vvH0IpSQ" name="acceptMoney">
+        <ownedParameter xmi:id="_7jjsoFnxEduaL8vvH0IpSQ" name="" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_BGphwFnyEduaL8vvH0IpSQ" name="display">
+        <ownedParameter xmi:id="_EG3xgFnyEduaL8vvH0IpSQ" name="message">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_G2s00FnyEduaL8vvH0IpSQ" name="ejectCard">
+        <ownedParameter xmi:id="_Iiu40FnyEduaL8vvH0IpSQ" name="returnValue" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_M1qGkFnyEduaL8vvH0IpSQ" name="getTransactionInfo">
+        <ownedParameter xmi:id="_SJQHIFnyEduaL8vvH0IpSQ" name="account" direction="inout">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WR5XgFnyEduaL8vvH0IpSQ" name="id" direction="inout">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_SeF5QFnzEduaL8vvH0IpSQ" name="Bank">
+    <packagedElement xmi:type="uml:Interface" xmi:id="_T3WLMFnzEduaL8vvH0IpSQ" name="IBank">
+      <ownedOperation xmi:id="_VUoBgFnzEduaL8vvH0IpSQ" name="debitAccount">
+        <ownedParameter xmi:id="_YnoDUFnzEduaL8vvH0IpSQ" name="account">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_cR3gcFnzEduaL8vvH0IpSQ" name="amount">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_fbe8wFnzEduaL8vvH0IpSQ" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_iqmkIFnzEduaL8vvH0IpSQ" name="depositAccount">
+        <ownedParameter xmi:id="_lG6OgFnzEduaL8vvH0IpSQ" name="account">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_nMbJgFnzEduaL8vvH0IpSQ" name="amount">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_ppVQ0FnzEduaL8vvH0IpSQ" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_p6n1IFnzEduaL8vvH0IpSQ" value=""/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_sZd2IFnzEduaL8vvH0IpSQ" name="findAccount">
+        <ownedParameter xmi:id="_vBGmwFnzEduaL8vvH0IpSQ" name="c" type="_T6RfAFnVEduaL8vvH0IpSQ"/>
+        <ownedParameter xmi:id="_w2rBQFnzEduaL8vvH0IpSQ" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_zYpOwFnzEduaL8vvH0IpSQ" name="wireMoney">
+        <ownedParameter xmi:id="_1I_yEFnzEduaL8vvH0IpSQ" name="amount">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_3YfvgFnzEduaL8vvH0IpSQ" name="swiftId">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_9EXtMFnzEduaL8vvH0IpSQ" name="account">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="__YCY8FnzEduaL8vvH0IpSQ" name="" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_DhSGQFn0EduaL8vvH0IpSQ" name="checkCredentials">
+        <ownedParameter xmi:id="_GF70UFn0EduaL8vvH0IpSQ" name="account">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_INrj8Fn0EduaL8vvH0IpSQ" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

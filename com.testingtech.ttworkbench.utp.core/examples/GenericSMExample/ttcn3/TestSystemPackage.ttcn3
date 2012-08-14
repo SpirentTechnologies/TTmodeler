@@ -1,0 +1,13 @@
+module TestSystemPackage {
+	import from ISUTProvided all;
+	import from ISUTRequired all;
+
+	type port TestComponentType__testCompPort procedure {
+		in intOp;
+		out booleanOp;
+	}
+
+	type component TestComponentType {
+		port TestComponentType__testCompPort testCompPort;
+	}
+}

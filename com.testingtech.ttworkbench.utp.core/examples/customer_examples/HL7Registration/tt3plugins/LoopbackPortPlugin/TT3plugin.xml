@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plugin PUBLIC "-//TESTING TECH//DTD TT3plugin//1.0" "TT3plugin.dtd">
+
+<plugin id="com.testingtech.ttcn.tri.LoopbackPortPlugin"
+  name="LoopbackPortPlugin"
+  version="1.0.0"
+  provider-name="Testing Technologies IST GmbH">
+
+  <runtime>
+      <library name="lib/loopbackPort.jar"/>
+  </runtime>
+  
+  <extension point="com.testingtech.ttcn.tri.extension.PortPluginProvider">
+    <parameter id="class" value="com.testingtech.ttcn.tri.LoopbackPortProvider"/>
+  </extension>
+</plugin>

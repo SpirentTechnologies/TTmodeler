@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_T_IMH85fEdy2LZVcYsxzcA" name="SimpleATMSystem">
+  <packageImport xmi:id="_T_IMIM5fEdy2LZVcYsxzcA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_T_IMIc5fEdy2LZVcYsxzcA" name="ATM">
+    <packagedElement xmi:type="uml:Interface" xmi:id="_T_IMIs5fEdy2LZVcYsxzcA" name="IATM">
+      <ownedOperation xmi:id="_T_IMI85fEdy2LZVcYsxzcA" name="isPinCorrect">
+        <ownedParameter xmi:id="_T_IMJM5fEdy2LZVcYsxzcA" name="returnValue" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_T_IMJc5fEdy2LZVcYsxzcA" name="c">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_T_IMJs5fEdy2LZVcYsxzcA" name="IHardware">
+      <ownedOperation xmi:id="_T_IMJ85fEdy2LZVcYsxzcA" name="display">
+        <ownedParameter xmi:id="_T_IMKM5fEdy2LZVcYsxzcA" name="message">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_T_IMKc5fEdy2LZVcYsxzcA" name="Bank">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_T_IMKs5fEdy2LZVcYsxzcA" name="atmPort" type="_T_IMK85fEdy2LZVcYsxzcA"/>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_T_IMK85fEdy2LZVcYsxzcA" name="AtmPortType" visibility="private" clientDependency="_T_IMLc5fEdy2LZVcYsxzcA _T_IMLM5fEdy2LZVcYsxzcA">
+        <interfaceRealization xmi:id="_T_IMLM5fEdy2LZVcYsxzcA" supplier="_T_IMIs5fEdy2LZVcYsxzcA" client="_T_IMK85fEdy2LZVcYsxzcA" contract="_T_IMIs5fEdy2LZVcYsxzcA"/>
+      </nestedClassifier>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_T_IMLc5fEdy2LZVcYsxzcA" supplier="_T_IMJs5fEdy2LZVcYsxzcA" client="_T_IMK85fEdy2LZVcYsxzcA"/>
+  </packagedElement>
+</uml:Model>

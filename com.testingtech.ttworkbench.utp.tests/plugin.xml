@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="com.testingtech.ttworkbench.core.projectPackets">
+      <projectPacket
+            category="test"
+            id="com.testingtech.ttworkbench.utp.tests.projectPacket1"
+            name="UTP test res Architecture">
+         <project
+               archive="archives/architecture-ea2ttcn3.zip"
+               name="architecture-ea2ttcn3"/>
+         <project
+               archive="archives/architecture-ea2uml.zip"
+               name="architecture-ea2uml"/>
+         <project
+               archive="archives/architecture-uml2ttcn3.zip"
+               name="architecture-uml2ttcn3"/>
+      </projectPacket>
+      <projectPacket
+            category="test"
+            id="com.testingtech.ttworkbench.utp.tests.projectPacket2"
+            name="UTP test res Complete">
+         <project
+               archive="archives/complete-uml2ttcn3.zip"
+               name="complete-uml2ttcn3"/>
+      </projectPacket>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            id="com.testingtech.ttworkbench.utp.tests.convert.eatouml"
+            nameFilter="*.eap"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               class="com.testingtech.ttworkbench.utp.tests.ConvertEAToUML"
+               icon="icons/etools16/NewUML.gif"
+               id="com.testingtech.ttworkbench.utp.tests.convert.eatouml.action"
+               label="Convert EA model to UML2"
+               tooltip="Converts the model from a Enterprise Architect file into a UML2 file. Places the created file into the same folder."/>
+      </objectContribution>
+   </extension>
+   
+
+</plugin>

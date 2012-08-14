@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<diagrams:Diagrams xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.topcased.org/DI/1.0" xmlns:diagrams="http://www.topcased.org/Diagrams/1.0" xmi:id="_vruLAGA0EdydLMC0IfSMUQ" activeDiagram="_vruLAWA0EdydLMC0IfSMUQ">
+  <model href="BankATM.uml#_w8IxIM37EdqwVrslYOdUDA"/>
+  <diagrams xmi:id="_vruLAWA0EdydLMC0IfSMUQ" position="0,0" size="100,100" name="BankATM" viewport="0,0">
+    <property xmi:id="_vtcCQGA0EdydLMC0IfSMUQ" key="pageFormatName" value="A4"/>
+    <property xmi:id="_vtcCQWA0EdydLMC0IfSMUQ" key="diagramWidth" value="840"/>
+    <property xmi:id="_vtcCQmA0EdydLMC0IfSMUQ" key="diagramHeight" value="1188"/>
+    <property xmi:id="_vtcCQ2A0EdydLMC0IfSMUQ" key="pageMarginName" value="Small Margin"/>
+    <property xmi:id="_vtcCRGA0EdydLMC0IfSMUQ" key="diagramTopMargin" value="20"/>
+    <property xmi:id="_vtcCRWA0EdydLMC0IfSMUQ" key="diagramBottomMargin" value="20"/>
+    <property xmi:id="_vtcCRmA0EdydLMC0IfSMUQ" key="diagramLeftMargin" value="20"/>
+    <property xmi:id="_vtcCR2A0EdydLMC0IfSMUQ" key="diagramRightMargin" value="20"/>
+    <property xmi:id="_vtcCSGA0EdydLMC0IfSMUQ" key="orientation" value="portrait"/>
+    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_vruLAmA0EdydLMC0IfSMUQ" presentation="org.topcased.modeler.uml.classdiagram">
+      <element href="BankATM.uml#_w8IxIM37EdqwVrslYOdUDA"/>
+    </semanticModel>
+    <contained xsi:type="di:GraphNode" xmi:id="_381asGA2EdydLMC0IfSMUQ" position="4,4" size="307,-1">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_381asWA2EdydLMC0IfSMUQ" presentation="default">
+        <element href="BankATM.uml#_381auGA2EdydLMC0IfSMUQ"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_381asmA2EdydLMC0IfSMUQ">
+        <property xmi:id="_381as2A2EdydLMC0IfSMUQ" key="eStructuralFeatureID" value="37"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_381atGA2EdydLMC0IfSMUQ" presentation="default">
+          <element href="BankATM.uml#_381auGA2EdydLMC0IfSMUQ"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_381atWA2EdydLMC0IfSMUQ">
+        <property xmi:id="_381atmA2EdydLMC0IfSMUQ" key="eStructuralFeatureID" value="38"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_381at2A2EdydLMC0IfSMUQ" presentation="default">
+          <element href="BankATM.uml#_381auGA2EdydLMC0IfSMUQ"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_SI8s0GA4EdydLMC0IfSMUQ" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_SI8s0WA4EdydLMC0IfSMUQ" presentation="default">
+            <element href="BankATM.uml#_SI8s0mA4EdydLMC0IfSMUQ"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_X_JEIGA4EdydLMC0IfSMUQ" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_X_JEIWA4EdydLMC0IfSMUQ" presentation="default">
+            <element href="BankATM.uml#_X_JEImA4EdydLMC0IfSMUQ"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_dTnOcGA4EdydLMC0IfSMUQ" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_dTnOcWA4EdydLMC0IfSMUQ" presentation="default">
+            <element href="BankATM.uml#_dTtVEGA4EdydLMC0IfSMUQ"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_gCxjYGA4EdydLMC0IfSMUQ" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_gCxjYWA4EdydLMC0IfSMUQ" presentation="default">
+            <element href="BankATM.uml#_gCxjYmA4EdydLMC0IfSMUQ"/>
+          </semanticModel>
+        </contained>
+      </contained>
+    </contained>
+    <contained xsi:type="di:GraphNode" xmi:id="_4TFXgGA2EdydLMC0IfSMUQ" position="24,159" size="243,-1">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_4TFXgWA2EdydLMC0IfSMUQ" presentation="default">
+        <element href="BankATM.uml#_4TLeIGA2EdydLMC0IfSMUQ"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_4TFXgmA2EdydLMC0IfSMUQ">
+        <property xmi:id="_4TFXg2A2EdydLMC0IfSMUQ" key="eStructuralFeatureID" value="37"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_4TFXhGA2EdydLMC0IfSMUQ" presentation="default">
+          <element href="BankATM.uml#_4TLeIGA2EdydLMC0IfSMUQ"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_4TFXhWA2EdydLMC0IfSMUQ">
+        <property xmi:id="_4TFXhmA2EdydLMC0IfSMUQ" key="eStructuralFeatureID" value="38"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_4TFXh2A2EdydLMC0IfSMUQ" presentation="default">
+          <element href="BankATM.uml#_4TLeIGA2EdydLMC0IfSMUQ"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_k0rMIGA4EdydLMC0IfSMUQ" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_k0rMIWA4EdydLMC0IfSMUQ" presentation="default">
+            <element href="BankATM.uml#_k0rMImA4EdydLMC0IfSMUQ"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_mgsCAGA4EdydLMC0IfSMUQ" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_mgsCAWA4EdydLMC0IfSMUQ" presentation="default">
+            <element href="BankATM.uml#_mgsCAmA4EdydLMC0IfSMUQ"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_ocXrkGA4EdydLMC0IfSMUQ" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_ocXrkWA4EdydLMC0IfSMUQ" presentation="default">
+            <element href="BankATM.uml#_ocXrkmA4EdydLMC0IfSMUQ"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_scB_EGA4EdydLMC0IfSMUQ" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_scB_EWA4EdydLMC0IfSMUQ" presentation="default">
+            <element href="BankATM.uml#_scB_EmA4EdydLMC0IfSMUQ"/>
+          </semanticModel>
+        </contained>
+      </contained>
+    </contained>
+    <contained xsi:type="di:GraphNode" xmi:id="_IG3ZUGA3EdydLMC0IfSMUQ" position="353,59" size="121,-1">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IG3ZUWA3EdydLMC0IfSMUQ" presentation="default">
+        <element href="BankATM.uml#_IG9f8GA3EdydLMC0IfSMUQ"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_IG3ZUmA3EdydLMC0IfSMUQ">
+        <property xmi:id="_IG3ZU2A3EdydLMC0IfSMUQ" key="eStructuralFeatureID" value="37"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IG3ZVGA3EdydLMC0IfSMUQ" presentation="default">
+          <element href="BankATM.uml#_IG9f8GA3EdydLMC0IfSMUQ"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_IG3ZVWA3EdydLMC0IfSMUQ">
+        <property xmi:id="_IG3ZVmA3EdydLMC0IfSMUQ" key="eStructuralFeatureID" value="47"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_IG3ZV2A3EdydLMC0IfSMUQ" presentation="default">
+          <element href="BankATM.uml#_IG9f8GA3EdydLMC0IfSMUQ"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_uQvd8GA4EdydLMC0IfSMUQ" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_uQvd8WA4EdydLMC0IfSMUQ" presentation="default">
+            <element href="BankATM.uml#_uQvd8mA4EdydLMC0IfSMUQ"/>
+          </semanticModel>
+        </contained>
+      </contained>
+    </contained>
+  </diagrams>
+</diagrams:Diagrams>

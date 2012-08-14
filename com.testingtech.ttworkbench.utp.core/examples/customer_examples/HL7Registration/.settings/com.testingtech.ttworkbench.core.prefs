@@ -1,0 +1,14 @@
+#Mon Mar 09 13:40:47 CET 2009
+eclipse.preferences.version=1
+tt3-plugins-path=//PROJECT_NAME//tt3plugins
+ttcn3.continue_on_fail=false
+ttcn3.gen_debug_code_record_init=false
+ttcn3.generate_mlf=false
+ttcn3.main_module=
+ttcn3.mlf_class=com.testingtech.ttcn.tri.PluginTestAdapter
+ttcn3.mlf_jar=
+ttcn3.output_folder=//PROJECT_NAME//ttcn3build
+ttcn3.output_same_as_src=false
+ttcn3.source_folders=//PROJECT_NAME//ttcn3
+ttcn3.use_bigint=false
+ttcn3.use_destination_path_for_ttcn3view=false

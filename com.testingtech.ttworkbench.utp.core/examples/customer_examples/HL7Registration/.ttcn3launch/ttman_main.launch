@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><launchConfiguration type="com.testingtech.ttworkbench.ttman.launching.ttcn3">
+<booleanAttribute key="org.eclipse.debug.core.appendEnvironmentVariables" value="true"/>
+<booleanAttribute key="org.eclipse.debug.ui.private" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="HL7Registration"/>
+</launchConfiguration>

@@ -1,0 +1,1103 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<MDG.Technology version="1.0">
+	<Documentation	id="UMLTEST47533"
+			name="UML 2.0 Testing Profile Technology"
+			version="1.0 Beta"
+			notes="  Result of the cooperation of Sparxsystem and Fraunhofer Fokus "/>
+	<UMLProfiles>
+<UMLProfile profiletype="uml2">
+	<Documentation id="FE9D1409-6" name="UML Profile for Testing" version="1.0" notes="UML Profile for Testing"/>
+	<Content>
+		<Stereotypes>
+			<Stereotype name="TestComponent" notes="A test component is a structured classifier participating in test behaviors. A test component is commonly an active class with a set of ports and interfaces. Test components are used to specify test cases as interactions between a number of test components.">
+				<AppliesTo>
+					<Apply type="Class"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="zone" type="Timezone" description="" unit="" values="" default=""/>
+				</TaggedValues>
+				<Constraints/>
+			</Stereotype>
+			<Stereotype name="TestContext" notes="A structured classifier acting as a grouping mechanism for a set of cases. The composite structure of a test context is reffered to as test configuration. The classifier behavior of a test context is used for test control.">
+				<AppliesTo>
+					<Apply type="Class"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="arbiter" type="Arbiter" description="" unit="" values="" default=""/>
+					<Tag name="scheduler" type="Scheduler" description="" unit="" values="" default=""/>
+				</TaggedValues>
+				<Constraints>
+					<Constraint name="A test context must contain exactly one property realizing the Arbiter interface." type="Invariant" description=""/>
+					<Constraint name="A test context must contain exactly one property realizing the Scheduler interface." type="Invariant" description=""/>
+				</Constraints>
+			</Stereotype>
+			<Stereotype name="SUT" notes="The SUT stereotype is applied to one or more properties of a classifier to specify that they constitute the system under test. The features and behavior of the SUT is given entirely by the type of the property to which the stereotype is applied.">
+				<AppliesTo>
+					<Apply type="Object"/>
+				</AppliesTo>
+				<TaggedValues/>
+				<Constraints/>
+			</Stereotype>
+			<Stereotype name="TestObjective" notes="A dependency used to specify the objectives of a test case or test context. A test case or test context can have any number of objectives and an objective can be realized by any number of test cases or test contexts.">
+				<AppliesTo>
+					<Apply type="Dependency"/>
+				</AppliesTo>
+				<TaggedValues/>
+				<Constraints>
+					<Constraint name="The client of a test objective must be a named element with a test case or test context stereotype applied." type="Invariant" description=""/>
+				</Constraints>
+			</Stereotype>
+			<Stereotype name="TestCase" notes="A test case is a behavioral feature or behavior specifying tests. A test case specifies how a set of test components interact with a SUT to realize a test objective to return a verdict value.">
+				<AppliesTo>
+					<Apply type="Operation"/>
+				</AppliesTo>
+				<TaggedValues/>
+				<Constraints>
+					<Constraint name="The tipe of the return result parameter of a test case must be Verdict." type="Invariant" description=""/>
+					<Constraint name="A test case stereotype can not be applied both to a behavior and its specification." type="Invariant" description=""/>
+					<Constraint name="If a test case stereotype is applied to an operation, the featuring classifier must have test context stereotype applied." type="Invariant" description=""/>
+					<Constraint name="If a test case stereotype is applied to a behavior, the context of the behavior must have the test context  stereotype applied." type="Invariant" description=""/>
+				</Constraints>
+			</Stereotype>
+			<Stereotype name="Default" notes="A default is a behavior used to handle unexpected or exceptional messages or events on one test component.">
+				<AppliesTo>
+					<Apply type="Operation"/>
+					<Apply type="Note"/>
+				</AppliesTo>
+				<TaggedValues/>
+				<Constraints/>
+			</Stereotype>
+			<Stereotype name="DefaultApplication" notes="A default application is a dependency used to apply a default behavior to a unit of testing on a test component.">
+				<AppliesTo>
+					<Apply type="Dependency"/>
+				</AppliesTo>
+				<TaggedValues/>
+				<Constraints>
+					<Constraint name="The default application relates a default to a unit of test behavior. That unit of test behavior must be one of the following: Package, Classifier, Behavior, InteractionFragment, State, Region or Activity" type="Invariant" description=""/>
+					<Constraint name="The multiplicity of clientdependency is restricted to [0..1]" type="Invariant" description=""/>
+				</Constraints>
+			</Stereotype>
+			<Stereotype name="ValidationAction" notes="Validation actions are used to set verdicts in test behaviors by calling the setVerdict operation on the arbiter.">
+				<AppliesTo>
+					<Apply type="Action">
+						<Property name="context" value=""/>
+						<Property name="effect" value=""/>
+						<Property name="mustIsolate" value="false"/>
+						<Property name="kind" value="CallOperation"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues/>
+				<Constraints>
+					<Constraint name="The operation of the action must be the setVerdict operation from the arbiter interface." type="Invariant" description=""/>
+					<Constraint name="The target of the action must refer to a classifier realizing the arbiter interface." type="Invariant" description=""/>
+					<Constraint name="The argument of the action must be a expression evaluating to a Verdict literal." type="Invariant" description=""/>
+					<Constraint name="Validation actions can only be used in test cases i.e. a behavior where the test case stereotype is applied to the behavior  or its specification." type="Invariant" description=""/>
+				</Constraints>
+			</Stereotype>
+			<Stereotype name="LogAction" notes="A log action is used to log entities during execution for further analysis. The logged entities can be simple strings, complete diagrams, instance values or any other entity of interest.">
+				<AppliesTo>
+					<Apply type="Action">
+						<Property name="context" value=""/>
+						<Property name="effect" value=""/>
+						<Property name="mustIsolate" value="false"/>
+						<Property name="kind" value="SendObject"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues/>
+				<Constraints/>
+			</Stereotype>
+			<Stereotype name="FinishAction" notes="A finish action is an action that determines thet the test component will finish its execution of the test case immediately. This does not mean that the test component is terminated.">
+				<AppliesTo>
+					<Apply type="Action">
+						<Property name="context" value=""/>
+						<Property name="effect" value=""/>
+						<Property name="mustIsolate" value="false"/>
+						<Property name="kind" value=""/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues/>
+				<Constraints/>
+			</Stereotype>
+			<Stereotype name="TestLog" notes="">
+				<AppliesTo>
+					<Apply type="Operation"/>
+					<Apply type="Note"/>
+				</AppliesTo>
+				<TaggedValues/>
+				<Constraints/>
+			</Stereotype>
+			<Stereotype name="TestLogApplication" notes="">
+				<AppliesTo>
+					<Apply type="Dependency"/>
+				</AppliesTo>
+				<TaggedValues/>
+				<Constraints>
+					<Constraint name="The client of a test log application must be a named element with a test case or test context stereotype applied." type="Invariant" description=""/>
+					<Constraint name="The supplier of a test log must be a named element with a test log stereotype applied." type="Invariant" description=""/>
+				</Constraints>
+			</Stereotype>
+			<Stereotype name="CodingRule" notes="A coding rule specifies how values are encoded/ or decoded. Coding rules are defined outside the Testing Profile and reffered to within Testing Profile specifications.">
+				<AppliesTo>
+					<Apply type="Constraint"/>
+					<Apply type="Object"/>
+					<Apply type="Note"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="coding" type="String" description="" unit="" values="" default=""/>
+				</TaggedValues>
+				<Constraints/>
+			</Stereotype>
+			<Stereotype name="DataPool" notes="The data pool stereotype extends a classifier or property to specify a container for explicit values or data partitions that are used by test contexts or test cases. A data pool provides an explicit means for associating data values for repeated tests and equivalence classes that can be used to defined abstract data sets for test evaluation.">
+				<AppliesTo>
+					<Apply type="Object"/>
+					<Apply type="Class"/>
+				</AppliesTo>
+				<TaggedValues/>
+				<Constraints>
+					<Constraint name="A data pool stereotype classifier can only be referenced by a test context or test component." type="Invariant" description=""/>
+					<Constraint name="A data pool stereotyped property can only be applied to aproperty associated connected with a test component within the context of a test context stereotyped  classifier. " type="Invariant" description=""/>
+					<Constraint name="A datapool stereotyped classifier cannot be associated with both a test context and a test component." type="Invariant" description=""/>
+				</Constraints>
+			</Stereotype>
+			<Stereotype name="DataPartition" notes="The data partition stereotypes extends a classifier to specify a container for a set of values. These data sets are used as abstract equivalence classes during test context and test case evaluation.">
+				<AppliesTo>
+					<Apply type="Class"/>
+				</AppliesTo>
+				<TaggedValues/>
+				<Constraints>
+					<Constraint name="A data partition stereotyped classifier can only be associated with a data pool or another data partition." type="Invariant" description=""/>
+				</Constraints>
+			</Stereotype>
+			<Stereotype name="DataSelector" notes="The data selector stereotype extends an operation to allow the implementation of different data selection strategies.">
+				<AppliesTo>
+					<Apply type="Operation"/>
+				</AppliesTo>
+				<TaggedValues/>
+				<Constraints>
+					<Constraint name="If a data selector stereotype is applied to an operation, the featuring classifier must have either a data pool or data partition stereotype applied." type="Invariant" description=""/>
+				</Constraints>
+			</Stereotype>
+			<Stereotype name="TimeOutMessage" notes="Extends Message. A TimeOutMessage is generated by a timer when it expires. The timeout message is sent to the active class which owns the timer.">
+				<AppliesTo>
+					<Apply type="Message"/>
+				</AppliesTo>
+				<TaggedValues/>
+				<Constraints/>
+			</Stereotype>
+			<Stereotype name="TimeOutAction" notes="A timeout is enabled by a timer when it expires. An activity having the TimeOutAction as input condition occurs, when the timeout is enabled (and when all further input conditions are satisfied).">
+				<AppliesTo>
+					<Apply type="Action">
+						<Property name="context" value=""/>
+						<Property name="effect" value=""/>
+						<Property name="mustIsolate" value="false"/>
+						<Property name="kind" value="AcceptEvent"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues/>
+				<Constraints/>
+			</Stereotype>
+			<Stereotype name="StartTimerAction" notes="An action used to start a timer.">
+				<AppliesTo>
+					<Apply type="Action">
+						<Property name="context" value=""/>
+						<Property name="effect" value=""/>
+						<Property name="mustIsolate" value="false"/>
+						<Property name="kind" value="CallOperation"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues/>
+				<Constraints>
+					<Constraint name="The operation of the action must be the start operation of the Timer interface." type="Invariant" description=""/>
+					<Constraint name="The target of the action must refer to a classifier realizing the Timer interface." type="Invariant" description=""/>
+					<Constraint name="The argument of the action must be a Time value." type="Invariant" description=""/>
+				</Constraints>
+			</Stereotype>
+			<Stereotype name="StopTimerAction" notes="An action used to stop a timer. Stops the timer if it is running, does nothing otherwise.">
+				<AppliesTo>
+					<Apply type="Action">
+						<Property name="context" value=""/>
+						<Property name="effect" value=""/>
+						<Property name="mustIsolate" value="false"/>
+						<Property name="kind" value="CallOperation"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues/>
+				<Constraints>
+					<Constraint name="The operation of the action must be the stop operation of the Timer interface." type="Invariant" description=""/>
+					<Constraint name="The target of the action must refer to a classifier realizing the timer interface." type="Invariant" description=""/>
+				</Constraints>
+			</Stereotype>
+			<Stereotype name="ReadTimerAction" notes="An action used to read a timer to obtain the expiration time of a timer.">
+				<AppliesTo>
+					<Apply type="Action">
+						<Property name="context" value=""/>
+						<Property name="effect" value=""/>
+						<Property name="mustIsolate" value="false"/>
+						<Property name="kind" value="CallOperation"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues/>
+				<Constraints>
+					<Constraint name="The operation action must be the read operation from the Timer interface." type="Invariant" description=""/>
+					<Constraint name="The target of the action must refer to a classifier realizing the Timer interface." type="Invariant" description=""/>
+					<Constraint name="The type of the result must be Time." type="Invariant" description=""/>
+				</Constraints>
+			</Stereotype>
+			<Stereotype name="TimerRunningAction" notes="An action used to check if a timer is currently running or not. Returns a boolean value, true if the timer is running, false otherwise.">
+				<AppliesTo>
+					<Apply type="Action">
+						<Property name="context" value=""/>
+						<Property name="effect" value=""/>
+						<Property name="mustIsolate" value="false"/>
+						<Property name="kind" value="ReadStructuralFeature"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues/>
+				<Constraints>
+					<Constraint name="The structural feature of the action must be the isrunning attribute of the Timer interface." type="Invariant" description=""/>
+					<Constraint name="The type of the result must be boolean." type="Invariant" description=""/>
+					<Constraint name="The target of the action must refer to a classifier realizing the Timer interface." type="Invariant" description=""/>
+				</Constraints>
+			</Stereotype>
+			<Stereotype name="GetTimezoneAction" notes="An action to dinamically retrieve the current timezone of a test component.">
+				<AppliesTo>
+					<Apply type="Action">
+						<Property name="context" value=""/>
+						<Property name="effect" value=""/>
+						<Property name="mustIsolate" value="false"/>
+						<Property name="kind" value="ReadStructuralFeature"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues/>
+				<Constraints>
+					<Constraint name="The type of the structural feature of the action must be Timezone." type="Invariant" description=""/>
+					<Constraint name="The type of the result must be Timezone." type="Invariant" description=""/>
+				</Constraints>
+			</Stereotype>
+			<Stereotype name="SetTimezoneAction" notes="An action to dynamically set the timezone of a test component.">
+				<AppliesTo>
+					<Apply type="Action">
+						<Property name="context" value=""/>
+						<Property name="effect" value=""/>
+						<Property name="mustIsolate" value="false"/>
+						<Property name="kind" value="WriteStructuralFeature"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues/>
+				<Constraints>
+					<Constraint name="The type of the structural feature of the action must be Timezone." type="Invariant" description=""/>
+					<Constraint name="The value must be a Timezone value." type="Invariant" description=""/>
+				</Constraints>
+			</Stereotype>
+			<Stereotype name="TimeOut" notes="A TimeOut is generated by a timer when it expires and may trigger an associated behavior, e.g. a transition in a statemachine.">
+				<AppliesTo>
+					<Apply type="Event"/>
+				</AppliesTo>
+				<TaggedValues/>
+				<Constraints/>
+			</Stereotype>
+		</Stereotypes>
+	</Content>
+</UMLProfile>
+	</UMLProfiles>
+<UMLPatterns><UMLPattern><XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3" timestamp="2005-09-29 19:19:10">
+				<XMI.header>
+					<XMI.documentation>
+						<XMI.exporter>Enterprise Architect</XMI.exporter>
+						<XMI.exporterVersion>2.5</XMI.exporterVersion>
+					</XMI.documentation>
+				</XMI.header>
+				<XMI.content>
+					<UML:Model name="EA Model" xmi.id="MX_EAID_98E60EA9_14DB_4267_99B6_0140A1262081">
+						<UML:Namespace.ownedElement>
+							<UML:Interface name="Arbiter" xmi.id="EAID_BA6BA57B_C4CE_487a_9020_27FE4B8853A0" visibility="public" namespace="EAPK_98E60EA9_14DB_4267_99B6_0140A1262081" isRoot="false" isLeaf="false" isAbstract="true">
+								<UML:ModelElement.stereotype>
+									<UML:Stereotype name="interface"/>
+								</UML:ModelElement.stereotype>
+								<UML:ModelElement.taggedValue>
+									<UML:TaggedValue tag="isSpecification" value="false"/>
+									<UML:TaggedValue tag="ea_stype" value="Interface"/>
+									<UML:TaggedValue tag="ea_ntype" value="0"/>
+									<UML:TaggedValue tag="version" value="1.0"/>
+									<UML:TaggedValue tag="package" value="EAPK_98E60EA9_14DB_4267_99B6_0140A1262081"/>
+									<UML:TaggedValue tag="date_created" value="2004-06-09 09:00:17"/>
+									<UML:TaggedValue tag="date_modified" value="2004-06-16 09:41:01"/>
+									<UML:TaggedValue tag="gentype" value="Java"/>
+									<UML:TaggedValue tag="tagged" value="0"/>
+									<UML:TaggedValue tag="package_name" value="Arbiter Pattern"/>
+									<UML:TaggedValue tag="phase" value="1.0"/>
+									<UML:TaggedValue tag="complexity" value="1"/>
+									<UML:TaggedValue tag="status" value="Proposed"/>
+									<UML:TaggedValue tag="stereotype" value="interface"/>
+									<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=0;HSwimLanes=0;BorderStyle=0;"/>
+								</UML:ModelElement.taggedValue>
+								<UML:Classifier.feature>
+									<UML:Operation name="getVerdict" visibility="public" ownerScope="instance" isQuery="false" concurrency="sequential">
+										<UML:ModelElement.taggedValue>
+											<UML:TaggedValue tag="type" value="Verdict"/>
+											<UML:TaggedValue tag="const" value="false"/>
+											<UML:TaggedValue tag="synchronised" value="0"/>
+											<UML:TaggedValue tag="concurrency" value="Sequential"/>
+											<UML:TaggedValue tag="position" value="0"/>
+											<UML:TaggedValue tag="returnarray" value="0"/>
+											<UML:TaggedValue tag="pure" value="0"/>
+											<UML:TaggedValue tag="ea_guid" value="{B5CFB27E-AED6-410a-AF01-FC6EFA55D1C0}"/>
+										</UML:ModelElement.taggedValue>
+										<UML:BehavioralFeature.parameter>
+											<UML:Parameter kind="return" visibility="public">
+												<UML:Parameter.type>
+													<UML:Classifier xmi.idref="eaxmiid0"/>
+												</UML:Parameter.type>
+												<UML:ModelElement.taggedValue>
+													<UML:TaggedValue tag="pos" value="0"/>
+													<UML:TaggedValue tag="type" value="Verdict"/>
+													<UML:TaggedValue tag="const" value="0"/>
+													<UML:TaggedValue tag="ea_guid" value="{RETURNID-AED6-410a-AF01-FC6EFA55D1C0}"/>
+												</UML:ModelElement.taggedValue>
+												<UML:Parameter.defaultValue>
+													<UML:Expression/>
+												</UML:Parameter.defaultValue>
+											</UML:Parameter>
+										</UML:BehavioralFeature.parameter>
+									</UML:Operation>
+									<UML:Operation name="setVerdict" visibility="public" ownerScope="instance" isQuery="false" concurrency="sequential">
+										<UML:ModelElement.taggedValue>
+											<UML:TaggedValue tag="type" value="void"/>
+											<UML:TaggedValue tag="const" value="false"/>
+											<UML:TaggedValue tag="synchronised" value="0"/>
+											<UML:TaggedValue tag="concurrency" value="Sequential"/>
+											<UML:TaggedValue tag="position" value="1"/>
+											<UML:TaggedValue tag="returnarray" value="0"/>
+											<UML:TaggedValue tag="pure" value="0"/>
+											<UML:TaggedValue tag="ea_guid" value="{820F6432-55D1-4c45-8A4D-B06DB63CD503}"/>
+										</UML:ModelElement.taggedValue>
+										<UML:BehavioralFeature.parameter>
+											<UML:Parameter kind="return" visibility="public">
+												<UML:Parameter.type>
+													<UML:Classifier xmi.idref="eaxmiid1"/>
+												</UML:Parameter.type>
+												<UML:ModelElement.taggedValue>
+													<UML:TaggedValue tag="pos" value="0"/>
+													<UML:TaggedValue tag="type" value="void"/>
+													<UML:TaggedValue tag="const" value="0"/>
+													<UML:TaggedValue tag="ea_guid" value="{RETURNID-55D1-4c45-8A4D-B06DB63CD503}"/>
+												</UML:ModelElement.taggedValue>
+												<UML:Parameter.defaultValue>
+													<UML:Expression/>
+												</UML:Parameter.defaultValue>
+											</UML:Parameter>
+											<UML:Parameter name="v" kind="in" visibility="public">
+												<UML:Parameter.type>
+													<UML:Classifier xmi.idref="eaxmiid0"/>
+												</UML:Parameter.type>
+												<UML:ModelElement.taggedValue>
+													<UML:TaggedValue tag="pos" value="0"/>
+													<UML:TaggedValue tag="type" value="Verdict"/>
+													<UML:TaggedValue tag="const" value="0"/>
+													<UML:TaggedValue tag="ea_guid" value="{2948A5DF-BA35-4192-A647-5C2A75785399}"/>
+												</UML:ModelElement.taggedValue>
+												<UML:Parameter.defaultValue>
+													<UML:Expression/>
+												</UML:Parameter.defaultValue>
+											</UML:Parameter>
+										</UML:BehavioralFeature.parameter>
+									</UML:Operation>
+								</UML:Classifier.feature>
+							</UML:Interface>
+							<UML:Class name="Verdict" xmi.id="EAID_2E93DE55_B4EE_4f3b_8A46_3E9B8142BE24" visibility="public" namespace="EAPK_98E60EA9_14DB_4267_99B6_0140A1262081" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+								<UML:ModelElement.stereotype>
+									<UML:Stereotype name="enumeration"/>
+								</UML:ModelElement.stereotype>
+								<UML:ModelElement.taggedValue>
+									<UML:TaggedValue tag="isSpecification" value="false"/>
+									<UML:TaggedValue tag="ea_stype" value="Class"/>
+									<UML:TaggedValue tag="ea_ntype" value="0"/>
+									<UML:TaggedValue tag="version" value="1.0"/>
+									<UML:TaggedValue tag="package" value="EAPK_98E60EA9_14DB_4267_99B6_0140A1262081"/>
+									<UML:TaggedValue tag="date_created" value="2004-06-09 09:35:04"/>
+									<UML:TaggedValue tag="date_modified" value="2004-06-16 09:55:47"/>
+									<UML:TaggedValue tag="gentype" value="Java"/>
+									<UML:TaggedValue tag="tagged" value="0"/>
+									<UML:TaggedValue tag="package_name" value="Arbiter Pattern"/>
+									<UML:TaggedValue tag="phase" value="1.0"/>
+									<UML:TaggedValue tag="complexity" value="1"/>
+									<UML:TaggedValue tag="status" value="Proposed"/>
+									<UML:TaggedValue tag="stereotype" value="enumeration"/>
+									<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=0;HSwimLanes=0;BorderStyle=0;"/>
+								</UML:ModelElement.taggedValue>
+								<UML:Classifier.feature>
+									<UML:Attribute name="pass" changeable="none" visibility="public" ownerScope="instance" targetScope="instance">
+										<UML:Attribute.initialValue>
+											<UML:Expression/>
+										</UML:Attribute.initialValue>
+										<UML:StructuralFeature.type>
+											<UML:Classifier xmi.idref="eaxmiid2"/>
+										</UML:StructuralFeature.type>
+										<UML:ModelElement.taggedValue>
+											<UML:TaggedValue tag="derived" value="0"/>
+											<UML:TaggedValue tag="containment" value="Not Specified"/>
+											<UML:TaggedValue tag="length" value="0"/>
+											<UML:TaggedValue tag="ordered" value="0"/>
+											<UML:TaggedValue tag="precision" value="0"/>
+											<UML:TaggedValue tag="scale" value="0"/>
+											<UML:TaggedValue tag="collection" value="false"/>
+											<UML:TaggedValue tag="position" value="0"/>
+											<UML:TaggedValue tag="lowerBound" value="1"/>
+											<UML:TaggedValue tag="upperBound" value="1"/>
+											<UML:TaggedValue tag="duplicates" value="0"/>
+											<UML:TaggedValue tag="ea_guid" value="{13698198-BB59-4254-AC28-0F2C11DF0C7B}"/>
+											<UML:TaggedValue tag="styleex" value="volatile=0;"/>
+										</UML:ModelElement.taggedValue>
+									</UML:Attribute>
+									<UML:Attribute name="fail" changeable="none" visibility="public" ownerScope="instance" targetScope="instance">
+										<UML:Attribute.initialValue>
+											<UML:Expression/>
+										</UML:Attribute.initialValue>
+										<UML:StructuralFeature.type>
+											<UML:Classifier xmi.idref="eaxmiid2"/>
+										</UML:StructuralFeature.type>
+										<UML:ModelElement.taggedValue>
+											<UML:TaggedValue tag="derived" value="0"/>
+											<UML:TaggedValue tag="containment" value="Not Specified"/>
+											<UML:TaggedValue tag="length" value="0"/>
+											<UML:TaggedValue tag="ordered" value="0"/>
+											<UML:TaggedValue tag="precision" value="0"/>
+											<UML:TaggedValue tag="scale" value="0"/>
+											<UML:TaggedValue tag="collection" value="false"/>
+											<UML:TaggedValue tag="position" value="1"/>
+											<UML:TaggedValue tag="lowerBound" value="1"/>
+											<UML:TaggedValue tag="upperBound" value="1"/>
+											<UML:TaggedValue tag="duplicates" value="0"/>
+											<UML:TaggedValue tag="ea_guid" value="{EDCC8776-BC72-4743-A652-14B4FF8F0173}"/>
+											<UML:TaggedValue tag="styleex" value="volatile=0;"/>
+										</UML:ModelElement.taggedValue>
+									</UML:Attribute>
+									<UML:Attribute name="inconclusive" changeable="none" visibility="public" ownerScope="instance" targetScope="instance">
+										<UML:Attribute.initialValue>
+											<UML:Expression/>
+										</UML:Attribute.initialValue>
+										<UML:StructuralFeature.type>
+											<UML:Classifier xmi.idref="eaxmiid2"/>
+										</UML:StructuralFeature.type>
+										<UML:ModelElement.taggedValue>
+											<UML:TaggedValue tag="derived" value="0"/>
+											<UML:TaggedValue tag="containment" value="Not Specified"/>
+											<UML:TaggedValue tag="length" value="0"/>
+											<UML:TaggedValue tag="ordered" value="0"/>
+											<UML:TaggedValue tag="precision" value="0"/>
+											<UML:TaggedValue tag="scale" value="0"/>
+											<UML:TaggedValue tag="collection" value="false"/>
+											<UML:TaggedValue tag="position" value="2"/>
+											<UML:TaggedValue tag="lowerBound" value="1"/>
+											<UML:TaggedValue tag="upperBound" value="1"/>
+											<UML:TaggedValue tag="duplicates" value="0"/>
+											<UML:TaggedValue tag="ea_guid" value="{8BF5BEA1-4531-47fa-BC81-FAC75895E842}"/>
+											<UML:TaggedValue tag="styleex" value="volatile=0;"/>
+										</UML:ModelElement.taggedValue>
+									</UML:Attribute>
+									<UML:Attribute name="error" changeable="none" visibility="public" ownerScope="instance" targetScope="instance">
+										<UML:Attribute.initialValue>
+											<UML:Expression/>
+										</UML:Attribute.initialValue>
+										<UML:StructuralFeature.type>
+											<UML:Classifier xmi.idref="eaxmiid2"/>
+										</UML:StructuralFeature.type>
+										<UML:ModelElement.taggedValue>
+											<UML:TaggedValue tag="derived" value="0"/>
+											<UML:TaggedValue tag="containment" value="Not Specified"/>
+											<UML:TaggedValue tag="length" value="0"/>
+											<UML:TaggedValue tag="ordered" value="0"/>
+											<UML:TaggedValue tag="precision" value="0"/>
+											<UML:TaggedValue tag="scale" value="0"/>
+											<UML:TaggedValue tag="collection" value="false"/>
+											<UML:TaggedValue tag="position" value="3"/>
+											<UML:TaggedValue tag="lowerBound" value="1"/>
+											<UML:TaggedValue tag="upperBound" value="1"/>
+											<UML:TaggedValue tag="duplicates" value="0"/>
+											<UML:TaggedValue tag="ea_guid" value="{205272A7-45B7-4220-B02A-9ED6DD33D64B}"/>
+											<UML:TaggedValue tag="styleex" value="volatile=0;"/>
+										</UML:ModelElement.taggedValue>
+									</UML:Attribute>
+								</UML:Classifier.feature>
+							</UML:Class>
+						</UML:Namespace.ownedElement>
+					</UML:Model>
+					<UML:Diagram name="Arbiter Pattern" xmi.id="EAID_699A6EC9_36E8_45d6_9703_AD77EE95E6FC" diagramType="ClassDiagram" owner="EAPK_699A6EC9_36E8_45d6_9703_AD77EE95E6FC" toolName="Enterprise Architect 2.5">
+						<UML:ModelElement.taggedValue>
+							<UML:TaggedValue tag="version" value="1.0"/>
+							<UML:TaggedValue tag="created_date" value="2005-09-29 19:17:52"/>
+							<UML:TaggedValue tag="modified_date" value="2005-09-29 00:00:00"/>
+							<UML:TaggedValue tag="package" value="EAPK_98E60EA9_14DB_4267_99B6_0140A1262081"/>
+							<UML:TaggedValue tag="type" value="Logical"/>
+							<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;inbar=false;names=false;color=0;bold=false;fcol=0;;cls=0;"/>
+							<UML:TaggedValue tag="EAStyle" value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=0;PPgs.cy=0;DocSize.cx=827;DocSize.cy=1169;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;"/>
+						</UML:ModelElement.taggedValue>
+						<UML:Diagram.element>
+							<UML:DiagramElement geometry="Left=441;Top=301;Right=531;Bottom=399;" subject="EAID_2E93DE55_B4EE_4f3b_8A46_3E9B8142BE24" seqno="1" style="DUID=31707FB6;LBL=;"/>
+							<UML:DiagramElement geometry="Left=156;Top=299;Right=332;Bottom=389;" subject="EAID_BA6BA57B_C4CE_487a_9020_27FE4B8853A0" seqno="2" style="DUID=659183B4;LBL=;"/>
+						</UML:Diagram.element>
+					</UML:Diagram>
+				</XMI.content>
+				<XMI.difference/>
+				<XMI.extensions xmi.extender="Enterprise Architect 2.5">
+					<UMLPattern name="Arbiter Pattern" category="UML 2.0 Testing Profile Patterns" version="1.0" notes="Arbiter Pattern">
+						<UMLPattern.PromptList/>
+						<UMLPattern.PreviewImage xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64" cx="400" cy="400">AQAAAGwAAAAAAAAAAAAAAP//////////AAAAAAAAAACQAQAAkAEAACBFTUYAAAEAKAMAABkA AAAFAAAAAAAAAAAAAAAAAAAAQAYAALAEAABAAQAA8AAAAAAAAAAAAAAAAAAAAADiBACAqQMA EQAAAAwAAAAIAAAACQAAABAAAAABAAAA/////woAAAAQAAAA9v///woAAABSAAAAcAEAAAEA AAD2////AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQQBSAEkAQQBMAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGoCAAAWAAAA AAAAAAAAACCECQAAAABgAD8EMBR8CQAAAAAAAAAAeQEAAAAAAAAAAAAAwOYSAG+UknwAIIAJ AAAEAHqBAAAAAGoCAAAWAAAAAAAAAAAAACCICQAAAABgAD8EOBSACQAAAAAAAAAAeAEAAAAA AAAAAAAAAAASAG+UknwAIIQJAAAEAHmBAAAAAGoCMwiSfCjoEgAAAAAAAABAAEABQADc5hIA AAAAABTnEgCVCJJ8AABAAAAAAADU2RIAvOcSACjoEgAzCJJ8oDULAZBtMwEAAEAAQAFAABTn EgCQbTMBTOcSAJUIknwAAEAAAQAAAEznEgBkdgAIAAAAACUAAAAMAAAAAQAAACcAAAAYAAAA AgAAAAAAAAD88uMAAAAAACUAAAAMAAAAAgAAACYAAAAcAAAAAwAAAAAAAAABAAAAAAAAAAAA AAAlAAAADAAAAAMAAAASAAAADAAAAAEAAAAhAAAACAAAABgAAAAMAAAAAAAAACYAAAAcAAAA BAAAAAAAAAABAAAAAAAAAAAAAAAlAAAADAAAAAQAAAAlAAAADAAAAAMAAAAiAAAADAAAAP// //8oAAAADAAAAAQAAAAlAAAADAAAAA0AAIAoAAAADAAAAAEAAAAlAAAADAAAAAAAAIAoAAAA DAAAAAIAAAAlAAAADAAAAAcAAIAoAAAADAAAAAMAAAAOAAAAFAAAAAAAAAAQAAAAFAAA AA==</UMLPattern.PreviewImage>
+					</UMLPattern>
+				</XMI.extensions>
+			</XMI>
+		</UMLPattern>
+		<UMLPattern>
+<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3" timestamp="2004-06-23 15:39:56">
+	<XMI.header>
+		<XMI.documentation>
+			<XMI.exporter>Enterprise Architect</XMI.exporter>
+			<XMI.exporterVersion>2.5</XMI.exporterVersion>
+		</XMI.documentation>
+	</XMI.header>
+	<XMI.content>
+		<UML:Model name="EA Model" xmi.id="MX_EAID_61607B4E_7AE4_46d2_BD02_D293D090038D">
+			<UML:Namespace.ownedElement>
+				<UML:Interface name="Scheduler" xmi.id="EAID_878B9352_F331_43fc_8F9C_523FDBC4BFCB" visibility="public" namespace="EAPK_61607B4E_7AE4_46d2_BD02_D293D090038D" isRoot="false" isLeaf="false" isAbstract="true">
+					<UML:ModelElement.stereotype>
+						<UML:Stereotype name="interface"/>
+					</UML:ModelElement.stereotype>
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="isSpecification" value="false"/>
+						<UML:TaggedValue tag="ea_stype" value="Interface"/>
+						<UML:TaggedValue tag="ea_ntype" value="0"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="package" value="EAPK_61607B4E_7AE4_46d2_BD02_D293D090038D"/>
+						<UML:TaggedValue tag="date_created" value="2004-06-09 09:01:19"/>
+						<UML:TaggedValue tag="date_modified" value="2004-06-16 10:03:49"/>
+						<UML:TaggedValue tag="gentype" value="Java"/>
+						<UML:TaggedValue tag="tagged" value="0"/>
+						<UML:TaggedValue tag="package_name" value="Scheduler Pattern"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="author" value="Neil Capey"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="stereotype" value="interface"/>
+						<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=0;HSwimLanes=0;BorderStyle=0;"/>
+					</UML:ModelElement.taggedValue>
+					<UML:Classifier.feature>
+						<UML:Operation name="startTestCase" visibility="public" ownerScope="instance" isQuery="false" concurrency="sequential">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="type" value="void"/>
+								<UML:TaggedValue tag="const" value="false"/>
+								<UML:TaggedValue tag="synchronised" value="0"/>
+								<UML:TaggedValue tag="concurrency" value="Sequential"/>
+								<UML:TaggedValue tag="position" value="0"/>
+								<UML:TaggedValue tag="returnarray" value="0"/>
+								<UML:TaggedValue tag="pure" value="0"/>
+								<UML:TaggedValue tag="ea_guid" value="{D3B0DE1A-53C9-46c5-A610-30A4ED34A5BB}"/>
+							</UML:ModelElement.taggedValue>
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter kind="return" visibility="public">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="pos" value="0"/>
+										<UML:TaggedValue tag="type" value="void"/>
+										<UML:TaggedValue tag="const" value="0"/>
+										<UML:TaggedValue tag="ea_guid" value="{D3B0DE1A-53C9-46c5-A610-30A4ED34A5BB}"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Parameter.defaultValue>
+										<UML:Expression/>
+									</UML:Parameter.defaultValue>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="finishTestCase" visibility="public" ownerScope="instance" isQuery="false" concurrency="sequential">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="type" value="void"/>
+								<UML:TaggedValue tag="const" value="false"/>
+								<UML:TaggedValue tag="synchronised" value="0"/>
+								<UML:TaggedValue tag="concurrency" value="Sequential"/>
+								<UML:TaggedValue tag="position" value="1"/>
+								<UML:TaggedValue tag="returnarray" value="0"/>
+								<UML:TaggedValue tag="pure" value="0"/>
+								<UML:TaggedValue tag="ea_guid" value="{DEDA6EEC-7651-4d62-A8D3-C7E3F59F454B}"/>
+							</UML:ModelElement.taggedValue>
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter kind="return" visibility="public">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="pos" value="0"/>
+										<UML:TaggedValue tag="type" value="void"/>
+										<UML:TaggedValue tag="const" value="0"/>
+										<UML:TaggedValue tag="ea_guid" value="{DEDA6EEC-7651-4d62-A8D3-C7E3F59F454B}"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Parameter.defaultValue>
+										<UML:Expression/>
+									</UML:Parameter.defaultValue>
+								</UML:Parameter>
+								<UML:Parameter name="t" kind="in" visibility="public">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_5D0DA42C_16B2_4269_96FB_7D4C91D86F30"/>
+									</UML:Parameter.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="pos" value="0"/>
+										<UML:TaggedValue tag="type" value="TestComponent"/>
+										<UML:TaggedValue tag="const" value="0"/>
+										<UML:TaggedValue tag="classifier" value="EAID_5D0DA42C_16B2_4269_96FB_7D4C91D86F30"/>
+										<UML:TaggedValue tag="ea_guid" value="{80C7BFF9-CCF6-4086-B649-1B335911B82C}"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Parameter.defaultValue>
+										<UML:Expression/>
+									</UML:Parameter.defaultValue>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="createTestComponent" visibility="public" ownerScope="instance" isQuery="false" concurrency="sequential">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="type" value="void"/>
+								<UML:TaggedValue tag="const" value="false"/>
+								<UML:TaggedValue tag="synchronised" value="0"/>
+								<UML:TaggedValue tag="concurrency" value="Sequential"/>
+								<UML:TaggedValue tag="position" value="2"/>
+								<UML:TaggedValue tag="returnarray" value="0"/>
+								<UML:TaggedValue tag="pure" value="0"/>
+								<UML:TaggedValue tag="ea_guid" value="{E66D7450-366B-4d41-980D-B118350BA4AD}"/>
+							</UML:ModelElement.taggedValue>
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter kind="return" visibility="public">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="pos" value="0"/>
+										<UML:TaggedValue tag="type" value="void"/>
+										<UML:TaggedValue tag="const" value="0"/>
+										<UML:TaggedValue tag="ea_guid" value="{E66D7450-366B-4d41-980D-B118350BA4AD}"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Parameter.defaultValue>
+										<UML:Expression/>
+									</UML:Parameter.defaultValue>
+								</UML:Parameter>
+								<UML:Parameter name="t" kind="in" visibility="public">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_5D0DA42C_16B2_4269_96FB_7D4C91D86F30"/>
+									</UML:Parameter.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="pos" value="0"/>
+										<UML:TaggedValue tag="type" value="TestComponent"/>
+										<UML:TaggedValue tag="const" value="0"/>
+										<UML:TaggedValue tag="classifier" value="EAID_5D0DA42C_16B2_4269_96FB_7D4C91D86F30"/>
+										<UML:TaggedValue tag="ea_guid" value="{94F837DB-B20B-4483-AFFA-0C5595DAD67D}"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Parameter.defaultValue>
+										<UML:Expression/>
+									</UML:Parameter.defaultValue>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+					</UML:Classifier.feature>
+				</UML:Interface>
+			</UML:Namespace.ownedElement>
+		</UML:Model>
+		<UML:Diagram name="Scheduler Pattern" xmi.id="EAID_481F52A0_3D1E_4063_8F9C_3E518170D980" diagramType="ClassDiagram" owner="EAPK_481F52A0_3D1E_4063_8F9C_3E518170D980" toolName="Enterprise Architect 2.5">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="documentation" value="UML Profile for Testing"/>
+				<UML:TaggedValue tag="version" value="1.0"/>
+				<UML:TaggedValue tag="author" value="Neil Capey"/>
+				<UML:TaggedValue tag="created_date" value="2004-06-16 10:03:07"/>
+				<UML:TaggedValue tag="modified_date" value="2004-06-16 15:50:10"/>
+				<UML:TaggedValue tag="package" value="EAPK_61607B4E_7AE4_46d2_BD02_D293D090038D"/>
+				<UML:TaggedValue tag="type" value="Logical"/>
+				<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;names=false;color=0;bold=false;fcol=0;;cls=0;"/>
+				<UML:TaggedValue tag="EAStyle" value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;DocSize.cx=827;DocSize.cy=1169;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;"/>
+				<UML:TaggedValue tag="styleex" value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;SuppressFOC=0;TDurLow=0;TDurHigh=100;TDurUnit=;TDurHide=0;"/>
+			</UML:ModelElement.taggedValue>
+			<UML:Diagram.element>
+				<UML:DiagramElement geometry="Left=141;Top=308;Right=378;Bottom=398;" subject="EAID_878B9352_F331_43fc_8F9C_523FDBC4BFCB" seqno="1" style="DUID=A7BEFEE9;"/>
+			</UML:Diagram.element>
+		</UML:Diagram>
+	</XMI.content>
+	<XMI.difference/>
+	<XMI.extensions xmi.extender="Enterprise Architect 2.5">
+		<UMLPattern name="Scheduler Pattern" category="UML 2.0 Testing Profile Patterns" version="1.0" notes="UML 2.0 Testing Profile Patterns">
+			<UMLPattern.PromptList>
+				<Element name="Scheduler:Interface" guid="EAID_878B9352_F331_43fc_8F9C_523FDBC4BFCB" id="138" prompt="yes" link="no"/>
+			</UMLPattern.PromptList>
+		</UMLPattern>
+	</XMI.extensions>
+</XMI>
+		</UMLPattern>
+		<UMLPattern>
+<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3" timestamp="2004-06-23 15:40:24">
+	<XMI.header>
+		<XMI.documentation>
+			<XMI.exporter>Enterprise Architect</XMI.exporter>
+			<XMI.exporterVersion>2.5</XMI.exporterVersion>
+		</XMI.documentation>
+	</XMI.header>
+	<XMI.content>
+		<UML:Model name="EA Model" xmi.id="MX_EAID_A10C8165_47B3_4782_B109_E17216088E44">
+			<UML:Namespace.ownedElement>
+				<UML:Interface name="Timer" xmi.id="EAID_5B38F185_B731_423f_9FA0_F8F3FACF50E1" visibility="public" namespace="EAPK_A10C8165_47B3_4782_B109_E17216088E44" isRoot="false" isLeaf="false" isAbstract="true">
+					<UML:ModelElement.stereotype>
+						<UML:Stereotype name="interface"/>
+					</UML:ModelElement.stereotype>
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="isSpecification" value="false"/>
+						<UML:TaggedValue tag="ea_stype" value="Interface"/>
+						<UML:TaggedValue tag="ea_ntype" value="0"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="package" value="EAPK_A10C8165_47B3_4782_B109_E17216088E44"/>
+						<UML:TaggedValue tag="date_created" value="2004-06-09 10:05:53"/>
+						<UML:TaggedValue tag="date_modified" value="2004-06-16 10:05:51"/>
+						<UML:TaggedValue tag="gentype" value="Java"/>
+						<UML:TaggedValue tag="tagged" value="0"/>
+						<UML:TaggedValue tag="package_name" value="Timer Pattern"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="author" value="Neil Capey"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="stereotype" value="interface"/>
+						<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=0;HSwimLanes=0;BorderStyle=0;"/>
+					</UML:ModelElement.taggedValue>
+					<UML:Classifier.feature>
+						<UML:Attribute name="isRunning" visibility="public" ownerScope="instance" changeable="none" targetScope="instance">
+							<UML:Attribute.initialValue>
+								<UML:Expression/>
+							</UML:Attribute.initialValue>
+							<UML:StructuralFeature.type>
+								<UML:Classifier xmi.idref="eaxmiid0"/>
+							</UML:StructuralFeature.type>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="type" value="Boolean"/>
+								<UML:TaggedValue tag="derived" value="0"/>
+								<UML:TaggedValue tag="containment" value="Not Specified"/>
+								<UML:TaggedValue tag="ordered" value="0"/>
+								<UML:TaggedValue tag="static" value="1"/>
+								<UML:TaggedValue tag="collection" value="false"/>
+								<UML:TaggedValue tag="position" value="0"/>
+								<UML:TaggedValue tag="lowerBound" value="1"/>
+								<UML:TaggedValue tag="upperBound" value="1"/>
+								<UML:TaggedValue tag="duplicates" value="0"/>
+								<UML:TaggedValue tag="ea_guid" value="{DD7148D3-6657-45f9-BED4-459EDE57616D}"/>
+								<UML:TaggedValue tag="styleex" value="volatile=0;"/>
+							</UML:ModelElement.taggedValue>
+							<UML:ModelElement.constraint>
+								<UML:Constraint name="readOnly">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="type" value="Invariant"/>
+									</UML:ModelElement.taggedValue>
+								</UML:Constraint>
+							</UML:ModelElement.constraint>
+						</UML:Attribute>
+						<UML:Operation name="start" visibility="public" ownerScope="instance" isQuery="false" concurrency="sequential">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="type" value="void"/>
+								<UML:TaggedValue tag="const" value="false"/>
+								<UML:TaggedValue tag="synchronised" value="0"/>
+								<UML:TaggedValue tag="concurrency" value="Sequential"/>
+								<UML:TaggedValue tag="position" value="0"/>
+								<UML:TaggedValue tag="returnarray" value="0"/>
+								<UML:TaggedValue tag="pure" value="0"/>
+								<UML:TaggedValue tag="ea_guid" value="{D6A953BC-65AA-4876-BD50-A734EDC20D6F}"/>
+							</UML:ModelElement.taggedValue>
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter kind="return" visibility="public">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="eaxmiid1"/>
+									</UML:Parameter.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="pos" value="0"/>
+										<UML:TaggedValue tag="type" value="void"/>
+										<UML:TaggedValue tag="const" value="0"/>
+										<UML:TaggedValue tag="ea_guid" value="{D6A953BC-65AA-4876-BD50-A734EDC20D6F}"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Parameter.defaultValue>
+										<UML:Expression/>
+									</UML:Parameter.defaultValue>
+								</UML:Parameter>
+								<UML:Parameter name="expire" kind="in" visibility="public">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_48C552F6_460E_49be_B4E1_0F7A9B2C3C8D"/>
+									</UML:Parameter.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="pos" value="0"/>
+										<UML:TaggedValue tag="type" value="Time"/>
+										<UML:TaggedValue tag="const" value="0"/>
+										<UML:TaggedValue tag="classifier" value="EAID_48C552F6_460E_49be_B4E1_0F7A9B2C3C8D"/>
+										<UML:TaggedValue tag="ea_guid" value="{36C4BD95-F237-4bbb-8C02-C157FBE2E389}"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Parameter.defaultValue>
+										<UML:Expression/>
+									</UML:Parameter.defaultValue>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="stop" visibility="public" ownerScope="instance" isQuery="false" concurrency="sequential">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="type" value="void"/>
+								<UML:TaggedValue tag="const" value="false"/>
+								<UML:TaggedValue tag="synchronised" value="0"/>
+								<UML:TaggedValue tag="concurrency" value="Sequential"/>
+								<UML:TaggedValue tag="position" value="1"/>
+								<UML:TaggedValue tag="returnarray" value="0"/>
+								<UML:TaggedValue tag="pure" value="0"/>
+								<UML:TaggedValue tag="ea_guid" value="{F26C533F-2D0E-465c-80ED-2D687205F5C7}"/>
+							</UML:ModelElement.taggedValue>
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter kind="return" visibility="public">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="eaxmiid1"/>
+									</UML:Parameter.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="pos" value="0"/>
+										<UML:TaggedValue tag="type" value="void"/>
+										<UML:TaggedValue tag="const" value="0"/>
+										<UML:TaggedValue tag="ea_guid" value="{F26C533F-2D0E-465c-80ED-2D687205F5C7}"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Parameter.defaultValue>
+										<UML:Expression/>
+									</UML:Parameter.defaultValue>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="read" visibility="public" ownerScope="instance" isQuery="false" concurrency="sequential">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="type" value="Time"/>
+								<UML:TaggedValue tag="const" value="false"/>
+								<UML:TaggedValue tag="synchronised" value="0"/>
+								<UML:TaggedValue tag="concurrency" value="Sequential"/>
+								<UML:TaggedValue tag="position" value="2"/>
+								<UML:TaggedValue tag="returnarray" value="0"/>
+								<UML:TaggedValue tag="pure" value="0"/>
+								<UML:TaggedValue tag="ea_guid" value="{5E419D77-7B37-4e2c-B1E0-C11D45F0AE8A}"/>
+							</UML:ModelElement.taggedValue>
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter kind="return" visibility="public">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_48C552F6_460E_49be_B4E1_0F7A9B2C3C8D"/>
+									</UML:Parameter.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="pos" value="0"/>
+										<UML:TaggedValue tag="type" value="Time"/>
+										<UML:TaggedValue tag="const" value="0"/>
+										<UML:TaggedValue tag="classifier" value="EAID_48C552F6_460E_49be_B4E1_0F7A9B2C3C8D"/>
+										<UML:TaggedValue tag="ea_guid" value="{5E419D77-7B37-4e2c-B1E0-C11D45F0AE8A}"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Parameter.defaultValue>
+										<UML:Expression/>
+									</UML:Parameter.defaultValue>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+					</UML:Classifier.feature>
+				</UML:Interface>
+				<UML:Class name="Timezone" xmi.id="EAID_3341E2B3_1B81_436f_BD40_9C2308C668D7" visibility="public" namespace="EAPK_A10C8165_47B3_4782_B109_E17216088E44" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+					<UML:ModelElement.stereotype>
+						<UML:Stereotype name="primitive"/>
+					</UML:ModelElement.stereotype>
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="isSpecification" value="false"/>
+						<UML:TaggedValue tag="ea_stype" value="Class"/>
+						<UML:TaggedValue tag="ea_ntype" value="0"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="package" value="EAPK_A10C8165_47B3_4782_B109_E17216088E44"/>
+						<UML:TaggedValue tag="date_created" value="2004-06-09 10:16:42"/>
+						<UML:TaggedValue tag="date_modified" value="2004-06-16 10:05:51"/>
+						<UML:TaggedValue tag="gentype" value="Java"/>
+						<UML:TaggedValue tag="tagged" value="0"/>
+						<UML:TaggedValue tag="package_name" value="Timer Pattern"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="author" value="Neil Capey"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="stereotype" value="primitive"/>
+						<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=0;HSwimLanes=0;BorderStyle=0;"/>
+					</UML:ModelElement.taggedValue>
+				</UML:Class>
+				<UML:Class name="Time" xmi.id="EAID_48C552F6_460E_49be_B4E1_0F7A9B2C3C8D" visibility="public" namespace="EAPK_A10C8165_47B3_4782_B109_E17216088E44" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+					<UML:ModelElement.stereotype>
+						<UML:Stereotype name="primitive"/>
+					</UML:ModelElement.stereotype>
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="isSpecification" value="false"/>
+						<UML:TaggedValue tag="ea_stype" value="Class"/>
+						<UML:TaggedValue tag="ea_ntype" value="0"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="package" value="EAPK_A10C8165_47B3_4782_B109_E17216088E44"/>
+						<UML:TaggedValue tag="date_created" value="2004-06-09 10:00:59"/>
+						<UML:TaggedValue tag="date_modified" value="2004-06-16 10:05:51"/>
+						<UML:TaggedValue tag="gentype" value="Java"/>
+						<UML:TaggedValue tag="tagged" value="0"/>
+						<UML:TaggedValue tag="package_name" value="Timer Pattern"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="author" value="Neil Capey"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="stereotype" value="primitive"/>
+						<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=0;HSwimLanes=0;BorderStyle=0;"/>
+					</UML:ModelElement.taggedValue>
+				</UML:Class>
+			</UML:Namespace.ownedElement>
+		</UML:Model>
+		<UML:Diagram name="Timer Pattern" xmi.id="EAID_B852AB00_E753_4d64_BA15_342C5019DA5C" diagramType="ClassDiagram" owner="EAPK_B852AB00_E753_4d64_BA15_342C5019DA5C" toolName="Enterprise Architect 2.5">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="documentation" value="UML Profile for Testing"/>
+				<UML:TaggedValue tag="version" value="1.0"/>
+				<UML:TaggedValue tag="author" value="Neil Capey"/>
+				<UML:TaggedValue tag="created_date" value="2004-06-16 10:04:57"/>
+				<UML:TaggedValue tag="modified_date" value="2004-06-16 15:50:54"/>
+				<UML:TaggedValue tag="package" value="EAPK_A10C8165_47B3_4782_B109_E17216088E44"/>
+				<UML:TaggedValue tag="type" value="Logical"/>
+				<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;names=false;color=0;bold=false;fcol=0;;cls=0;"/>
+				<UML:TaggedValue tag="EAStyle" value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;DocSize.cx=827;DocSize.cy=1169;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;"/>
+				<UML:TaggedValue tag="styleex" value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;SuppressFOC=0;TDurLow=0;TDurHigh=100;TDurUnit=;TDurHide=0;"/>
+			</UML:ModelElement.taggedValue>
+			<UML:Diagram.element>
+				<UML:DiagramElement geometry="Left=451;Top=345;Right=541;Bottom=415;" subject="EAID_48C552F6_460E_49be_B4E1_0F7A9B2C3C8D" seqno="1" style="DUID=7C1893D2;"/>
+				<UML:DiagramElement geometry="Left=293;Top=345;Right=383;Bottom=415;" subject="EAID_3341E2B3_1B81_436f_BD40_9C2308C668D7" seqno="2" style="DUID=DB99C3F4;"/>
+				<UML:DiagramElement geometry="Left=102;Top=345;Right=225;Bottom=449;" subject="EAID_5B38F185_B731_423f_9FA0_F8F3FACF50E1" seqno="3" style="DUID=71C2F0E5;"/>
+			</UML:Diagram.element>
+		</UML:Diagram>
+	</XMI.content>
+	<XMI.difference/>
+	<XMI.extensions xmi.extender="Enterprise Architect 2.5">
+		<UMLPattern name="Timer Pattern" category="UML 2.0 Testing Profile Patterns" version="1.0" notes="UML Profile for Testing">
+			<UMLPattern.PromptList>
+				<Element name="Time:Class" guid="EAID_48C552F6_460E_49be_B4E1_0F7A9B2C3C8D" id="184" prompt="no" link="no"/>
+				<Element name="Timer:Interface" guid="EAID_5B38F185_B731_423f_9FA0_F8F3FACF50E1" id="186" prompt="yes" link="no"/>
+				<Element name="Timezone:Class" guid="EAID_3341E2B3_1B81_436f_BD40_9C2308C668D7" id="201" prompt="no" link="no"/>
+			</UMLPattern.PromptList>
+		</UMLPattern>
+	</XMI.extensions>
+</XMI>
+		</UMLPattern>
+<UMLPattern><XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3" timestamp="2005-09-29 21:00:50">
+				<XMI.header>
+					<XMI.documentation>
+						<XMI.exporter>Enterprise Architect</XMI.exporter>
+						<XMI.exporterVersion>2.5</XMI.exporterVersion>
+					</XMI.documentation>
+				</XMI.header>
+				<XMI.content>
+					<UML:Model name="EA Model" xmi.id="MX_EAID_98E60EA9_14DB_4267_99B6_0140A1262081">
+						<UML:Namespace.ownedElement>
+							<UML:Class name="timer" xmi.id="EAID_B0369E00_883C_40c9_89F6_CF0C77FC5112" visibility="public" namespace="EAPK_98E60EA9_14DB_4267_99B6_0140A1262081" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+								<UML:ModelElement.stereotype>
+									<UML:Stereotype name="StopTimerAction"/>
+								</UML:ModelElement.stereotype>
+								<UML:ModelElement.taggedValue>
+									<UML:TaggedValue tag="isSpecification" value="false"/>
+									<UML:TaggedValue tag="ea_stype" value="Class"/>
+									<UML:TaggedValue tag="ea_ntype" value="0"/>
+									<UML:TaggedValue tag="version" value="1.0"/>
+									<UML:TaggedValue tag="package" value="EAPK_98E60EA9_14DB_4267_99B6_0140A1262081"/>
+									<UML:TaggedValue tag="date_created" value="2005-09-29 20:52:44"/>
+									<UML:TaggedValue tag="date_modified" value="2005-09-29 20:56:39"/>
+									<UML:TaggedValue tag="gentype" value="Java"/>
+									<UML:TaggedValue tag="tagged" value="0"/>
+									<UML:TaggedValue tag="package_name" value="Graphical Pattern"/>
+									<UML:TaggedValue tag="phase" value="1.0"/>
+									<UML:TaggedValue tag="complexity" value="1"/>
+									<UML:TaggedValue tag="status" value="Proposed"/>
+									<UML:TaggedValue tag="stereotype" value="StopTimerAction"/>
+									<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=0;HSwimLanes=0;BorderStyle=0;"/>
+								</UML:ModelElement.taggedValue>
+							</UML:Class>
+							<UML:Class name="timer(0.0)" xmi.id="EAID_2FB1D432_A06F_484a_B724_A4886A3A58BA" visibility="public" namespace="EAPK_98E60EA9_14DB_4267_99B6_0140A1262081" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+								<UML:ModelElement.stereotype>
+									<UML:Stereotype name="StartTimerAction"/>
+								</UML:ModelElement.stereotype>
+								<UML:ModelElement.taggedValue>
+									<UML:TaggedValue tag="isSpecification" value="false"/>
+									<UML:TaggedValue tag="ea_stype" value="Class"/>
+									<UML:TaggedValue tag="ea_ntype" value="0"/>
+									<UML:TaggedValue tag="version" value="1.0"/>
+									<UML:TaggedValue tag="package" value="EAPK_98E60EA9_14DB_4267_99B6_0140A1262081"/>
+									<UML:TaggedValue tag="date_created" value="2005-09-29 20:53:42"/>
+									<UML:TaggedValue tag="date_modified" value="2005-09-29 20:56:49"/>
+									<UML:TaggedValue tag="gentype" value="Java"/>
+									<UML:TaggedValue tag="tagged" value="0"/>
+									<UML:TaggedValue tag="package_name" value="Graphical Pattern"/>
+									<UML:TaggedValue tag="phase" value="1.0"/>
+									<UML:TaggedValue tag="complexity" value="1"/>
+									<UML:TaggedValue tag="status" value="Proposed"/>
+									<UML:TaggedValue tag="stereotype" value="StartTimerAction"/>
+									<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=0;HSwimLanes=0;BorderStyle=0;"/>
+								</UML:ModelElement.taggedValue>
+							</UML:Class>
+							<UML:Class name="timer" xmi.id="EAID_57426EF3_4B52_4c07_AF65_A0BADE7ADA9C" visibility="public" namespace="EAPK_98E60EA9_14DB_4267_99B6_0140A1262081" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+								<UML:ModelElement.stereotype>
+									<UML:Stereotype name="TimeOutAction"/>
+								</UML:ModelElement.stereotype>
+								<UML:ModelElement.taggedValue>
+									<UML:TaggedValue tag="isSpecification" value="false"/>
+									<UML:TaggedValue tag="ea_stype" value="Class"/>
+									<UML:TaggedValue tag="ea_ntype" value="0"/>
+									<UML:TaggedValue tag="version" value="1.0"/>
+									<UML:TaggedValue tag="package" value="EAPK_98E60EA9_14DB_4267_99B6_0140A1262081"/>
+									<UML:TaggedValue tag="date_created" value="2005-09-29 20:57:21"/>
+									<UML:TaggedValue tag="date_modified" value="2005-09-29 20:57:31"/>
+									<UML:TaggedValue tag="gentype" value="Java"/>
+									<UML:TaggedValue tag="tagged" value="0"/>
+									<UML:TaggedValue tag="package_name" value="Graphical Pattern"/>
+									<UML:TaggedValue tag="phase" value="1.0"/>
+									<UML:TaggedValue tag="complexity" value="1"/>
+									<UML:TaggedValue tag="status" value="Proposed"/>
+									<UML:TaggedValue tag="stereotype" value="TimeOutAction"/>
+									<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=0;HSwimLanes=0;BorderStyle=0;"/>
+								</UML:ModelElement.taggedValue>
+							</UML:Class>
+							<UML:Class name="timer" xmi.id="EAID_DA377071_9F3E_445f_B2E8_4229BF9E6952" visibility="public" namespace="EAPK_98E60EA9_14DB_4267_99B6_0140A1262081" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+								<UML:ModelElement.stereotype>
+									<UML:Stereotype name="TimeOutMessage"/>
+								</UML:ModelElement.stereotype>
+								<UML:ModelElement.taggedValue>
+									<UML:TaggedValue tag="isSpecification" value="false"/>
+									<UML:TaggedValue tag="ea_stype" value="Class"/>
+									<UML:TaggedValue tag="ea_ntype" value="0"/>
+									<UML:TaggedValue tag="version" value="1.0"/>
+									<UML:TaggedValue tag="package" value="EAPK_98E60EA9_14DB_4267_99B6_0140A1262081"/>
+									<UML:TaggedValue tag="date_created" value="2005-09-29 20:57:34"/>
+									<UML:TaggedValue tag="date_modified" value="2005-09-29 20:57:43"/>
+									<UML:TaggedValue tag="gentype" value="Java"/>
+									<UML:TaggedValue tag="tagged" value="0"/>
+									<UML:TaggedValue tag="package_name" value="Graphical Pattern"/>
+									<UML:TaggedValue tag="phase" value="1.0"/>
+									<UML:TaggedValue tag="complexity" value="1"/>
+									<UML:TaggedValue tag="status" value="Proposed"/>
+									<UML:TaggedValue tag="stereotype" value="TimeOutMessage"/>
+									<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=0;HSwimLanes=0;BorderStyle=0;"/>
+								</UML:ModelElement.taggedValue>
+							</UML:Class>
+						</UML:Namespace.ownedElement>
+					</UML:Model>
+					<UML:Diagram name="Graphical Pattern" xmi.id="EAID_BFC2FCEC_51FF_443f_B50C_E80187413D44" diagramType="ClassDiagram" owner="EAPK_BFC2FCEC_51FF_443f_B50C_E80187413D44" toolName="Enterprise Architect 2.5">
+						<UML:ModelElement.taggedValue>
+							<UML:TaggedValue tag="version" value="1.0"/>
+							<UML:TaggedValue tag="created_date" value="2005-09-29 20:39:21"/>
+							<UML:TaggedValue tag="modified_date" value="2005-09-29 21:00:11"/>
+							<UML:TaggedValue tag="package" value="EAPK_98E60EA9_14DB_4267_99B6_0140A1262081"/>
+							<UML:TaggedValue tag="type" value="Logical"/>
+							<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;inbar=false;names=false;color=0;bold=false;fcol=0;;cls=0;"/>
+							<UML:TaggedValue tag="EAStyle" value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=0;PPgs.cy=0;DocSize.cx=827;DocSize.cy=1169;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;"/>
+							<UML:TaggedValue tag="styleex" value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=0;TDurLow=0;TDurHigh=100;TDurUnit=;TDurHide=0;"/>
+						</UML:ModelElement.taggedValue>
+						<UML:Diagram.element>
+							<UML:DiagramElement geometry="Left=292;Top=225;Right=370;Bottom=265;" subject="EAID_DA377071_9F3E_445f_B2E8_4229BF9E6952" seqno="1" style="DUID=57CFC096;ImageID=4;"/>
+							<UML:DiagramElement geometry="Left=130;Top=297;Right=186;Bottom=328;" subject="EAID_57426EF3_4B52_4c07_AF65_A0BADE7ADA9C" seqno="2" style="DUID=5D178BF9;ImageID=3;"/>
+							<UML:DiagramElement geometry="Left=128;Top=175;Right=200;Bottom=205;" subject="EAID_2FB1D432_A06F_484a_B724_A4886A3A58BA" seqno="3" style="DUID=FD285207;ImageID=1;LBL=CX=0:CY=0:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:ALT=1:ROT=0;"/>
+							<UML:DiagramElement geometry="Left=128;Top=234;Right=200;Bottom=264;" subject="EAID_B0369E00_883C_40c9_89F6_CF0C77FC5112" seqno="4" style="DUID=598008DE;ImageID=2;"/>
+						</UML:Diagram.element>
+					</UML:Diagram>
+				</XMI.content>
+				<XMI.difference/>
+				<XMI.extensions xmi.extender="Enterprise Architect 2.5">
+					<UMLPattern name="Graphical Pattern" category="UML 2.0 Testing Profile Patterns" version="1.0" notes="UTP TimerAction Graphical Pattern">
+						<UMLPattern.PromptList/>
+						<UMLPattern.PreviewImage xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64" cx="400" cy="400">AQAAAGwAAAAAAAAAAAAAAP//////////AAAAAAAAAACQAQAAkAEAACBFTUYAAAEAKAMAABkA AAAFAAAAAAAAAAAAAAAAAAAAQAYAALAEAABAAQAA8AAAAAAAAAAAAAAAAAAAAADiBACAqQMA EQAAAAwAAAAIAAAACQAAABAAAAABAAAA/////woAAAAQAAAA9v///woAAABSAAAAcAEAAAEA AAD2////AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQQBSAEkAQQBMAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGoCAAAWAAAA AAAAAAAAABB2CQAAAACIBRYASABuCQAAAAAAAAAA9gEAAAAAAAAAAAAAwOYSAG+UknwAEHIJ AAAEAPeBAAAAAGoCAAAWAAAAAAAAAAAAABB6CQAAAACIBRYAUAByCQAAAAAAAAAA9QEAAAAA AAAAAAAAAAASAG+UknwAEHYJAAAEAPaBAAAAAGoCMwiSfCjoEgAAAAAAAABAAEABQADc5hIA AAAAABTnEgCVCJJ8AABAAAAAAADU2RIAvOcSACjoEgAzCJJ8oDULAZBtMwEAAEAAQAFAABTn EgCQbTMBTOcSAJUIknwAAEAAAQAAAEznEgBkdgAIAAAAACUAAAAMAAAAAQAAACcAAAAYAAAA AgAAAAAAAAD88uMAAAAAACUAAAAMAAAAAgAAACYAAAAcAAAAAwAAAAAAAAABAAAAAAAAAAAA AAAlAAAADAAAAAMAAAASAAAADAAAAAEAAAAhAAAACAAAABgAAAAMAAAAAAAAACYAAAAcAAAA BAAAAAAAAAABAAAAAAAAAAAAAAAlAAAADAAAAAQAAAAlAAAADAAAAAMAAAAiAAAADAAAAP// //8oAAAADAAAAAQAAAAlAAAADAAAAA0AAIAoAAAADAAAAAEAAAAlAAAADAAAAAAAAIAoAAAA DAAAAAIAAAAlAAAADAAAAAcAAIAoAAAADAAAAAMAAAAOAAAAFAAAAAAAAAAQAAAAFAAA AA==</UMLPattern.PreviewImage>
+					</UMLPattern>
+				</XMI.extensions>
+			</XMI>
+		</UMLPattern></UMLPatterns><Images><RefData version="1.0" exporter="EA.25">
+		</RefData></Images></MDG.Technology>

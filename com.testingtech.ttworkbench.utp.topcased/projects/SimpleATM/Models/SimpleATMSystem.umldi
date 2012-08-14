@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagrams:Diagrams xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.topcased.org/DI/1.0" xmlns:diagrams="http://www.topcased.org/Diagrams/1.0" xmi:id="_m1kVoO9uEdypq_rO_9ry1w" activeDiagram="_m1kVoe9uEdypq_rO_9ry1w">
+  <model href="SimpleATMSystem.uml#_T_IMH85fEdy2LZVcYsxzcA"/>
+  <diagrams xmi:id="_m1kVoe9uEdypq_rO_9ry1w" position="0,0" size="100,100" name="SimpleATMSystem" viewport="0,0">
+    <property xmi:id="_m1kVou9uEdypq_rO_9ry1w" key="pageFormatName" value="A4"/>
+    <property xmi:id="_m1kVo-9uEdypq_rO_9ry1w" key="diagramWidth" value="840"/>
+    <property xmi:id="_m1kVpO9uEdypq_rO_9ry1w" key="diagramHeight" value="1188"/>
+    <property xmi:id="_m1kVpe9uEdypq_rO_9ry1w" key="pageMarginName" value="Small Margin"/>
+    <property xmi:id="_m1kVpu9uEdypq_rO_9ry1w" key="diagramTopMargin" value="20"/>
+    <property xmi:id="_m1kVp-9uEdypq_rO_9ry1w" key="diagramBottomMargin" value="20"/>
+    <property xmi:id="_m1kVqO9uEdypq_rO_9ry1w" key="diagramLeftMargin" value="20"/>
+    <property xmi:id="_m1kVqe9uEdypq_rO_9ry1w" key="diagramRightMargin" value="20"/>
+    <property xmi:id="_m1kVqu9uEdypq_rO_9ry1w" key="orientation" value="portrait"/>
+    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_m1kVq-9uEdypq_rO_9ry1w" presentation="org.topcased.modeler.uml.classdiagram">
+      <element href="SimpleATMSystem.uml#_T_IMH85fEdy2LZVcYsxzcA"/>
+    </semanticModel>
+    <contained xsi:type="di:GraphNode" xmi:id="_m1kVrO9uEdypq_rO_9ry1w" position="8,9" size="333,178">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_m1kVre9uEdypq_rO_9ry1w" presentation="default">
+        <element href="SimpleATMSystem.uml#_T_IMIc5fEdy2LZVcYsxzcA"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_m1kVru9uEdypq_rO_9ry1w" position="10,11" size="208,-1">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_m1kVr-9uEdypq_rO_9ry1w" presentation="default">
+          <element href="SimpleATMSystem.uml#_T_IMIs5fEdy2LZVcYsxzcA"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_m1kVsO9uEdypq_rO_9ry1w">
+          <property xmi:id="_m1kVse9uEdypq_rO_9ry1w" key="eStructuralFeatureID" value="37"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_m1kVsu9uEdypq_rO_9ry1w" presentation="default">
+            <element href="SimpleATMSystem.uml#_T_IMIs5fEdy2LZVcYsxzcA"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_m1kVs-9uEdypq_rO_9ry1w">
+          <property xmi:id="_m1kVtO9uEdypq_rO_9ry1w" key="eStructuralFeatureID" value="38"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_m1kVte9uEdypq_rO_9ry1w" presentation="default">
+            <element href="SimpleATMSystem.uml#_T_IMIs5fEdy2LZVcYsxzcA"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_m1kVtu9uEdypq_rO_9ry1w" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_m1kVt-9uEdypq_rO_9ry1w" presentation="default">
+              <element href="SimpleATMSystem.uml#_T_IMI85fEdy2LZVcYsxzcA"/>
+            </semanticModel>
+          </contained>
+        </contained>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_m1kVuO9uEdypq_rO_9ry1w" position="11,80" size="161,-1">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_m1kVue9uEdypq_rO_9ry1w" presentation="default">
+          <element href="SimpleATMSystem.uml#_T_IMJs5fEdy2LZVcYsxzcA"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_m1kVuu9uEdypq_rO_9ry1w">
+          <property xmi:id="_m1kVu-9uEdypq_rO_9ry1w" key="eStructuralFeatureID" value="37"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_m1kVvO9uEdypq_rO_9ry1w" presentation="default">
+            <element href="SimpleATMSystem.uml#_T_IMJs5fEdy2LZVcYsxzcA"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_m1qcQO9uEdypq_rO_9ry1w">
+          <property xmi:id="_m1qcQe9uEdypq_rO_9ry1w" key="eStructuralFeatureID" value="38"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_m1qcQu9uEdypq_rO_9ry1w" presentation="default">
+            <element href="SimpleATMSystem.uml#_T_IMJs5fEdy2LZVcYsxzcA"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_m1qcQ-9uEdypq_rO_9ry1w" position="0,0" size="-1,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_m1qcRO9uEdypq_rO_9ry1w" presentation="default">
+              <element href="SimpleATMSystem.uml#_T_IMJ85fEdy2LZVcYsxzcA"/>
+            </semanticModel>
+          </contained>
+        </contained>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_m1qcRe9uEdypq_rO_9ry1w" position="181,85" size="140,-1">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_m1qcRu9uEdypq_rO_9ry1w" presentation="default">
+          <element href="SimpleATMSystem.uml#_T_IMKc5fEdy2LZVcYsxzcA"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_m1qcR-9uEdypq_rO_9ry1w">
+          <property xmi:id="_m1qcSO9uEdypq_rO_9ry1w" key="eStructuralFeatureID" value="37"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_m1qcSe9uEdypq_rO_9ry1w" presentation="default">
+            <element href="SimpleATMSystem.uml#_T_IMKc5fEdy2LZVcYsxzcA"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_m1qcSu9uEdypq_rO_9ry1w" position="0,0" size="0,0">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_m1qcS-9uEdypq_rO_9ry1w" presentation="default">
+              <element href="SimpleATMSystem.uml#_T_IMKs5fEdy2LZVcYsxzcA"/>
+            </semanticModel>
+          </contained>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_m1qcTO9uEdypq_rO_9ry1w">
+          <property xmi:id="_m1qcTe9uEdypq_rO_9ry1w" key="eStructuralFeatureID" value="47"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_m1qcTu9uEdypq_rO_9ry1w" presentation="default">
+            <element href="SimpleATMSystem.uml#_T_IMKc5fEdy2LZVcYsxzcA"/>
+          </semanticModel>
+        </contained>
+      </contained>
+    </contained>
+  </diagrams>
+</diagrams:Diagrams>

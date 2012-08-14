@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="com.testingtech.ttworkbench.metamodel.core.foreignModelImporter">
+      <descriptor
+            class="com.testingtech.ttworkbench.utp.ttcn3.importer.UTPImporterDescriptor"
+            description="%Importer.description"
+            extensions="uml,xmi"
+            icon="platform:/plugin/org.eclipse.uml2.uml.editor/icons/full/obj16/UMLModelFile.gif"
+            id="com.testingtech.ttworkbench.utp.ttcn3.importer"
+            name="%Importer.name"
+            wizard="com.testingtech.ttworkbench.utp.ttcn3.importer.UTPImporterWizard">
+      </descriptor>
+   </extension>
+
+	<extension
+         point="org.eclipse.ui.newWizards">
+               <!--
+      <wizard
+            category="com.testingtech.ttworkbench.cleditor.new"
+            class="com.testingtech.ttworkbench.xcleditor.wizards.NewTestModelWizard"
+            id="com.testingtech.ttworkbench.xcleditor.newTestModelWizard"
+            name="%NewTestModel.label">
+        <description>
+            %NewTestModel.description
+        </description>
+      </wizard>
+      -->
+      <wizard
+            category="com.testingtech.ttworkbench.cleditor.new"
+            class="com.testingtech.ttworkbench.utp.ttcn3.importer.NewTestModelWizard"
+            icon="icons/obj16/new_suite_wiz.gif"
+            id="com.testingtech.ttworkbench.utp.ttcn3.importer.newTestModelWizard"
+            name="%NewTestModel.label">
+        <description>
+            %NewTestModel.description
+        </description>
+      </wizard>
+     </extension>
+</plugin>

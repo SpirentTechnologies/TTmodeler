@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package
+       uri = "http:///com.testingtech.utp.ecore"
+       class = "com.testingtech.utp.UTPPackage"
+       genModel = "model/utp.genmodel" />
+  </extension>
+  <extension
+        point="org.eclipse.team.core.fileTypes">
+     <fileTypes
+           extension="utp"
+           type="text"/>
+  </extension>
+  <extension
+        point="com.testingtech.ttworkbench.core.projectPackets">
+     <projectPacket
+           category="example"
+           id="com.testingtech.ttworkbench.utp.core.simpleping"
+           name="%SimplePing.name">
+        <description>%SimplePing.desc</description>
+        <project
+              archive="archives/SimplePing.zip"
+              name="SimplePing">
+        </project>
+        <project
+              archive="archives/UTPProfile.zip"
+              name="UTPProfile"
+              shared="true">
+        </project>
+     </projectPacket>
+  </extension> 
+    <extension
+        point="com.testingtech.ttworkbench.core.projectPackets">
+     <projectPacket
+           category="example"
+           id="com.testingtech.ttworkbench.utp.core.genericsm"
+           name="%GenericSM.name">
+        <description>%GenericSM.desc</description>
+        <project
+              archive="archives/GenericSMExample.zip"
+              name="GenericSMExample">
+        </project>
+	    <project
+              archive="archives/UTPProfile.zip"
+              name="UTPProfile"
+              shared="true">
+        </project>
+      </projectPacket>
+  </extension>
+      <extension
+        point="com.testingtech.ttworkbench.core.projectPackets">
+     <projectPacket
+           category="example"
+           id="com.testingtech.ttworkbench.utp.core.genericsm"
+           name="%HL7Registration.name">
+        <description>%HL7Registration.desc</description>
+        <project
+              archive="archives/HL7Registration.zip"
+              name="HL7Registration">
+        </project>
+	    <project
+              archive="archives/UTPProfile.zip"
+              name="UTPProfile"
+              shared="true">
+        </project>
+      </projectPacket>
+  </extension>
+  <extension
+        point="com.testingtech.ttworkbench.core.projectPackets">
+     <projectPacket
+           category="example"
+           id="com.testingtech.ttworkbench.utp.core.utpprofile"
+           name="%UTPProfile.name">
+        <description>%UTPProfile.desc</description>
+        <project
+              archive="archives/UTPProfile.zip"
+              name="UTPProfile"
+              shared="true">
+        </project>
+     </projectPacket>
+  </extension>
+</plugin>
+

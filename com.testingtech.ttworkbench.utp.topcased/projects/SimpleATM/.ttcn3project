@@ -1,0 +1,6 @@
+#Fri May 30 18:54:20 CEST 2008
+ttcn3.main_module=SimpleATMTest__ATMTest__ATMSuite
+ttcn3.mlf_jar=lib/TA.jar
+ttcn3.mlf_class=com.testingtech.ttcn.tri.BAAdapter
+ttcn3.output_same_as_src=false
+ttcn3.source_folders=//PROJECT_NAME//ttcn3

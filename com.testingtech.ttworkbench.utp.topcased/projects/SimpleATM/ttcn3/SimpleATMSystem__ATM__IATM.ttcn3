@@ -1,0 +1,8 @@
+module SimpleATMSystem__ATM__IATM {
+  import from U2TPAUX all;
+  signature isPinCorrect(integer c) return boolean;
+  
+  type address SimpleATMSystem__ATM__IATM__OBJ;
+  
+  external function INIT__ () return SimpleATMSystem__ATM__IATM__OBJ;
+}

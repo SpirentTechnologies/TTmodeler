@@ -1,0 +1,11 @@
+module root {
+	import from PingInterface all;
+
+	type port EchoClient__pingClientPort procedure {
+		out ping;
+	}
+
+	type component EchoClient {
+		port EchoClient__pingClientPort pingClientPort;
+	}
+}

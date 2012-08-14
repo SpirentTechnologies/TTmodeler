@@ -1,0 +1,141 @@
+module TestSuite {
+	import from ISUTRequired all;
+	import from ISUTProvided all;
+	import from TestSystemPackage all;
+	import from UTPAUX all;
+
+	type port TSI__sutPort procedure {
+		in intOp;
+		out booleanOp;
+	}
+
+	type component sut {
+		port TSI__sutPort sutPort;
+	}
+
+	type component TSI__MAIN extends sut {
+	}
+
+	function CONFIG(in TSI__MAIN tsi, inout TestComponentType testComp) {
+		testComp := TestComponentType.create;
+		map(testComp:testCompPort, tsi:sutPort);
+	}
+
+	function Call_TC_SM__statemachine() runs on Call_TC_SM__testComp {
+		Call_TC_SM__CALL__state();
+	}
+
+	external function extInitInt__INIT() return integer {}
+
+	type component Call_TC_SM__testComp extends TestComponentType {
+		timer timer1 := 3.0;
+		var integer extInitInt := extInitInt__INIT();
+		var charstring unInitializedString;
+		var integer inputNumber := 5;
+		var boolean result := false;
+	}
+
+	function Call_TC_SM__VERDICT_PASS__state() runs on Call_TC_SM__testComp {
+		setverdict(pass);
+	}
+
+	function Call_TC_SM__VERDICT_FAIL__state() runs on Call_TC_SM__testComp {
+		setverdict(fail);
+	}
+
+	function Call_TC_SM__CALL__state() runs on Call_TC_SM__testComp {
+		testCompPort.call(booleanOp:{int := inputNumber}, 5.0) {
+			[] testCompPort.getreply(booleanOp:{?}) -> value result {
+				Call_TC_SM__EVAL__state();
+			}
+			[] testCompPort.catch(booleanOp, SUTExceptionType:?) {
+				Call_TC_SM__VERDICT_FAIL__state();
+			}
+			[] testCompPort.catch(timeout) {
+				Call_TC_SM__VERDICT_INCONC__state();
+			}
+		};
+	}
+
+	function Call_TC_SM__EVAL__state() runs on Call_TC_SM__testComp {
+		if (/* condition is freetext */
+			result == false) {
+			Call_TC_SM__VERDICT_FAIL__state();
+		} else
+		if (/* condition is freetext */
+			result == true) {
+			Call_TC_SM__VERDICT_PASS__state();
+		}
+	}
+
+	function Call_TC_SM__VERDICT_INCONC__state() runs on Call_TC_SM__testComp {
+		setverdict(inconc);
+	}
+
+	function Getcall_TC_SM__statemachine() runs on Getcall_TC_SM__testComp {
+		Getcall_TC_SM__GETCALL__state();
+	}
+
+	type component Getcall_TC_SM__testComp extends TestComponentType {
+		var integer callValue;
+		var integer returnValue := 1234;
+		var integer expectedValue := 4711;
+	}
+
+	function Getcall_TC_SM__VERDICT_PASS__state()
+	runs on Getcall_TC_SM__testComp {
+		setverdict(pass);
+	}
+
+	function Getcall_TC_SM__VERDICT_FAIL__state()
+	runs on Getcall_TC_SM__testComp {
+		setverdict(fail);
+	}
+
+	function Getcall_TC_SM__GETCALL__state() runs on Getcall_TC_SM__testComp {
+		alt {
+			[] testCompPort.getcall(intOp:{callValue := ?}) {
+				Getcall_TC_SM__EVAL__state();
+			}
+		}
+	}
+
+	function Getcall_TC_SM__EVAL__state() runs on Getcall_TC_SM__testComp {
+		if (/* condition is freetext */
+			expectedValue == callValue) {
+			Getcall_TC_SM__REPLY__state();
+		} else
+		if (/* condition is freetext */
+			expectedValue != callValue) {
+			Getcall_TC_SM__VERDICT_FAIL__state();
+		}
+	}
+
+	function Getcall_TC_SM__REPLY__state() runs on Getcall_TC_SM__testComp {
+		testCompPort.reply(intOp:{callValue := omit} value returnValue);
+		Getcall_TC_SM__VERDICT_PASS__state();
+	}
+
+	testcase getcall_tc() runs on MTC__DEFAULT system TSI__MAIN {
+		var Getcall_TC_SM__testComp testComp;
+		CONFIG(system, testComp);
+		testComp.start(Getcall_TC_SM__statemachine());
+		alt {
+			[] all component.done {}
+		}
+	}
+
+	testcase call_tc() runs on MTC__DEFAULT system TSI__MAIN {
+		var Call_TC_SM__testComp testComp;
+		CONFIG(system, testComp);
+		testComp.start(Call_TC_SM__statemachine());
+		alt {
+			[] all component.done {}
+		}
+	}
+
+	testcase send_tc() runs on MTC__DEFAULT system TSI__MAIN {
+		var TestComponentType testComp;
+		CONFIG(system, testComp);
+	}
+}

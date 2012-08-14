@@ -1,0 +1,11 @@
+module IMPI {
+	type integer MPIExceptionType;
+
+
+	signature
+	findCandidates(in charstring name, in boolean gender, in charstring place)
+	return charstring exception(MPIExceptionType);
+
+
+	signature getPersonDemographics(in charstring candidate) return charstring;
+}
